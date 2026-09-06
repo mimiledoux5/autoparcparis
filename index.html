@@ -271,16 +271,16 @@ const cars=[
 {name:"Mercedes-Benz CLA 180 AMG",year:"2015",km:"152 000 km",fuel:"Essence",price:"4 100 €"},
 {name:"Hyundai Tucson Premium 4x4",year:"2016",km:"171 000 km",fuel:"Diesel",price:"5 700 €"}
 ];
-const carPhotos=["cla180-1.jpg","cla180-2.jpg","cla180-3.jpg","cla180-4.jpg","cla180-5.jpg","cla180-6.jpg","cla180-7.jpg","cla180-8.jpg","cla180-9.jpg","cla180-10.jpg","cla180-11.jpg","cla180-12.jpg","cla180-13.jpg","cla180-14.jpg","cla180-15.jpg","cla180-16.jpg"];
-const tucsonPhotos=["tucson-1.jpg","tucson-2.jpg","tucson-3.jpg","tucson-4.jpg","tucson-5.jpg","tucson-6.jpg","tucson-7.jpg","tucson-8.jpg","tucson-9.jpg","tucson-10.jpg","tucson-11.jpg","tucson-12.jpg","tucson-13.jpg","tucson-14.jpg","tucson-15.jpg"];
-const i30Photos=["i30-1.jpg","i30-2.jpg","i30-3.jpg","i30-4.jpg","i30-5.jpg","i30-6.jpg","i30-7.jpg","i30-8.jpg","i30-9.jpg","i30-10.jpg","i30-11.jpg","i30-12.jpg","i30-13.jpg","i30-14.jpg","i30-15.jpg"];
+const carPhotos=["./cla180-1.jpg","./cla180-2.jpg","./cla180-3.jpg","./cla180-4.jpg","./cla180-5.jpg","./cla180-6.jpg","./cla180-7.jpg","./cla180-8.jpg","./cla180-9.jpg","./cla180-10.jpg","./cla180-11.jpg","./cla180-12.jpg","./cla180-13.jpg","./cla180-14.jpg","./cla180-15.jpg","./cla180-16.jpg"];
+const tucsonPhotos=["./tucson-1.jpg","./tucson-2.jpg","./tucson-3.jpg","./tucson-4.jpg","./tucson-5.jpg","./tucson-6.jpg","./tucson-7.jpg","./tucson-8.jpg","./tucson-9.jpg","./tucson-10.jpg","./tucson-11.jpg","./tucson-12.jpg","./tucson-13.jpg","./tucson-14.jpg","./tucson-15.jpg"];
+const i30Photos=["./i30-1.jpg","./i30-2.jpg","./i30-3.jpg","./i30-4.jpg","./i30-5.jpg","./i30-6.jpg","./i30-7.jpg","./i30-8.jpg","./i30-9.jpg","./i30-10.jpg","./i30-11.jpg","./i30-12.jpg","./i30-13.jpg","./i30-14.jpg","./i30-15.jpg"];
 function renderGallery(){
 const g=document.getElementById("carGallery");
-g.innerHTML=carPhotos.map((p,i)=>`<img src="${p}" alt="Mercedes-Benz CLA 180 AMG — photo ${i+1}" loading="lazy" onclick="openLightbox('${p}')">`).join("");
+g.innerHTML=carPhotos.map((p,i)=>`<img src="${p}" alt="Mercedes-Benz CLA 180 AMG — photo ${i+1}" loading="lazy" onerror="this.style.display='none'" onclick="openLightbox('${p}')">`).join("");
 const tg=document.getElementById("tucsonGallery");
-tg.innerHTML=tucsonPhotos.map((p,i)=>`<img src="${p}" alt="Hyundai Tucson Premium 4x4 — photo ${i+1}" loading="lazy" onclick="openLightbox('${p}')">`).join("");
+tg.innerHTML=tucsonPhotos.map((p,i)=>`<img src="${p}" alt="Hyundai Tucson Premium 4x4 — photo ${i+1}" loading="lazy" onerror="this.style.display='none'" onclick="openLightbox('${p}')">`).join("");
 const ig=document.getElementById("i30Gallery");
-ig.innerHTML=i30Photos.map((p,i)=>`<img src="${p}" alt="Hyundai i30 1.4 T-GDi 140 ch — photo ${i+1}" loading="lazy" onclick="openLightbox('${p}')">`).join("");
+ig.innerHTML=i30Photos.map((p,i)=>`<img src="${p}" alt="Hyundai i30 1.4 T-GDi 140 ch — photo ${i+1}" loading="lazy" onerror="this.style.display='none'" onclick="openLightbox('${p}')">`).join("");
 }
 function openLightbox(src){document.getElementById("lightboxImg").src=src;document.getElementById("lightbox").classList.add("open");}
 function closeLightbox(){document.getElementById("lightbox").classList.remove("open");}
@@ -350,39 +350,22 @@ applyLanguage(savedLang);
 renderGallery();
 </script>
 
-<script id="v15-language-selector">
+<script id="v16-language-selector">
 (function(){
- const picker=document.getElementById('languagePicker');
- if(!picker)return;
- const btn=document.getElementById('languagePickerBtn');
- const menu=document.getElementById('languagePickerMenu');
- const flag=document.getElementById('currentLanguageFlag');
- const name=document.getElementById('currentLanguageName');
+ const picker=document.getElementById('languagePicker'); if(!picker)return;
+ const btn=document.getElementById('languagePickerBtn'),menu=document.getElementById('languagePickerMenu');
+ const flag=document.getElementById('currentLanguageFlag'),name=document.getElementById('currentLanguageName');
  const info={fr:['Français','fr'],en:['English','gb'],pl:['Polski','pl'],it:['Italiano','it'],es:['Español','es'],pt:['Português','pt']};
  function selectLang(lang){
-   if(!info[lang]) lang='fr';
-   flag.src='https://flagcdn.com/w40/'+info[lang][1]+'.png';
-   name.textContent=info[lang][0];
-   document.documentElement.lang=lang;
-   // Prefer the site's existing translation function.
-   if(typeof window.setLanguage==='function'){window.setLanguage(lang);return;}
-   if(typeof window.changeLanguage==='function'){window.changeLanguage(lang);return;}
-   // Otherwise trigger an existing native selector if present.
-   const native=document.querySelector('select.language-select, select#languageSelect, select[name="language"]');
-   if(native){
-     native.value=lang;
-     native.dispatchEvent(new Event('change',{bubbles:true}));
-   }
+   if(!info[lang])lang='fr';
+   flag.src='https://flagcdn.com/w40/'+info[lang][1]+'.png'; name.textContent=info[lang][0];
+   if(typeof applyLanguage==='function') applyLanguage(lang);
+   localStorage.setItem('autoparc-lang',lang);
  }
- btn.onclick=function(e){e.stopPropagation();picker.classList.toggle('open');btn.setAttribute('aria-expanded',picker.classList.contains('open'))};
- menu.querySelectorAll('.language-option').forEach(x=>x.onclick=function(){
-   selectLang(this.dataset.lang);
-   localStorage.setItem('autoparc-language',this.dataset.lang);
-   picker.classList.remove('open');btn.setAttribute('aria-expanded','false');
- });
+ btn.onclick=function(e){e.stopPropagation();picker.classList.toggle('open');};
+ menu.querySelectorAll('.language-option').forEach(x=>x.onclick=function(e){e.stopPropagation();selectLang(this.dataset.lang);picker.classList.remove('open');});
  document.addEventListener('click',()=>picker.classList.remove('open'));
- const saved=localStorage.getItem('autoparc-language')||'fr';
- selectLang(saved);
+ selectLang(localStorage.getItem('autoparc-lang')||'fr');
 })();
 </script>
 
