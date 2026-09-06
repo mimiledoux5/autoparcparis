@@ -82,12 +82,28 @@ footer{background:var(--dark);color:white;padding:35px 7%}footer a{color:white}
 .hero-trust .flag{width:24px;height:18px}
 </style>
 
+
+<style id="v13-fixes">
+.lang-select{font-family:Arial,sans-serif;min-width:145px;display:inline-block!important;visibility:visible!important;opacity:1!important}
+.lang-select option{font-family:Arial,sans-serif;font-size:14px}
+.hero-features,.trust-features,.hero-badges{display:flex!important;flex-wrap:wrap;gap:10px;align-items:center}
+.hero-feature,.trust-feature,.hero-badge{display:flex!important;align-items:center!important;gap:7px!important;visibility:visible!important}
+.flag-badge{display:inline-flex!important;align-items:center;justify-content:center;width:24px;height:18px;font-size:16px;line-height:1}
+@media(max-width:700px){.lang-select{min-width:125px}.hero-features,.trust-features,.hero-badges{gap:7px}}
+</style>
 </head>
 <body>
 <header>
 <a class="logo" href="#" style="display:flex;align-items:center;text-decoration:none;color:white"><img src="logo.png" alt="AutoParc Export" style="height:52px;width:auto;max-width:190px;object-fit:contain"><span style="display:none">AutoParc Export</span></a>
 <nav><a href="#cars" data-i18n="carsNav">Véhicules</a><a href="#services" data-i18n="servicesNav">Services</a><a href="#contact" data-i18n="contactNav">Contact</a></nav>
-<select id="lang"><option value="fr">🇫🇷 FR</option><option value="en">🇬🇧 English</option><option value="pl">🇵🇱 PL</option><option value="it">🇮🇹 IT</option><option value="es">🇪🇸 ES</option><option value="pt">🇵🇹 PT</option></select>
+<select class="lang-select" id="languageSelect" aria-label="Language">
+<option value="fr">🇫🇷 Français</option>
+<option value="en">🇬🇧 English</option>
+<option value="pl">🇵🇱 Polski</option>
+<option value="it">🇮🇹 Italiano</option>
+<option value="es">🇪🇸 Español</option>
+<option value="pt">🇵🇹 Português</option>
+</select>
 </header>
 
 <main>
@@ -228,7 +244,7 @@ footer{background:var(--dark);color:white;padding:35px 7%}footer a{color:white}
 <section id="contact">
 <h2 data-i18n="contactTitle">Vous recherchez un véhicule précis ?</h2>
 <p data-i18n="contactText">Indiquez-nous la marque, le modèle, le budget et vos critères. Nous pourrons rechercher un véhicule correspondant.</p>
-<a class="btn" href="https://wa.me/33000000000" target="_blank" data-i18n="contactBtn">Nous contacter sur WhatsApp</a>
+<a class="btn" href="https://wa.me/33780770163" target="_blank" data-i18n="contactBtn">Nous contacter sur WhatsApp</a>
 </section>
 </main>
 <div class="lightbox" id="lightbox" onclick="closeLightbox()"><span class="close">&times;</span><img id="lightboxImg" src="" alt="Photo du véhicule" onclick="event.stopPropagation()"></div>
