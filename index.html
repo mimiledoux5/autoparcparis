@@ -576,5 +576,57 @@ enableGallerySwipe();
 })();
 
 setTimeout(()=>{updatePlaceholders(localStorage.getItem('autoparc-lang')||'fr');},0);
+<script id="v25-translation-final-fallback">
+(function(){
+  const extra={
+    fr:{},
+    en:{
+      "Jusqu'en juin 2027":"Until June 2027","Jusqu'en août 2027":"Until August 2027","Jusqu'au 26/06/2027":"Until 26/06/2027",
+      "Cuir partiel":"Part-leather","Excellent état":"Excellent condition","Gris":"Grey","Bleu métallisé":"Metallic blue","Blanc":"White",
+      "Traction avant":"Front-wheel drive","Intérieur sport":"Sport interior","Véhicules d'occasion • Allemagne → Europe":"Used vehicles • Germany → Europe",
+      "Mentions légales à compléter avant mise en production.":"Legal notices to be completed before launch.","Sélection en Allemagne":"Selection in Germany","Livraison en Europe":"Delivery in Europe"
+    },
+    pl:{
+      "Jusqu'en juin 2027":"Do czerwca 2027","Jusqu'en août 2027":"Do sierpnia 2027","Jusqu'au 26/06/2027":"Do 26.06.2027",
+      "Cuir partiel":"Częściowa skóra","Excellent état":"Bardzo dobry stan","Gris":"Szary","Bleu métallisé":"Niebieski metalizowany","Blanc":"Biały",
+      "Traction avant":"Napęd na przednie koła","Intérieur sport":"Sportowe wnętrze","Véhicules d'occasion • Allemagne → Europe":"Samochody używane • Niemcy → Europa",
+      "Mentions légales à compléter avant mise en production.":"Informacje prawne do uzupełnienia przed uruchomieniem.","Sélection en Allemagne":"Wybór w Niemczech","Livraison en Europe":"Dostawa w Europie"
+    },
+    it:{
+      "Jusqu'en juin 2027":"Fino a giugno 2027","Jusqu'en août 2027":"Fino ad agosto 2027","Jusqu'au 26/06/2027":"Fino al 26/06/2027",
+      "Cuir partiel":"Pelle parziale","Excellent état":"Ottime condizioni","Gris":"Grigio","Bleu métallisé":"Blu metallizzato","Blanc":"Bianco",
+      "Traction avant":"Trazione anteriore","Intérieur sport":"Interni sportivi","Véhicules d'occasion • Allemagne → Europe":"Auto usate • Germania → Europa",
+      "Mentions légales à compléter avant mise en production.":"Note legali da completare prima della messa online.","Sélection en Allemagne":"Selezione in Germania","Livraison en Europe":"Consegna in Europa"
+    },
+    es:{
+      "Jusqu'en juin 2027":"Hasta junio de 2027","Jusqu'en août 2027":"Hasta agosto de 2027","Jusqu'au 26/06/2027":"Hasta el 26/06/2027",
+      "Cuir partiel":"Cuero parcial","Excellent état":"Excelente estado","Gris":"Gris","Bleu métallisé":"Azul metalizado","Blanc":"Blanco",
+      "Traction avant":"Tracción delantera","Intérieur sport":"Interior deportivo","Véhicules d'occasion • Allemagne → Europe":"Vehículos de ocasión • Alemania → Europa",
+      "Mentions légales à compléter avant mise en production.":"Aviso legal por completar antes de la puesta en producción.","Sélection en Allemagne":"Selección en Alemania","Livraison en Europe":"Entrega en Europa"
+    },
+    pt:{
+      "Jusqu'en juin 2027":"Até junho de 2027","Jusqu'en août 2027":"Até agosto de 2027","Jusqu'au 26/06/2027":"Até 26/06/2027",
+      "Cuir partiel":"Couro parcial","Excellent état":"Excelente estado","Gris":"Cinzento","Bleu métallisé":"Azul metalizado","Blanc":"Branco",
+      "Traction avant":"Tração dianteira","Intérieur sport":"Interior desportivo","Véhicules d'occasion • Allemagne → Europe":"Veículos usados • Alemanha → Europa",
+      "Mentions légales à compléter avant mise en production.":"Aviso legal a completar antes da entrada em produção.","Sélection en Allemagne":"Seleção na Alemanha","Livraison en Europe":"Entrega na Europa"
+    }
+  };
+  window.__v25translate=function(lang){
+    const base=(window.__valueTranslations&&window.__valueTranslations[lang])||{};
+    const map=Object.assign({},base,extra[lang]||{});
+    const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);
+    const nodes=[]; while(walker.nextNode()) nodes.push(walker.currentNode);
+    nodes.forEach(n=>{
+      let raw=n.nodeValue, trimmed=raw.trim();
+      if(!trimmed || n.parentElement.closest('script,style')) return;
+      if(map[trimmed]) { n.nodeValue=raw.replace(trimmed,map[trimmed]); return; }
+      Object.keys(map).sort((a,b)=>b.length-a.length).forEach(k=>{ if(n.nodeValue.includes(k)) n.nodeValue=n.nodeValue.split(k).join(map[k]); });
+    });
+  };
+  const oldApply=window.applyLanguage;
+  if(typeof oldApply==='function') window.applyLanguage=function(lang){ oldApply(lang); setTimeout(()=>window.__v25translate(lang),0); setTimeout(()=>window.__v25translate(lang),80); };
+  const lang=localStorage.getItem('autoparc-lang')||'fr';
+  setTimeout(()=>window.__v25translate(lang),120);
+})();
 </script>
 </body></html>
