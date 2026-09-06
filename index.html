@@ -110,6 +110,40 @@ footer{background:var(--dark);color:white;padding:35px 7%}footer a{color:white}
 <div>✓ Volant multifonction<br>✓ Phares antibrouillard<br>✓ ABS & contrôle de stabilité</div>
 </div></div>
 </article>
+
+<article class="vehicle-block">
+<div class="car-main">
+<div>
+<div class="gallery" id="i30Gallery"></div>
+<p class="gallery-note">Photos du véhicule — cliquez sur une photo pour l'agrandir.</p>
+</div>
+<div class="car-info">
+<div class="badge">Disponible</div>
+<h1 style="margin-top:10px">Hyundai i30 1.4 T-GDi 140 ch</h1>
+<p class="muted">2018 • 71 000 km • Essence • Boîte automatique</p>
+<p class="price" style="font-size:32px">3 200 €</p>
+<p style="line-height:1.6">Une Hyundai i30 élégante et très bien équipée, avec moteur essence 1.4 T-GDi de 140 ch, boîte automatique et seulement 71 000 km. Sa teinte bleu métallisé, son confort et ses équipements technologiques en font une excellente voiture polyvalente.</p>
+<div class="specs">
+<div class="spec"><strong>Puissance</strong><br>140 ch</div><div class="spec"><strong>Moteur</strong><br>1.4 T-GDi</div>
+<div class="spec"><strong>Transmission</strong><br>Traction avant</div><div class="spec"><strong>Couleur</strong><br>Bleu métallisé</div>
+<div class="spec"><strong>Intérieur</strong><br>Cuir partiel</div><div class="spec"><strong>Places / portes</strong><br>5 / 5</div>
+<div class="spec"><strong>Coffre</strong><br>395 L</div><div class="spec"><strong>Homologation UE</strong><br>Jusqu'au 26/06/2027</div>
+</div>
+<a class="btn" href="#contact">Demander des informations</a>
+</div></div>
+<div class="equipment"><h3>Équipements</h3><div class="equipment-grid">
+<div>✓ Caméra de recul<br>✓ Navigation GPS<br>✓ Apple CarPlay / Android Auto<br>✓ Bluetooth – téléphone & musique<br>✓ Sièges avant chauffants<br>✓ Volant chauffant<br>✓ Sièges partiellement en cuir</div>
+<div>✓ Siège conducteur électrique avec mémoire<br>✓ Démarrage sans clé<br>✓ Verrouillage sans clé<br>✓ Régulateur de vitesse adaptatif<br>✓ Reconnaissance des panneaux<br>✓ Capteurs de stationnement avant & arrière</div>
+<div>✓ Assistance aux feux de route<br>✓ Assistance au maintien dans la voie<br>✓ Climatisation automatique 2 zones<br>✓ Feux de jour LED<br>✓ Capteur de pluie<br>✓ Volant multifonction</div>
+<div>✓ Vitres électriques<br>✓ Rétroviseurs électriques<br>✓ Jantes aluminium<br>✓ Isofix<br>✓ ABS & contrôle de stabilité<br>✓ Alarme<br>✓ Phares antibrouillard</div>
+</div></div>
+<div class="equipment"><h3>Documents & conditions</h3><div class="equipment-grid">
+<div>✓ Carte grise<br>✓ Certificat de conformité<br>✓ Contrôle technique<br>✓ Carnet d'entretien</div>
+<div>✓ Factures d'entretien<br>✓ Certificat de kilométrage<br>✓ Rapport de condition disponible<br>✓ Documents disponibles selon le véhicule</div>
+<div>🇩🇪 Véhicule importé d'Allemagne<br>🇪🇺 Livraison possible dans toute l'Europe</div>
+<div>💳 Financement possible avec apport minimum de 20 %, selon conditions applicables.<br>💰 Remise de 15 % pour achat comptant à la commande, selon conditions.</div>
+</div></div>
+</article>
 </div>
 </section>
 
@@ -142,11 +176,14 @@ const cars=[
 ];
 const carPhotos=["cla180-1.jpg","cla180-2.jpg","cla180-3.jpg","cla180-4.jpg","cla180-5.jpg","cla180-6.jpg","cla180-7.jpg","cla180-8.jpg","cla180-9.jpg","cla180-10.jpg","cla180-11.jpg","cla180-12.jpg","cla180-13.jpg","cla180-14.jpg","cla180-15.jpg","cla180-16.jpg"];
 const tucsonPhotos=["tucson-1.jpg","tucson-2.jpg","tucson-3.jpg","tucson-4.jpg","tucson-5.jpg","tucson-6.jpg","tucson-7.jpg","tucson-8.jpg","tucson-9.jpg","tucson-10.jpg","tucson-11.jpg","tucson-12.jpg","tucson-13.jpg","tucson-14.jpg","tucson-15.jpg"];
+const i30Photos=["i30/i30-1.png","i30/i30-2.png","i30/i30-3.png","i30/i30-4.png","i30/i30-5.png","i30/i30-6.png","i30/i30-7.png","i30/i30-8.jpg","i30/i30-9.png","i30/i30-10.jpg","i30/i30-11.jpg","i30/i30-12.jpg","i30/i30-13.jpg","i30/i30-14.jpg","i30/i30-15.png"];
 function renderGallery(){
 const g=document.getElementById("carGallery");
 g.innerHTML=carPhotos.map((p,i)=>`<img src="${p}" alt="Mercedes-Benz CLA 180 AMG — photo ${i+1}" loading="lazy" onclick="openLightbox('${p}')">`).join("");
 const tg=document.getElementById("tucsonGallery");
 tg.innerHTML=tucsonPhotos.map((p,i)=>`<img src="${p}" alt="Hyundai Tucson Premium 4x4 — photo ${i+1}" loading="lazy" onclick="openLightbox('${p}')">`).join("");
+const ig=document.getElementById("i30Gallery");
+ig.innerHTML=i30Photos.map((p,i)=>`<img src="${p}" alt="Hyundai i30 1.4 T-GDi 140 ch — photo ${i+1}" loading="lazy" onclick="openLightbox('${p}')">`).join("");
 }
 function openLightbox(src){document.getElementById("lightboxImg").src=src;document.getElementById("lightbox").classList.add("open");}
 function closeLightbox(){document.getElementById("lightbox").classList.remove("open");}
