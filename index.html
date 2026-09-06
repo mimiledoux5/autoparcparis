@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>AutoParc Export — Véhicules d'occasion</title>
-<meta name="description" content="AutoParc Export — véhicules d'occasion sélectionnés en Allemagne et livraison en Europe.">
+<meta name="description" content="AutoParc Export — Mercedes-Benz CLA 180 AMG 2015, 152 000 km, 4 100 €. Véhicules d'occasion sélectionnés en Allemagne et livraison en Europe.">
 <style>
 :root{--dark:#0b1220;--blue:#1358a6;--light:#f5f7fa;--text:#172033}
 *{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;color:var(--text);background:var(--light)}
@@ -19,6 +19,12 @@ section{padding:55px 7%}.search{background:white;margin:-35px 7% 0;padding:22px;
 .card{background:white;border-radius:12px;overflow:hidden;box-shadow:0 4px 15px #0001}.card img{width:100%;height:175px;object-fit:cover}.card div{padding:17px}.price{font-size:22px;font-weight:800}.muted{color:#687386}.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:20px}.feature{background:white;padding:24px;border-radius:12px}
 footer{background:var(--dark);color:white;padding:35px 7%}footer a{color:white}
 @media(max-width:700px){nav{display:none}.hero h1{font-size:35px}.search{margin:0}.hero{min-height:500px}}
+
+.gallery{display:grid;grid-template-columns:2fr 1fr 1fr;gap:8px;margin-top:15px}
+.gallery img{width:100%;height:115px;object-fit:cover;border-radius:8px;cursor:pointer;transition:transform .2s}.gallery img:hover{transform:scale(1.02)}
+.gallery img:first-child{grid-row:span 2;height:238px}
+.car-main{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(300px,1fr);gap:28px;align-items:start}.car-info{background:white;padding:24px;border-radius:12px;box-shadow:0 4px 15px #0001}.specs{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:18px 0}.spec{padding:10px 12px;background:#f5f7fa;border-radius:8px}.lightbox{display:none;position:fixed;inset:0;background:#000d;z-index:20;align-items:center;justify-content:center;padding:25px}.lightbox.open{display:flex}.lightbox img{max-width:95vw;max-height:90vh;object-fit:contain;border-radius:8px}.close{position:absolute;right:25px;top:15px;color:white;font-size:40px;cursor:pointer}.gallery-note{font-size:13px;color:#687386;margin-top:8px}
+@media(max-width:800px){.car-main{grid-template-columns:1fr}.gallery{grid-template-columns:1fr 1fr}.gallery img:first-child{grid-column:span 2;grid-row:auto;height:230px}}
 </style>
 </head>
 <body>
@@ -36,7 +42,7 @@ footer{background:var(--dark);color:white;padding:35px 7%}footer a{color:white}
 <a class="btn" href="#cars" data-i18n="heroBtn">Voir les véhicules</a>
 </div></div>
 
-<div class="search">
+<div class="search" style="display:none">
 <strong data-i18n="searchTitle">Rechercher un véhicule</strong><br>
 <input id="search" placeholder="Marque ou modèle">
 <select><option>Prix maximum</option><option>20 000 €</option><option>30 000 €</option><option>50 000 €</option></select>
@@ -45,7 +51,23 @@ footer{background:var(--dark);color:white;padding:35px 7%}footer a{color:white}
 
 <section id="cars">
 <h2 data-i18n="carsTitle">Véhicules disponibles</h2>
-<div class="cars" id="carList"></div>
+<div class="car-main">
+<div>
+<div class="gallery" id="carGallery"></div>
+<p class="gallery-note">Photos réelles du véhicule — cliquez sur une photo pour l'agrandir.</p>
+</div>
+<div class="car-info">
+<h1 style="margin-top:0">Mercedes-Benz CLA 180 AMG</h1>
+<p class="muted">2015 • 152 000 km • Essence • Boîte manuelle</p>
+<p class="price" style="font-size:32px">4 100 €</p>
+<div class="specs">
+<div class="spec"><strong>Puissance</strong><br>122 ch</div><div class="spec"><strong>Moteur</strong><br>1.6 L</div>
+<div class="spec"><strong>Transmission</strong><br>Traction avant</div><div class="spec"><strong>Couleur</strong><br>Gris</div>
+<div class="spec"><strong>Intérieur</strong><br>Cuir partiel</div><div class="spec"><strong>Places / portes</strong><br>5 / 5</div>
+<div class="spec"><strong>Homologation UE</strong><br>Jusqu'en août 2027</div><div class="spec"><strong>État</strong><br>Excellent état</div>
+</div>
+<a class="btn" href="#contact">Demander des informations</a>
+</div></div>
 </section>
 
 <section id="services">
@@ -58,23 +80,34 @@ footer{background:var(--dark);color:white;padding:35px 7%}footer a{color:white}
 </div>
 </section>
 
+<section>
+<h2>Équipements</h2>
+<div class="features">
+<div class="feature">✓ Finition AMG<br>✓ Caméra de recul<br>✓ Radars avant & arrière<br>✓ Bluetooth<br>✓ USB / AUX<br>✓ Régulateur de vitesse</div>
+<div class="feature">✓ Système multimédia<br>✓ Radio DAB+<br>✓ Navigation<br>✓ Climatisation automatique 2 zones<br>✓ Sièges avant chauffants</div>
+<div class="feature">✓ Volant multifonction<br>✓ Phares Xénon<br>✓ Feux de jour LED<br>✓ Capteur de pluie<br>✓ Vitres électriques</div>
+<div class="feature">✓ Rétroviseurs électriques rabattables<br>✓ Intérieur sport<br>✓ Isofix<br>✓ Jantes aluminium<br>✓ Pneus été et hiver sur jantes</div>
+<div class="feature">✓ ABS<br>✓ Alarme<br>✓ Antidérapage</div>
+</div>
+</section>
+
 <section id="contact">
 <h2 data-i18n="contactTitle">Vous recherchez un véhicule précis ?</h2>
 <p data-i18n="contactText">Indiquez-nous la marque, le modèle, le budget et vos critères. Nous pourrons rechercher un véhicule correspondant.</p>
 <a class="btn" href="https://wa.me/33000000000" target="_blank" data-i18n="contactBtn">Nous contacter sur WhatsApp</a>
 </section>
 </main>
+<div class="lightbox" id="lightbox" onclick="closeLightbox()"><span class="close">&times;</span><img id="lightboxImg" src="" alt="Photo du véhicule" onclick="event.stopPropagation()"></div>
 
 <footer><strong>AutoParc Export</strong><p>Véhicules d'occasion • Allemagne → Europe</p><small>© 2026 AutoParc Export — Mentions légales à compléter avant mise en production.</small></footer>
 
 <script>
-const cars=[
-{name:"BMW Série 3 320d",year:"2022",km:"48 000 km",fuel:"Diesel",price:"29 900 €",img:"https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=900&q=80"},
-{name:"Mercedes-Benz Classe C",year:"2021",km:"62 000 km",fuel:"Diesel",price:"31 500 €",img:"https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=900&q=80"},
-{name:"Audi A4 Avant",year:"2022",km:"55 000 km",fuel:"Diesel",price:"27 900 €",img:"https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=900&q=80"}
-];
-function render(list=cars){document.getElementById("carList").innerHTML=list.map(c=>`<article class="card"><img src="${c.img}" alt="${c.name}"><div><h3>${c.name}</h3><p class="muted">${c.year} • ${c.km} • ${c.fuel}</p><p class="price">${c.price}</p><a class="btn" href="#contact">Voir le véhicule</a></div></article>`).join("")}
-function filterCars(){let q=document.getElementById("search").value.toLowerCase();render(cars.filter(c=>(c.name+" "+c.fuel).toLowerCase().includes(q)))}
+const cars=[{name:"Mercedes-Benz CLA 180 AMG",year:"2015",km:"152 000 km",fuel:"Essence",price:"4 100 €"}];
+const carPhotos=["cla180-1.jpg","cla180-2.jpg","cla180-3.jpg","cla180-4.jpg","cla180-5.jpg","cla180-6.jpg","cla180-7.jpg","cla180-8.jpg","cla180-9.jpg","cla180-10.jpg","cla180-11.jpg","cla180-12.jpg","cla180-13.jpg","cla180-14.jpg","cla180-15.jpg","cla180-16.jpg"];
+function renderGallery(){const g=document.getElementById("carGallery");g.innerHTML=carPhotos.map((p,i)=>`<img src="${p}" alt="Mercedes-Benz CLA 180 AMG — photo ${i+1}" loading="lazy" onclick="openLightbox('${p}')">`).join("");}
+function openLightbox(src){document.getElementById("lightboxImg").src=src;document.getElementById("lightbox").classList.add("open");}
+function closeLightbox(){document.getElementById("lightbox").classList.remove("open");}
+
 const t={
 fr:{carsNav:"Véhicules",servicesNav:"Services",contactNav:"Contact",heroTitle:"Votre véhicule d'occasion, sélectionné en Allemagne.",heroText:"Découvrez des véhicules sélectionnés et bénéficiez d'un accompagnement pour l'importation et la livraison en Europe.",heroBtn:"Voir les véhicules",searchTitle:"Rechercher un véhicule",searchBtn:"Rechercher",carsTitle:"Véhicules disponibles",servicesTitle:"Pourquoi AutoParc Export ?",f1t:"Sélection en Allemagne",f1:"Nous recherchons des véhicules correspondant aux critères de nos clients.",f2t:"Livraison en Europe",f2:"Organisation de la livraison vers différents pays européens.",f3t:"Accompagnement",f3:"Accompagnement dans les démarches liées à l'importation.",f4t:"Contact direct",f4:"Contactez-nous directement par WhatsApp ou formulaire.",contactTitle:"Vous recherchez un véhicule précis ?",contactText:"Indiquez-nous la marque, le modèle, le budget et vos critères. Nous pourrons rechercher un véhicule correspondant.",contactBtn:"Nous contacter sur WhatsApp"},
 pl:{carsNav:"Samochody",servicesNav:"Usługi",contactNav:"Kontakt",heroTitle:"Twój samochód używany, wybrany w Niemczech.",heroText:"Poznaj wybrane samochody i skorzystaj ze wsparcia przy imporcie oraz dostawie w Europie.",heroBtn:"Zobacz samochody",searchTitle:"Wyszukaj samochód",searchBtn:"Szukaj",carsTitle:"Dostępne samochody",servicesTitle:"Dlaczego AutoParc Export?",f1t:"Wybór w Niemczech",f1:"Szukamy samochodów zgodnych z wymaganiami klientów.",f2t:"Dostawa w Europie",f2:"Organizujemy dostawę do różnych krajów Europy.",f3t:"Wsparcie",f3:"Pomagamy w formalnościach związanych z importem.",f4t:"Bezpośredni kontakt",f4:"Skontaktuj się z nami przez WhatsApp lub formularz.",contactTitle:"Szukasz konkretnego samochodu?",contactText:"Podaj markę, model, budżet i wymagania. Poszukamy odpowiedniego pojazdu.",contactBtn:"Skontaktuj się przez WhatsApp"},
@@ -82,6 +115,6 @@ it:{carsNav:"Veicoli",servicesNav:"Servizi",contactNav:"Contatti",heroTitle:"La 
 es:{carsNav:"Vehículos",servicesNav:"Servicios",contactNav:"Contacto",heroTitle:"Tu vehículo de ocasión, seleccionado en Alemania.",heroText:"Descubre vehículos seleccionados y recibe asistencia para la importación y entrega en Europa.",heroBtn:"Ver vehículos",searchTitle:"Buscar un vehículo",searchBtn:"Buscar",carsTitle:"Vehículos disponibles",servicesTitle:"¿Por qué AutoParc Export?",f1t:"Selección en Alemania",f1:"Buscamos vehículos según los criterios de nuestros clientes.",f2t:"Entrega en Europa",f2:"Organizamos la entrega a diferentes países europeos.",f3t:"Asistencia",f3:"Asistencia en los trámites relacionados con la importación.",f4t:"Contacto directo",f4:"Contáctanos por WhatsApp o formulario.",contactTitle:"¿Buscas un vehículo específico?",contactText:"Indícanos marca, modelo, presupuesto y criterios. Buscaremos un vehículo adecuado.",contactBtn:"Contactar por WhatsApp"}
 };
 document.getElementById("lang").onchange=e=>{let x=t[e.target.value];document.querySelectorAll("[data-i18n]").forEach(el=>el.textContent=x[el.dataset.i18n])};
-render();
+renderGallery();
 </script>
 </body></html>
