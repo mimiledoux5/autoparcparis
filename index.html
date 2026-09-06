@@ -188,175 +188,11 @@ window.__valueTranslations={"en": {"Gris": "Grey", "Cuir partiel": "Part-leather
 <button class="btn" data-i18n="searchBtn" onclick="filterCars()">Rechercher</button>
 </div>
 <section id="cars">
-<h2 data-i18n="carsTitle">Véhicules disponibles</h2>
+<h2 data-i18n="carsTitle">Véhicules disponibles</h2><div id="vehicleList"></div>
 <div class="car-list">
-<article class="vehicle-block">
-<div class="car-main">
-<div>
-<div class="vehicle-gallery" data-gallery="carGallery" id="carGallery">
-<button aria-label="Photo précédente" class="gallery-arrow prev" onclick="changeGallery('carGallery',-1)" type="button">‹</button>
-<img alt="Photo du véhicule" class="gallery-main" onclick="openGalleryLightbox('carGallery')" src=""/>
-<button aria-label="Photo suivante" class="gallery-arrow next" onclick="changeGallery('carGallery',1)" type="button">›</button>
-<div class="gallery-counter"><span class="gallery-current">1</span> / <span class="gallery-total">1</span></div>
-</div>
-<p class="gallery-note" data-i18n="galleryNote">Photos du véhicule — cliquez sur une photo pour l'agrandir.</p>
-<div class="equipment"><h3 data-i18n="equipmentTitle">Équipements</h3><div class="equipment-grid">
-<div>✓ Finition AMG<br/>✓ Caméra de recul<br/>✓ Radars avant &amp; arrière<br/>✓ Bluetooth<br/>✓ USB / AUX<br/>✓ Régulateur de vitesse</div>
-<div>✓ Système multimédia<br/>✓ Radio DAB+<br/>✓ Navigation<br/>✓ Climatisation automatique 2 zones<br/>✓ Sièges avant chauffants</div>
-<div>✓ Volant multifonction<br/>✓ Phares Xénon<br/>✓ Feux de jour LED<br/>✓ Capteur de pluie<br/>✓ Vitres électriques</div>
-<div>✓ Rétroviseurs électriques rabattables<br/>✓ Intérieur sport<br/>✓ Isofix<br/>✓ Jantes aluminium<br/>✓ Pneus été et hiver sur jantes</div>
-</div></div><div class="equipment"><h3 data-i18n="docsTitle">Documents &amp; conditions</h3><div class="equipment-grid">
-<div>✓ Carte grise<br/>✓ Certificat de conformité<br/>✓ Contrôle technique<br/>✓ Carnet d'entretien</div>
-<div>✓ Factures d'entretien<br/>✓ Certificat de kilométrage<br/>✓ Rapport de condition disponible<br/>✓ Documents disponibles selon le véhicule</div>
-<div>🇩🇪 Véhicule importé d'Allemagne<br/>🇪🇺 Livraison possible dans toute l'Europe</div>
-<div>💳 Financement possible avec apport minimum de 20 %, selon conditions applicables.<br/>💰 Remise de 15 % pour achat comptant à la commande, selon conditions.</div>
-</div></div></div>
-<div class="car-info">
-<div class="vehicle-top"><div><div class="vehicle-kicker" data-i18n="vehicleKicker">Véhicule sélectionné en Allemagne</div><div class="badge" data-i18n="available">Disponible</div><h1 class="vehicle-title">Mercedes-Benz CLA 180 AMG</h1><p class="vehicle-subtitle">2015 • 152 000 km • Essence • Boîte manuelle</p></div><div class="vehicle-pricebox"><small data-i18n="fromPrice">Prix</small><p class="price">4 100 €</p><small data-i18n="deliveryExtra">hors livraison</small></div></div>
-<div class="specs">
-<div class="spec"><strong>Puissance</strong><br/>122 ch</div><div class="spec"><strong>Moteur</strong><br/>1.6 L</div>
-<div class="spec"><strong>Transmission</strong><br/>Traction avant</div><div class="spec"><strong>Couleur</strong><br/>Gris</div>
-<div class="spec"><strong>Intérieur</strong><br/>Cuir partiel</div><div class="spec"><strong>Places / portes</strong><br/>5 / 5</div>
-<div class="spec"><strong>Homologation UE</strong><br/>Jusqu'en août 2027</div><div class="spec"><strong>État</strong><br/>Excellent état</div>
-</div>
-<div class="vehicle-actions"><a class="btn" data-i18n="askInfo" href="#contact" onclick="selectVehicleForContact('Mercedes-Benz CLA 180 AMG');">Demander des informations</a><a class="btn secondary" data-i18n="whatsapp" href="https://wa.me/33780770163" target="_blank">WhatsApp</a></div>
-<div class="vehicle-contact-form">
-<h3>📞 <span data-i18n="vehicleFormTitle">Intéressé par ce véhicule ?</span></h3>
-<p class="form-intro" data-i18n="vehicleFormIntro">Remplissez ce formulaire pour nous contacter directement au sujet de ce véhicule.</p>
-<form class="inline-contact-form" onsubmit="sendInlineWhatsApp(event)">
-<input name="vehicle" type="hidden" value="Mercedes-Benz CLA 180 AMG"/>
-<div class="inline-form-grid">
-<input data-i18n-placeholder="formNamePh" name="name" placeholder="Votre nom" required=""/>
-<input data-i18n-placeholder="formCountryPh" name="country" placeholder="France" required=""/>
-<input data-i18n-placeholder="formContactPh" name="phone" placeholder="+33..." required=""/>
-<input data-i18n-placeholder="formEmailPh" name="email" placeholder="vous@email.com" type="email"/>
-<input data-i18n-placeholder="formBudgetPh" name="budget" placeholder="Ex. 10 000 €"/>
-<textarea data-i18n-placeholder="inlineMessagePh" name="message" placeholder="Votre demande ou vos questions..."></textarea>
-</div>
-<div class="inline-form-actions">
-<button class="btn whatsapp-form" data-i18n="inlineWhatsApp" type="submit">💬 Envoyer par WhatsApp</button>
-<button class="btn email-form" data-i18n="inlineEmail" onclick="sendInlineEmail(this)" type="button">📧 Préparer un e-mail</button>
-</div>
-<p class="form-small-note" data-i18n="inlineEmailNote">L'option e-mail ouvre votre messagerie avec la demande déjà préparée. Il suffit d'indiquer votre destinataire.</p>
-</form>
-</div>
-</div></div>
-<div class="trust-row"><div class="trust-item">🇩🇪 <strong data-i18n="trustGermany">Origine Allemagne</strong><span data-i18n="trustGermanySub">Sélection et contrôle du véhicule</span></div><div class="trust-item">🇪🇺 <strong data-i18n="trustEurope">Livraison Europe</strong><span data-i18n="trustEuropeSub">Accompagnement à l'importation</span></div><div class="trust-item">📄 <strong data-i18n="trustDocs">Dossier véhicule</strong><span data-i18n="trustDocsSub">Documents disponibles selon le véhicule</span></div><div class="trust-item">💬 <strong data-i18n="trustContact">Contact direct</strong><span data-i18n="trustContactSub">WhatsApp et formulaire</span></div></div>
 
 
-</article>
-<article class="vehicle-block">
-<div class="car-main">
-<div>
-<div class="vehicle-gallery" data-gallery="tucsonGallery" id="tucsonGallery">
-<button aria-label="Photo précédente" class="gallery-arrow prev" onclick="changeGallery('tucsonGallery',-1)" type="button">‹</button>
-<img alt="Photo du véhicule" class="gallery-main" onclick="openGalleryLightbox('tucsonGallery')" src=""/>
-<button aria-label="Photo suivante" class="gallery-arrow next" onclick="changeGallery('tucsonGallery',1)" type="button">›</button>
-<div class="gallery-counter"><span class="gallery-current">1</span> / <span class="gallery-total">1</span></div>
-</div>
-<p class="gallery-note" data-i18n="galleryNote">Photos du véhicule — cliquez sur une photo pour l'agrandir.</p>
-<div class="equipment"><h3>Équipements Premium</h3><div class="equipment-grid">
-<div>✓ Édition Premium<br/>✓ Boîte automatique<br/>✓ Transmission 4x4<br/>✓ Intérieur cuir<br/>✓ Toit panoramique<br/>✓ Sièges avant chauffants<br/>✓ Sièges arrière chauffants</div>
-<div>✓ Sièges avant ventilés<br/>✓ Volant chauffant<br/>✓ Caméra de recul<br/>✓ Radars avant &amp; arrière<br/>✓ Avertisseur d'angle mort<br/>✓ Navigation GPS<br/>✓ Radio DAB+</div>
-<div>✓ Bluetooth<br/>✓ USB / AUX<br/>✓ Démarrage sans clé<br/>✓ Hayon électrique<br/>✓ Régulateur de vitesse<br/>✓ Climatisation automatique 2 zones<br/>✓ Feux de jour LED</div>
-<div>✓ Capteur de pluie<br/>✓ Vitres électriques<br/>✓ Rétroviseurs électriques rabattables<br/>✓ Jantes alliage<br/>✓ Pneus été sur jantes aluminium<br/>✓ Pneus hiver sur jantes aluminium<br/>✓ Isofix</div>
-<div>✓ Volant multifonction<br/>✓ Phares antibrouillard<br/>✓ ABS &amp; contrôle de stabilité</div>
-</div></div><div class="equipment"><h3 data-i18n="docsTitle">Documents &amp; conditions</h3><div class="equipment-grid">
-<div>✓ Carte grise<br/>✓ Certificat de conformité<br/>✓ Contrôle technique<br/>✓ Carnet d'entretien</div>
-<div>✓ Factures d'entretien<br/>✓ Certificat de kilométrage<br/>✓ Rapport de condition disponible<br/>✓ Documents disponibles selon le véhicule</div>
-<div>🇩🇪 Véhicule importé d'Allemagne<br/>🇪🇺 Livraison possible dans toute l'Europe</div>
-<div>💳 Financement possible avec apport minimum de 20 %, selon conditions applicables.<br/>💰 Remise de 15 % pour achat comptant à la commande, selon conditions.</div>
-</div></div></div>
-<div class="car-info">
-<div class="vehicle-top"><div><div class="vehicle-kicker" data-i18n="vehicleKicker">Véhicule sélectionné en Allemagne</div><div class="badge" data-i18n="available">Disponible</div><h1 class="vehicle-title">Hyundai Tucson Premium 4x4</h1><p class="vehicle-subtitle">2016 • 171 000 km • Diesel • Boîte automatique</p></div><div class="vehicle-pricebox"><small data-i18n="fromPrice">Prix</small><p class="price">5 700 €</p><small data-i18n="deliveryExtra">hors livraison</small></div></div>
-<p style="line-height:1.6">SUV familial spacieux et polyvalent, avec moteur 2.0 CRDi de 136 ch, transmission intégrale 4x4 et une dotation Premium complète.</p>
-<div class="specs">
-<div class="spec"><strong>Puissance</strong><br/>136 ch</div><div class="spec"><strong>Moteur</strong><br/>2.0 L CRDi</div>
-<div class="spec"><strong>Transmission</strong><br/>4x4</div><div class="spec"><strong>Couleur</strong><br/>Blanc</div>
-<div class="spec"><strong>Intérieur</strong><br/>Cuir</div><div class="spec"><strong>Propriétaires</strong><br/>2</div>
-<div class="spec"><strong>Places / portes</strong><br/>5 / 5</div><div class="spec"><strong>Homologation UE</strong><br/>Jusqu'en juin 2027</div>
-</div>
-<div class="vehicle-actions"><a class="btn" data-i18n="askInfo" href="#contact" onclick="selectVehicleForContact('Hyundai Tucson Premium 4x4');">Demander des informations</a><a class="btn secondary" data-i18n="whatsapp" href="https://wa.me/33780770163" target="_blank">WhatsApp</a></div>
-<div class="vehicle-contact-form">
-<h3>📞 <span data-i18n="vehicleFormTitle">Intéressé par ce véhicule ?</span></h3>
-<p class="form-intro" data-i18n="vehicleFormIntro">Remplissez ce formulaire pour nous contacter directement au sujet de ce véhicule.</p>
-<form class="inline-contact-form" onsubmit="sendInlineWhatsApp(event)">
-<input name="vehicle" type="hidden" value="Hyundai Tucson Premium 4x4"/>
-<div class="inline-form-grid">
-<input data-i18n-placeholder="formNamePh" name="name" placeholder="Votre nom" required=""/>
-<input data-i18n-placeholder="formCountryPh" name="country" placeholder="France" required=""/>
-<input data-i18n-placeholder="formContactPh" name="phone" placeholder="+33..." required=""/>
-<input data-i18n-placeholder="formEmailPh" name="email" placeholder="vous@email.com" type="email"/>
-<input data-i18n-placeholder="formBudgetPh" name="budget" placeholder="Ex. 10 000 €"/>
-<textarea data-i18n-placeholder="inlineMessagePh" name="message" placeholder="Votre demande ou vos questions..."></textarea>
-</div>
-<div class="inline-form-actions">
-<button class="btn whatsapp-form" data-i18n="inlineWhatsApp" type="submit">💬 Envoyer par WhatsApp</button>
-<button class="btn email-form" data-i18n="inlineEmail" onclick="sendInlineEmail(this)" type="button">📧 Préparer un e-mail</button>
-</div>
-<p class="form-small-note" data-i18n="inlineEmailNote">L'option e-mail ouvre votre messagerie avec la demande déjà préparée. Il suffit d'indiquer votre destinataire.</p>
-</form>
-</div>
-</div></div>
 
-
-</article>
-<article class="vehicle-block">
-<div class="car-main">
-<div>
-<div class="vehicle-gallery" data-gallery="i30Gallery" id="i30Gallery">
-<button aria-label="Photo précédente" class="gallery-arrow prev" onclick="changeGallery('i30Gallery',-1)" type="button">‹</button>
-<img alt="Photo du véhicule" class="gallery-main" onclick="openGalleryLightbox('i30Gallery')" src=""/>
-<button aria-label="Photo suivante" class="gallery-arrow next" onclick="changeGallery('i30Gallery',1)" type="button">›</button>
-<div class="gallery-counter"><span class="gallery-current">1</span> / <span class="gallery-total">1</span></div>
-</div>
-<p class="gallery-note" data-i18n="galleryNote">Photos du véhicule — cliquez sur une photo pour l'agrandir.</p>
-<div class="equipment"><h3 data-i18n="equipmentTitle">Équipements</h3><div class="equipment-grid">
-<div>✓ Caméra de recul<br/>✓ Navigation GPS<br/>✓ Apple CarPlay / Android Auto<br/>✓ Bluetooth – téléphone &amp; musique<br/>✓ Sièges avant chauffants<br/>✓ Volant chauffant<br/>✓ Sièges partiellement en cuir</div>
-<div>✓ Siège conducteur électrique avec mémoire<br/>✓ Démarrage sans clé<br/>✓ Verrouillage sans clé<br/>✓ Régulateur de vitesse adaptatif<br/>✓ Reconnaissance des panneaux<br/>✓ Capteurs de stationnement avant &amp; arrière</div>
-<div>✓ Assistance aux feux de route<br/>✓ Assistance au maintien dans la voie<br/>✓ Climatisation automatique 2 zones<br/>✓ Feux de jour LED<br/>✓ Capteur de pluie<br/>✓ Volant multifonction</div>
-<div>✓ Vitres électriques<br/>✓ Rétroviseurs électriques<br/>✓ Jantes aluminium<br/>✓ Isofix<br/>✓ ABS &amp; contrôle de stabilité<br/>✓ Alarme<br/>✓ Phares antibrouillard</div>
-</div></div><div class="equipment"><h3 data-i18n="docsTitle">Documents &amp; conditions</h3><div class="equipment-grid">
-<div>✓ Carte grise<br/>✓ Certificat de conformité<br/>✓ Contrôle technique<br/>✓ Carnet d'entretien</div>
-<div>✓ Factures d'entretien<br/>✓ Certificat de kilométrage<br/>✓ Rapport de condition disponible<br/>✓ Documents disponibles selon le véhicule</div>
-<div>🇩🇪 Véhicule importé d'Allemagne<br/>🇪🇺 Livraison possible dans toute l'Europe</div>
-<div>💳 Financement possible avec apport minimum de 20 %, selon conditions applicables.<br/>💰 Remise de 15 % pour achat comptant à la commande, selon conditions.</div>
-</div></div></div>
-<div class="car-info">
-<div class="vehicle-top"><div><div class="vehicle-kicker" data-i18n="vehicleKicker">Véhicule sélectionné en Allemagne</div><div class="badge" data-i18n="available">Disponible</div><h1 class="vehicle-title">Hyundai i30 1.4 T-GDi 140 ch</h1><p class="vehicle-subtitle">2018 • 71 000 km • Essence • Boîte automatique</p></div><div class="vehicle-pricebox"><small data-i18n="fromPrice">Prix</small><p class="price">3 200 €</p><small data-i18n="deliveryExtra">hors livraison</small></div></div>
-<p style="line-height:1.6">Une Hyundai i30 élégante et très bien équipée, avec moteur essence 1.4 T-GDi de 140 ch, boîte automatique et seulement 71 000 km. Sa teinte bleu métallisé, son confort et ses équipements technologiques en font une excellente voiture polyvalente.</p>
-<div class="specs">
-<div class="spec"><strong>Puissance</strong><br/>140 ch</div><div class="spec"><strong>Moteur</strong><br/>1.4 T-GDi</div>
-<div class="spec"><strong>Transmission</strong><br/>Traction avant</div><div class="spec"><strong>Couleur</strong><br/>Bleu métallisé</div>
-<div class="spec"><strong>Intérieur</strong><br/>Cuir partiel</div><div class="spec"><strong>Places / portes</strong><br/>5 / 5</div>
-<div class="spec"><strong>Coffre</strong><br/>395 L</div><div class="spec"><strong>Homologation UE</strong><br/>Jusqu'au 26/06/2027</div>
-</div>
-<div class="vehicle-actions"><a class="btn" data-i18n="askInfo" href="#contact" onclick="selectVehicleForContact('Hyundai i30 1.4 T-GDi 140 ch');">Demander des informations</a><a class="btn secondary" data-i18n="whatsapp" href="https://wa.me/33780770163" target="_blank">WhatsApp</a></div>
-<div class="vehicle-contact-form">
-<h3>📞 <span data-i18n="vehicleFormTitle">Intéressé par ce véhicule ?</span></h3>
-<p class="form-intro" data-i18n="vehicleFormIntro">Remplissez ce formulaire pour nous contacter directement au sujet de ce véhicule.</p>
-<form class="inline-contact-form" onsubmit="sendInlineWhatsApp(event)">
-<input name="vehicle" type="hidden" value="Hyundai i30 1.4 T-GDi 140 ch"/>
-<div class="inline-form-grid">
-<input data-i18n-placeholder="formNamePh" name="name" placeholder="Votre nom" required=""/>
-<input data-i18n-placeholder="formCountryPh" name="country" placeholder="France" required=""/>
-<input data-i18n-placeholder="formContactPh" name="phone" placeholder="+33..." required=""/>
-<input data-i18n-placeholder="formEmailPh" name="email" placeholder="vous@email.com" type="email"/>
-<input data-i18n-placeholder="formBudgetPh" name="budget" placeholder="Ex. 10 000 €"/>
-<textarea data-i18n-placeholder="inlineMessagePh" name="message" placeholder="Votre demande ou vos questions..."></textarea>
-</div>
-<div class="inline-form-actions">
-<button class="btn whatsapp-form" data-i18n="inlineWhatsApp" type="submit">💬 Envoyer par WhatsApp</button>
-<button class="btn email-form" data-i18n="inlineEmail" onclick="sendInlineEmail(this)" type="button">📧 Préparer un e-mail</button>
-</div>
-<p class="form-small-note" data-i18n="inlineEmailNote">L'option e-mail ouvre votre messagerie avec la demande déjà préparée. Il suffit d'indiquer votre destinataire.</p>
-</form>
-</div>
-</div></div>
-<div class="trust-row"><div class="trust-item">🇩🇪 <strong data-i18n="trustGermany">Origine Allemagne</strong><span data-i18n="trustGermanySub">Sélection et contrôle du véhicule</span></div><div class="trust-item">🇪🇺 <strong data-i18n="trustEurope">Livraison Europe</strong><span data-i18n="trustEuropeSub">Accompagnement à l'importation</span></div><div class="trust-item">📄 <strong data-i18n="trustDocs">Dossier véhicule</strong><span data-i18n="trustDocsSub">Documents disponibles selon le véhicule</span></div><div class="trust-item">💬 <strong data-i18n="trustContact">Contact direct</strong><span data-i18n="trustContactSub">WhatsApp et formulaire</span></div></div>
-
-
-</article>
 </div>
 </section>
 <section id="services">
@@ -391,39 +227,16 @@ window.__valueTranslations={"en": {"Gris": "Grey", "Cuir partiel": "Part-leather
 </section>
 </main>
 <div class="lightbox" id="lightbox" onclick="closeLightbox()"><span class="close">×</span><img alt="Photo du véhicule" id="lightboxImg" onclick="event.stopPropagation()" src=""/></div>
-<footer><strong>AutoParc Export</strong><p>Véhicules d'occasion • Allemagne → Europe</p><small>© 2026 AutoParc Export — Mentions légales à compléter avant mise en production.</small></footer>
+<footer><strong>AutoParc Export</strong><p data-i18n="footerTag">Véhicules d'occasion • Allemagne → Europe</p><small data-i18n="footerLegal">© 2026 AutoParc Export — Mentions légales à compléter avant mise en production.</small></footer>
+<script src="vehicules.js"></script>
 <script>
-const cars=[
-{name:"Mercedes-Benz CLA 180 AMG",year:"2015",km:"152 000 km",fuel:"Essence",price:"4 100 €"},
-{name:"Hyundai Tucson Premium 4x4",year:"2016",km:"171 000 km",fuel:"Diesel",price:"5 700 €"}
-];
-const carPhotos=["./cla180-1.jpg","./cla180-2.jpg","./cla180-3.jpg","./cla180-4.jpg","./cla180-5.jpg","./cla180-6.jpg","./cla180-7.jpg","./cla180-8.jpg","./cla180-9.jpg","./cla180-10.jpg","./cla180-11.jpg","./cla180-12.jpg","./cla180-13.jpg","./cla180-14.jpg","./cla180-15.jpg","./cla180-16.jpg"];
-const tucsonPhotos=["./tucson-1.jpg","./tucson-2.jpg","./tucson-3.jpg","./tucson-4.jpg","./tucson-5.jpg","./tucson-6.jpg","./tucson-7.jpg","./tucson-8.jpg","./tucson-9.jpg","./tucson-10.jpg","./tucson-11.jpg","./tucson-12.jpg","./tucson-13.jpg","./tucson-14.jpg","./tucson-15.jpg"];
-const i30Photos=["./i30-1.jpg","./i30-2.jpg","./i30-3.jpg","./i30-4.jpg","./i30-5.jpg","./i30-6.jpg","./i30-7.jpg","./i30-8.jpg","./i30-9.jpg","./i30-10.jpg","./i30-11.jpg","./i30-12.jpg","./i30-13.jpg","./i30-14.jpg","./i30-15.jpg"];
-const galleryState={carGallery:0,tucsonGallery:0,i30Gallery:0};
-const galleryData={carGallery:carPhotos,tucsonGallery:tucsonPhotos,i30Gallery:i30Photos};
-function updateGallery(id){
- const box=document.getElementById(id); if(!box)return;
- const photos=galleryData[id]||[]; if(!photos.length)return;
- let idx=galleryState[id]||0; idx=(idx+photos.length)%photos.length; galleryState[id]=idx;
- const img=box.querySelector('.gallery-main'); img.src=photos[idx]; img.alt=`Photo ${idx+1} du véhicule`;
- box.querySelector('.gallery-current').textContent=idx+1; box.querySelector('.gallery-total').textContent=photos.length;
-}
-function renderGallery(){Object.keys(galleryData).forEach(updateGallery);}
-function changeGallery(id,step){galleryState[id]=(galleryState[id]||0)+step;updateGallery(id);}
-function openGalleryLightbox(id){const photos=galleryData[id]||[];const idx=galleryState[id]||0;if(photos[idx])openLightbox(photos[idx]);}
-function openLightbox(src){document.getElementById("lightboxImg").src=src;document.getElementById("lightbox").classList.add("open");}
-function closeLightbox(){document.getElementById("lightbox").classList.remove("open");}
-function enableGallerySwipe(){document.querySelectorAll('.vehicle-gallery').forEach(box=>{let x=0;box.addEventListener('touchstart',e=>{x=e.changedTouches[0].screenX},{passive:true});box.addEventListener('touchend',e=>{const dx=e.changedTouches[0].screenX-x;if(Math.abs(dx)>45)changeGallery(box.id,dx<0?1:-1);},{passive:true});});}
-
-
 const t={
-fr:{carsNav:"Véhicules",servicesNav:"Services",contactNav:"Contact",heroTitle:"Votre véhicule d'occasion, sélectionné en Allemagne.",heroText:"Découvrez des véhicules sélectionnés et bénéficiez d'un accompagnement pour l'importation et la livraison en Europe.",heroBtn:"Voir les véhicules",searchTitle:"Rechercher un véhicule",searchBtn:"Rechercher",carsTitle:"Véhicules disponibles",servicesTitle:"Pourquoi AutoParc Export ?",f1t:"Sélection en Allemagne",f1:"Nous recherchons des véhicules correspondant aux critères de nos clients.",f2t:"Livraison en Europe",f2:"Organisation de la livraison vers différents pays européens.",f3t:"Accompagnement",f3:"Accompagnement dans les démarches liées à l'importation.",f4t:"Contact direct",f4:"Contactez-nous directement par WhatsApp ou formulaire.",contactTitle:"Vous recherchez un véhicule précis ?",contactText:"Indiquez-nous la marque, le modèle, le budget et vos critères. Nous pourrons rechercher un véhicule correspondant.",contactBtn:"Nous contacter sur WhatsApp",contactHighlightTitle:'Une question sur un véhicule ?',contactHighlightText:'Remplissez le formulaire ci-dessous et nous vous répondrons rapidement.',vehicleKicker:'Véhicule sélectionné en Allemagne',available:'Disponible',fromPrice:'Prix',deliveryExtra:'hors livraison',askInfo:'Demander des informations',whatsapp:'WhatsApp',equipmentTitle:'Équipements',docsTitle:'Documents & conditions',galleryNote:"Photo du véhicule — utilisez les flèches pour faire défiler les photos. Cliquez sur la photo pour l'agrandir.",trustGermany:'Origine Allemagne',trustGermanySub:'Sélection et contrôle du véhicule',trustEurope:'Livraison Europe',trustEuropeSub:"Accompagnement à l'importation",trustDocs:'Dossier véhicule',trustDocsSub:'Documents disponibles selon le véhicule',trustContact:'Contact direct',trustContactSub:'WhatsApp et formulaire',formTitle:'Demande de renseignements',formIntro:'Remplissez ce formulaire. Votre demande sera préparée automatiquement et envoyée à AutoParc Export via WhatsApp.',formName:'Nom / Prénom',formCountry:'Pays',formContact:'Téléphone / WhatsApp',formEmail:'E-mail',formVehicle:'Véhicule recherché',formBudget:'Budget',formMessage:'Votre demande',formSubmit:'📲 Envoyer ma demande sur WhatsApp',formDirect:'Ou ouvrir WhatsApp directement',formNote:"Vos informations sont utilisées uniquement pour répondre à votre demande commerciale. Aucun compte n'est nécessaire pour envoyer le message WhatsApp.",formNamePh:'Votre nom',formCountryPh:'France',formContactPh:'+33...',formEmailPh:'vous@email.com',formVehiclePh:'Marque et modèle',formBudgetPh:'Ex. 10 000 €',formMessagePh:'Décrivez vos critères : année, kilométrage, carburant, boîte, options...',maxPrice:"Prix maximum"},
-en:{carsNav:"Vehicles",servicesNav:"Services",contactNav:"Contact",heroTitle:"Your used vehicle, selected in Germany.",heroText:"Discover selected vehicles and benefit from support with import procedures and delivery throughout Europe.",heroBtn:"View vehicles",searchTitle:"Search for a vehicle",searchBtn:"Search",carsTitle:"Available vehicles",servicesTitle:"Why AutoParc Export?",f1t:"Selection in Germany",f1:"We search for vehicles matching our customers' requirements.",f2t:"Delivery in Europe",f2:"We organize delivery to different European countries.",f3t:"Support",f3:"Support with procedures related to vehicle import.",f4t:"Direct contact",f4:"Contact us directly via WhatsApp or the contact form.",contactTitle:"Looking for a specific vehicle?",contactText:"Tell us the make, model, budget and your requirements. We can search for a suitable vehicle.",contactBtn:"Contact us on WhatsApp",contactHighlightTitle:'Questions about a vehicle?',contactHighlightText:'Fill in the form below and we will get back to you quickly.',vehicleKicker:'Vehicle selected in Germany',available:'Available',fromPrice:'Price',deliveryExtra:'delivery not included',askInfo:'Request information',whatsapp:'WhatsApp',equipmentTitle:'Equipment',docsTitle:'Documents & conditions',galleryNote:'Vehicle photos — click a photo to enlarge.',trustGermany:'German origin',trustGermanySub:'Vehicle selection and check',trustEurope:'European delivery',trustEuropeSub:'Import support',trustDocs:'Vehicle file',trustDocsSub:'Documents available depending on the vehicle',trustContact:'Direct contact',trustContactSub:'WhatsApp and contact form',formTitle:'Information request',formIntro:'Fill in this form. Your request will be prepared automatically and sent to AutoParc Export via WhatsApp.',formName:'First / last name',formCountry:'Country',formContact:'Phone / WhatsApp',formEmail:'Email',formVehicle:'Vehicle wanted',formBudget:'Budget',formMessage:'Your request',formSubmit:'📲 Send my request on WhatsApp',formDirect:'Or open WhatsApp directly',formNote:'Your information is used only to respond to your commercial request. No account is required to send the WhatsApp message.',formNamePh:'Your name',formCountryPh:'France',formContactPh:'+33...',formEmailPh:'you@email.com',formVehiclePh:'Make and model',formBudgetPh:'e.g. €10,000',formMessagePh:'Describe your criteria: year, mileage, fuel, gearbox, options...',maxPrice:"Maximum price"},
-pl:{carsNav:"Samochody",servicesNav:"Usługi",contactNav:"Kontakt",heroTitle:"Twój samochód używany, wybrany w Niemczech.",heroText:"Poznaj wybrane samochody i skorzystaj ze wsparcia przy imporcie oraz dostawie w Europie.",heroBtn:"Zobacz samochody",searchTitle:"Wyszukaj samochód",searchBtn:"Szukaj",carsTitle:"Dostępne samochody",servicesTitle:"Dlaczego AutoParc Export?",f1t:"Wybór w Niemczech",f1:"Szukamy samochodów zgodnych z wymaganiami klientów.",f2t:"Dostawa w Europie",f2:"Organizujemy dostawę do różnych krajów Europy.",f3t:"Wsparcie",f3:"Pomagamy w formalnościach związanych z importem.",f4t:"Bezpośredni kontakt",f4:"Skontaktuj się z nami przez WhatsApp lub formularz.",contactTitle:"Szukasz konkretnego samochodu?",contactText:"Podaj markę, model, budżet i wymagania. Poszukamy odpowiedniego pojazdu.",contactBtn:"Skontaktuj się przez WhatsApp",contactHighlightTitle:'Masz pytanie dotyczące pojazdu?',contactHighlightText:'Wypełnij poniższy formularz, a szybko się z Tobą skontaktujemy.',vehicleKicker:'Pojazd wybrany w Niemczech',available:'Dostępny',fromPrice:'Cena',deliveryExtra:'dostawa nie wliczona',askInfo:'Poproś o informacje',whatsapp:'WhatsApp',equipmentTitle:'Wyposażenie',docsTitle:'Dokumenty i warunki',galleryNote:'Zdjęcie pojazdu — użyj strzałek, aby przeglądać zdjęcia. Kliknij zdjęcie, aby je powiększyć.',trustGermany:'Pochodzenie: Niemcy',trustGermanySub:'Wybór i kontrola pojazdu',trustEurope:'Dostawa w Europie',trustEuropeSub:'Wsparcie przy imporcie',trustDocs:'Dokumentacja pojazdu',trustDocsSub:'Dokumenty dostępne zależnie od pojazdu',trustContact:'Bezpośredni kontakt',trustContactSub:'WhatsApp i formularz kontaktowy',formTitle:'Zapytanie o informacje',formIntro:'Wypełnij formularz. Twoje zapytanie zostanie automatycznie przygotowane i wysłane do AutoParc Export przez WhatsApp.',formName:'Imię / nazwisko',formCountry:'Kraj',formContact:'Telefon / WhatsApp',formEmail:'E-mail',formVehicle:'Poszukiwany pojazd',formBudget:'Budżet',formMessage:'Twoje zapytanie',formSubmit:'📲 Wyślij zapytanie przez WhatsApp',formDirect:'Lub otwórz WhatsApp bezpośrednio',formNote:'Twoje dane są wykorzystywane wyłącznie do odpowiedzi na zapytanie handlowe. Do wysłania wiadomości WhatsApp nie jest potrzebne konto.',formNamePh:'Twoje imię i nazwisko',formCountryPh:'Francja',formContactPh:'+33...',formEmailPh:'ty@email.com',formVehiclePh:'Marka i model',formBudgetPh:'np. 10 000 €',formMessagePh:'Opisz kryteria: rok, przebieg, paliwo, skrzynia, wyposażenie...',maxPrice:"Maksymalna cena"},
-it:{carsNav:"Veicoli",servicesNav:"Servizi",contactNav:"Contatti",heroTitle:"La tua auto usata, selezionata in Germania.",heroText:"Scopri veicoli selezionati e ricevi assistenza per importazione e consegna in Europa.",heroBtn:"Vedi i veicoli",searchTitle:"Cerca un veicolo",searchBtn:"Cerca",carsTitle:"Veicoli disponibili",servicesTitle:"Perché AutoParc Export?",f1t:"Selezione in Germania",f1:"Cerchiamo veicoli in base alle esigenze dei nostri clienti.",f2t:"Consegna in Europa",f2:"Organizziamo la consegna in diversi Paesi europei.",f3t:"Assistenza",f3:"Assistenza nelle procedure legate all'importazione.",f4t:"Contatto diretto",f4:"Contattaci direttamente tramite WhatsApp o modulo.",contactTitle:"Cerchi un veicolo specifico?",contactText:"Indicaci marca, modello, budget e criteri. Cercheremo il veicolo adatto.",contactBtn:"Contattaci su WhatsApp",contactHighlightTitle:'Hai una domanda su un veicolo?',contactHighlightText:'Compila il modulo qui sotto e ti risponderemo rapidamente.',vehicleKicker:'Veicolo selezionato in Germania',available:'Disponibile',fromPrice:'Prezzo',deliveryExtra:'consegna esclusa',askInfo:'Richiedi informazioni',whatsapp:'WhatsApp',equipmentTitle:'Equipaggiamento',docsTitle:'Documenti e condizioni',galleryNote:'Foto del veicolo — usa le frecce per scorrere le foto. Clicca sulla foto per ingrandirla.',trustGermany:'Origine Germania',trustGermanySub:'Selezione e controllo del veicolo',trustEurope:'Consegna in Europa',trustEuropeSub:"Assistenza per l'importazione",trustDocs:'Documentazione veicolo',trustDocsSub:'Documenti disponibili in base al veicolo',trustContact:'Contatto diretto',trustContactSub:'WhatsApp e modulo di contatto',formTitle:'Richiesta di informazioni',formIntro:'Compila il modulo. La tua richiesta sarà preparata automaticamente e inviata ad AutoParc Export tramite WhatsApp.',formName:'Nome / Cognome',formCountry:'Paese',formContact:'Telefono / WhatsApp',formEmail:'E-mail',formVehicle:'Veicolo ricercato',formBudget:'Budget',formMessage:'La tua richiesta',formSubmit:'📲 Invia la richiesta su WhatsApp',formDirect:'Oppure apri direttamente WhatsApp',formNote:'I tuoi dati vengono utilizzati esclusivamente per rispondere alla tua richiesta commerciale. Non è necessario un account per inviare il messaggio WhatsApp.',formNamePh:'Il tuo nome',formCountryPh:'Francia',formContactPh:'+33...',formEmailPh:'tu@email.com',formVehiclePh:'Marca e modello',formBudgetPh:'es. 10.000 €',formMessagePh:'Descrivi i tuoi criteri: anno, chilometraggio, carburante, cambio, optional...',maxPrice:"Prezzo massimo"},
-es:{carsNav:"Vehículos",servicesNav:"Servicios",contactNav:"Contacto",heroTitle:"Tu vehículo de ocasión, seleccionado en Alemania.",heroText:"Descubre vehículos seleccionados y recibe asistencia para la importación y entrega en Europa.",heroBtn:"Ver vehículos",searchTitle:"Buscar un vehículo",searchBtn:"Buscar",carsTitle:"Vehículos disponibles",servicesTitle:"¿Por qué AutoParc Export?",f1t:"Selección en Alemania",f1:"Buscamos vehículos según los criterios de nuestros clientes.",f2t:"Entrega en Europa",f2:"Organizamos la entrega a diferentes países europeos.",f3t:"Asistencia",f3:"Asistencia en los trámites relacionados con la importación.",f4t:"Contacto directo",f4:"Contáctanos por WhatsApp o formulario.",contactTitle:"¿Buscas un vehículo específico?",contactText:"Indícanos marca, modelo, presupuesto y criterios. Buscaremos un vehículo adecuado.",contactBtn:"Contactar por WhatsApp",contactHighlightTitle:'¿Tienes alguna pregunta sobre un vehículo?',contactHighlightText:'Completa el formulario y te responderemos rápidamente.',vehicleKicker:'Vehículo seleccionado en Alemania',available:'Disponible',fromPrice:'Precio',deliveryExtra:'entrega no incluida',askInfo:'Solicitar información',whatsapp:'WhatsApp',equipmentTitle:'Equipamiento',docsTitle:'Documentos y condiciones',galleryNote:'Foto del vehículo — usa las flechas para ver las fotos. Haz clic en la foto para ampliarla.',trustGermany:'Origen Alemania',trustGermanySub:'Selección y revisión del vehículo',trustEurope:'Entrega en Europa',trustEuropeSub:'Asistencia con la importación',trustDocs:'Documentación del vehículo',trustDocsSub:'Documentos disponibles según el vehículo',trustContact:'Contacto directo',trustContactSub:'WhatsApp y formulario de contacto',formTitle:'Solicitud de información',formIntro:'Completa este formulario. Tu solicitud se preparará automáticamente y se enviará a AutoParc Export por WhatsApp.',formName:'Nombre / Apellidos',formCountry:'País',formContact:'Teléfono / WhatsApp',formEmail:'Correo electrónico',formVehicle:'Vehículo buscado',formBudget:'Presupuesto',formMessage:'Tu solicitud',formSubmit:'📲 Enviar mi solicitud por WhatsApp',formDirect:'O abrir WhatsApp directamente',formNote:'Tus datos se utilizan únicamente para responder a tu solicitud comercial. No necesitas una cuenta para enviar el mensaje de WhatsApp.',formNamePh:'Tu nombre',formCountryPh:'Francia',formContactPh:'+33...',formEmailPh:'tu@email.com',formVehiclePh:'Marca y modelo',formBudgetPh:'p. ej. 10.000 €',formMessagePh:'Describe tus criterios: año, kilometraje, combustible, cambio, equipamiento...',maxPrice:"Precio máximo"},
-pt:{carsNav:"Veículos",servicesNav:"Serviços",contactNav:"Contacto",heroTitle:"O seu veículo usado, selecionado na Alemanha.",heroText:"Descubra veículos selecionados e beneficie de acompanhamento na importação e entrega em toda a Europa.",heroBtn:"Ver veículos",searchTitle:"Pesquisar um veículo",searchBtn:"Pesquisar",carsTitle:"Veículos disponíveis",servicesTitle:"Porquê a AutoParc Export?",f1t:"Seleção na Alemanha",f1:"Procuramos veículos de acordo com os critérios dos nossos clientes.",f2t:"Entrega na Europa",f2:"Organizamos a entrega para diferentes países europeus.",f3t:"Acompanhamento",f3:"Acompanhamos os procedimentos relacionados com a importação.",f4t:"Contacto direto",f4:"Contacte-nos diretamente por WhatsApp ou formulário.",contactTitle:"Procura um veículo específico?",contactText:"Indique a marca, o modelo, o orçamento e os seus critérios. Procuraremos um veículo adequado.",contactBtn:"Contactar pelo WhatsApp",contactHighlightTitle:'Tem alguma dúvida sobre um veículo?',contactHighlightText:'Preencha o formulário abaixo e responderemos rapidamente.',vehicleKicker:'Veículo selecionado na Alemanha',available:'Disponível',fromPrice:'Preço',deliveryExtra:'entrega não incluída',askInfo:'Pedir informações',whatsapp:'WhatsApp',equipmentTitle:'Equipamento',docsTitle:'Documentos e condições',galleryNote:'Foto do veículo — use as setas para percorrer as fotos. Clique na foto para ampliar.',trustGermany:'Origem Alemanha',trustGermanySub:'Seleção e verificação do veículo',trustEurope:'Entrega na Europa',trustEuropeSub:'Acompanhamento da importação',trustDocs:'Documentação do veículo',trustDocsSub:'Documentos disponíveis conforme o veículo',trustContact:'Contacto direto',trustContactSub:'WhatsApp e formulário de contacto',formTitle:'Pedido de informações',formIntro:'Preencha este formulário. O seu pedido será preparado automaticamente e enviado à AutoParc Export através do WhatsApp.',formName:'Nome / Apelido',formCountry:'País',formContact:'Telefone / WhatsApp',formEmail:'E-mail',formVehicle:'Veículo pretendido',formBudget:'Orçamento',formMessage:'O seu pedido',formSubmit:'📲 Enviar o meu pedido pelo WhatsApp',formDirect:'Ou abrir o WhatsApp diretamente',formNote:'Os seus dados são utilizados apenas para responder ao seu pedido comercial. Não é necessária uma conta para enviar a mensagem WhatsApp.',formNamePh:'O seu nome',formCountryPh:'França',formContactPh:'+33...',formEmailPh:'voce@email.com',formVehiclePh:'Marca e modelo',formBudgetPh:'ex.: 10 000 €',formMessagePh:'Descreva os seus critérios: ano, quilometragem, combustível, caixa, equipamento...',maxPrice:"Preço máximo"}
+fr:{carsNav:"Véhicules",servicesNav:"Services",contactNav:"Contact",heroTitle:"Votre véhicule d'occasion, sélectionné en Allemagne.",heroText:"Découvrez des véhicules sélectionnés et bénéficiez d'un accompagnement pour l'importation et la livraison en Europe.",heroBtn:"Voir les véhicules",searchTitle:"Rechercher un véhicule",searchBtn:"Rechercher",carsTitle:"Véhicules disponibles",servicesTitle:"Pourquoi AutoParc Export ?",f1t:"Sélection en Allemagne",f1:"Nous recherchons des véhicules correspondant aux critères de nos clients.",f2t:"Livraison en Europe",f2:"Organisation de la livraison vers différents pays européens.",f3t:"Accompagnement",f3:"Accompagnement dans les démarches liées à l'importation.",f4t:"Contact direct",f4:"Contactez-nous directement par WhatsApp ou formulaire.",contactTitle:"Vous recherchez un véhicule précis ?",contactText:"Indiquez-nous la marque, le modèle, le budget et vos critères. Nous pourrons rechercher un véhicule correspondant.",contactBtn:"Nous contacter sur WhatsApp",contactHighlightTitle:'Une question sur un véhicule ?',contactHighlightText:'Remplissez le formulaire ci-dessous et nous vous répondrons rapidement.',vehicleKicker:'Véhicule sélectionné en Allemagne',available:'Disponible',fromPrice:'Prix',deliveryExtra:'hors livraison',askInfo:'Demander des informations',whatsapp:'WhatsApp',equipmentTitle:'Équipements',docsTitle:'Documents & conditions',galleryNote:"Photo du véhicule — utilisez les flèches pour faire défiler les photos. Cliquez sur la photo pour l'agrandir.",trustGermany:'Origine Allemagne',trustGermanySub:'Sélection et contrôle du véhicule',trustEurope:'Livraison Europe',trustEuropeSub:"Accompagnement à l'importation",trustDocs:'Dossier véhicule',trustDocsSub:'Documents disponibles selon le véhicule',trustContact:'Contact direct',trustContactSub:'WhatsApp et formulaire',formTitle:'Demande de renseignements',formIntro:'Remplissez ce formulaire. Votre demande sera préparée automatiquement et envoyée à AutoParc Export via WhatsApp.',formName:'Nom / Prénom',formCountry:'Pays',formContact:'Téléphone / WhatsApp',formEmail:'E-mail',formVehicle:'Véhicule recherché',formBudget:'Budget',formMessage:'Votre demande',formSubmit:'📲 Envoyer ma demande sur WhatsApp',formDirect:'Ou ouvrir WhatsApp directement',formNote:"Vos informations sont utilisées uniquement pour répondre à votre demande commerciale. Aucun compte n'est nécessaire pour envoyer le message WhatsApp.",formNamePh:'Votre nom',formCountryPh:'France',formContactPh:'+33...',formEmailPh:'vous@email.com',formVehiclePh:'Marque et modèle',formBudgetPh:'Ex. 10 000 €',formMessagePh:'Décrivez vos critères : année, kilométrage, carburant, boîte, options...',pageTitle:"AutoParc Export — Véhicules d'occasion",metaDescription:"AutoParc Export — véhicules d'occasion sélectionnés en Allemagne et livraison dans toute l'Europe.",footerTag:"Véhicules d'occasion • Allemagne → Europe",footerLegal:"© 2026 AutoParc Export — Mentions légales à compléter avant mise en production.",maxPrice:"Prix maximum"},
+en:{carsNav:"Vehicles",servicesNav:"Services",contactNav:"Contact",heroTitle:"Your used vehicle, selected in Germany.",heroText:"Discover selected vehicles and benefit from support with import procedures and delivery throughout Europe.",heroBtn:"View vehicles",searchTitle:"Search for a vehicle",searchBtn:"Search",carsTitle:"Available vehicles",servicesTitle:"Why AutoParc Export?",f1t:"Selection in Germany",f1:"We search for vehicles matching our customers' requirements.",f2t:"Delivery in Europe",f2:"We organize delivery to different European countries.",f3t:"Support",f3:"Support with procedures related to vehicle import.",f4t:"Direct contact",f4:"Contact us directly via WhatsApp or the contact form.",contactTitle:"Looking for a specific vehicle?",contactText:"Tell us the make, model, budget and your requirements. We can search for a suitable vehicle.",contactBtn:"Contact us on WhatsApp",contactHighlightTitle:'Questions about a vehicle?',contactHighlightText:'Fill in the form below and we will get back to you quickly.',vehicleKicker:'Vehicle selected in Germany',available:'Available',fromPrice:'Price',deliveryExtra:'delivery not included',askInfo:'Request information',whatsapp:'WhatsApp',equipmentTitle:'Equipment',docsTitle:'Documents & conditions',galleryNote:'Vehicle photos — click a photo to enlarge.',trustGermany:'German origin',trustGermanySub:'Vehicle selection and check',trustEurope:'European delivery',trustEuropeSub:'Import support',trustDocs:'Vehicle file',trustDocsSub:'Documents available depending on the vehicle',trustContact:'Direct contact',trustContactSub:'WhatsApp and contact form',formTitle:'Information request',formIntro:'Fill in this form. Your request will be prepared automatically and sent to AutoParc Export via WhatsApp.',formName:'First / last name',formCountry:'Country',formContact:'Phone / WhatsApp',formEmail:'Email',formVehicle:'Vehicle wanted',formBudget:'Budget',formMessage:'Your request',formSubmit:'📲 Send my request on WhatsApp',formDirect:'Or open WhatsApp directly',formNote:'Your information is used only to respond to your commercial request. No account is required to send the WhatsApp message.',formNamePh:'Your name',formCountryPh:'France',formContactPh:'+33...',formEmailPh:'you@email.com',formVehiclePh:'Make and model',formBudgetPh:'e.g. €10,000',formMessagePh:'Describe your criteria: year, mileage, fuel, gearbox, options...',pageTitle:"AutoParc Export — Used vehicles",metaDescription:"AutoParc Export — used vehicles selected in Germany and delivered throughout Europe.",footerTag:"Used vehicles • Germany → Europe",footerLegal:"© 2026 AutoParc Export — Legal notices to be completed before launch.",maxPrice:"Maximum price"},
+pl:{carsNav:"Samochody",servicesNav:"Usługi",contactNav:"Kontakt",heroTitle:"Twój samochód używany, wybrany w Niemczech.",heroText:"Poznaj wybrane samochody i skorzystaj ze wsparcia przy imporcie oraz dostawie w Europie.",heroBtn:"Zobacz samochody",searchTitle:"Wyszukaj samochód",searchBtn:"Szukaj",carsTitle:"Dostępne samochody",servicesTitle:"Dlaczego AutoParc Export?",f1t:"Wybór w Niemczech",f1:"Szukamy samochodów zgodnych z wymaganiami klientów.",f2t:"Dostawa w Europie",f2:"Organizujemy dostawę do różnych krajów Europy.",f3t:"Wsparcie",f3:"Pomagamy w formalnościach związanych z importem.",f4t:"Bezpośredni kontakt",f4:"Skontaktuj się z nami przez WhatsApp lub formularz.",contactTitle:"Szukasz konkretnego samochodu?",contactText:"Podaj markę, model, budżet i wymagania. Poszukamy odpowiedniego pojazdu.",contactBtn:"Skontaktuj się przez WhatsApp",contactHighlightTitle:'Masz pytanie dotyczące pojazdu?',contactHighlightText:'Wypełnij poniższy formularz, a szybko się z Tobą skontaktujemy.',vehicleKicker:'Pojazd wybrany w Niemczech',available:'Dostępny',fromPrice:'Cena',deliveryExtra:'dostawa nie wliczona',askInfo:'Poproś o informacje',whatsapp:'WhatsApp',equipmentTitle:'Wyposażenie',docsTitle:'Dokumenty i warunki',galleryNote:'Zdjęcie pojazdu — użyj strzałek, aby przeglądać zdjęcia. Kliknij zdjęcie, aby je powiększyć.',trustGermany:'Pochodzenie: Niemcy',trustGermanySub:'Wybór i kontrola pojazdu',trustEurope:'Dostawa w Europie',trustEuropeSub:'Wsparcie przy imporcie',trustDocs:'Dokumentacja pojazdu',trustDocsSub:'Dokumenty dostępne zależnie od pojazdu',trustContact:'Bezpośredni kontakt',trustContactSub:'WhatsApp i formularz kontaktowy',formTitle:'Zapytanie o informacje',formIntro:'Wypełnij formularz. Twoje zapytanie zostanie automatycznie przygotowane i wysłane do AutoParc Export przez WhatsApp.',formName:'Imię / nazwisko',formCountry:'Kraj',formContact:'Telefon / WhatsApp',formEmail:'E-mail',formVehicle:'Poszukiwany pojazd',formBudget:'Budżet',formMessage:'Twoje zapytanie',formSubmit:'📲 Wyślij zapytanie przez WhatsApp',formDirect:'Lub otwórz WhatsApp bezpośrednio',formNote:'Twoje dane są wykorzystywane wyłącznie do odpowiedzi na zapytanie handlowe. Do wysłania wiadomości WhatsApp nie jest potrzebne konto.',formNamePh:'Twoje imię i nazwisko',formCountryPh:'Francja',formContactPh:'+33...',formEmailPh:'ty@email.com',formVehiclePh:'Marka i model',formBudgetPh:'np. 10 000 €',formMessagePh:'Opisz kryteria: rok, przebieg, paliwo, skrzynia, wyposażenie...',pageTitle:"AutoParc Export — Samochody używane",metaDescription:"AutoParc Export — samochody używane wybrane w Niemczech z dostawą w całej Europie.",footerTag:"Samochody używane • Niemcy → Europa",footerLegal:"© 2026 AutoParc Export — Informacje prawne do uzupełnienia przed uruchomieniem.",maxPrice:"Maksymalna cena"},
+it:{carsNav:"Veicoli",servicesNav:"Servizi",contactNav:"Contatti",heroTitle:"La tua auto usata, selezionata in Germania.",heroText:"Scopri veicoli selezionati e ricevi assistenza per importazione e consegna in Europa.",heroBtn:"Vedi i veicoli",searchTitle:"Cerca un veicolo",searchBtn:"Cerca",carsTitle:"Veicoli disponibili",servicesTitle:"Perché AutoParc Export?",f1t:"Selezione in Germania",f1:"Cerchiamo veicoli in base alle esigenze dei nostri clienti.",f2t:"Consegna in Europa",f2:"Organizziamo la consegna in diversi Paesi europei.",f3t:"Assistenza",f3:"Assistenza nelle procedure legate all'importazione.",f4t:"Contatto diretto",f4:"Contattaci direttamente tramite WhatsApp o modulo.",contactTitle:"Cerchi un veicolo specifico?",contactText:"Indicaci marca, modello, budget e criteri. Cercheremo il veicolo adatto.",contactBtn:"Contattaci su WhatsApp",contactHighlightTitle:'Hai una domanda su un veicolo?',contactHighlightText:'Compila il modulo qui sotto e ti risponderemo rapidamente.',vehicleKicker:'Veicolo selezionato in Germania',available:'Disponibile',fromPrice:'Prezzo',deliveryExtra:'consegna esclusa',askInfo:'Richiedi informazioni',whatsapp:'WhatsApp',equipmentTitle:'Equipaggiamento',docsTitle:'Documenti e condizioni',galleryNote:'Foto del veicolo — usa le frecce per scorrere le foto. Clicca sulla foto per ingrandirla.',trustGermany:'Origine Germania',trustGermanySub:'Selezione e controllo del veicolo',trustEurope:'Consegna in Europa',trustEuropeSub:"Assistenza per l'importazione",trustDocs:'Documentazione veicolo',trustDocsSub:'Documenti disponibili in base al veicolo',trustContact:'Contatto diretto',trustContactSub:'WhatsApp e modulo di contatto',formTitle:'Richiesta di informazioni',formIntro:'Compila il modulo. La tua richiesta sarà preparata automaticamente e inviata ad AutoParc Export tramite WhatsApp.',formName:'Nome / Cognome',formCountry:'Paese',formContact:'Telefono / WhatsApp',formEmail:'E-mail',formVehicle:'Veicolo ricercato',formBudget:'Budget',formMessage:'La tua richiesta',formSubmit:'📲 Invia la richiesta su WhatsApp',formDirect:'Oppure apri direttamente WhatsApp',formNote:'I tuoi dati vengono utilizzati esclusivamente per rispondere alla tua richiesta commerciale. Non è necessario un account per inviare il messaggio WhatsApp.',formNamePh:'Il tuo nome',formCountryPh:'Francia',formContactPh:'+33...',formEmailPh:'tu@email.com',formVehiclePh:'Marca e modello',formBudgetPh:'es. 10.000 €',formMessagePh:'Descrivi i tuoi criteri: anno, chilometraggio, carburante, cambio, optional...',pageTitle:"AutoParc Export — Auto usate",metaDescription:"AutoParc Export — auto usate selezionate in Germania con consegna in tutta Europa.",footerTag:"Auto usate • Germania → Europa",footerLegal:"© 2026 AutoParc Export — Note legali da completare prima della messa online.",maxPrice:"Prezzo massimo"},
+es:{carsNav:"Vehículos",servicesNav:"Servicios",contactNav:"Contacto",heroTitle:"Tu vehículo de ocasión, seleccionado en Alemania.",heroText:"Descubre vehículos seleccionados y recibe asistencia para la importación y entrega en Europa.",heroBtn:"Ver vehículos",searchTitle:"Buscar un vehículo",searchBtn:"Buscar",carsTitle:"Vehículos disponibles",servicesTitle:"¿Por qué AutoParc Export?",f1t:"Selección en Alemania",f1:"Buscamos vehículos según los criterios de nuestros clientes.",f2t:"Entrega en Europa",f2:"Organizamos la entrega a diferentes países europeos.",f3t:"Asistencia",f3:"Asistencia en los trámites relacionados con la importación.",f4t:"Contacto directo",f4:"Contáctanos por WhatsApp o formulario.",contactTitle:"¿Buscas un vehículo específico?",contactText:"Indícanos marca, modelo, presupuesto y criterios. Buscaremos un vehículo adecuado.",contactBtn:"Contactar por WhatsApp",contactHighlightTitle:'¿Tienes alguna pregunta sobre un vehículo?',contactHighlightText:'Completa el formulario y te responderemos rápidamente.',vehicleKicker:'Vehículo seleccionado en Alemania',available:'Disponible',fromPrice:'Precio',deliveryExtra:'entrega no incluida',askInfo:'Solicitar información',whatsapp:'WhatsApp',equipmentTitle:'Equipamiento',docsTitle:'Documentos y condiciones',galleryNote:'Foto del vehículo — usa las flechas para ver las fotos. Haz clic en la foto para ampliarla.',trustGermany:'Origen Alemania',trustGermanySub:'Selección y revisión del vehículo',trustEurope:'Entrega en Europa',trustEuropeSub:'Asistencia con la importación',trustDocs:'Documentación del vehículo',trustDocsSub:'Documentos disponibles según el vehículo',trustContact:'Contacto directo',trustContactSub:'WhatsApp y formulario de contacto',formTitle:'Solicitud de información',formIntro:'Completa este formulario. Tu solicitud se preparará automáticamente y se enviará a AutoParc Export por WhatsApp.',formName:'Nombre / Apellidos',formCountry:'País',formContact:'Teléfono / WhatsApp',formEmail:'Correo electrónico',formVehicle:'Vehículo buscado',formBudget:'Presupuesto',formMessage:'Tu solicitud',formSubmit:'📲 Enviar mi solicitud por WhatsApp',formDirect:'O abrir WhatsApp directamente',formNote:'Tus datos se utilizan únicamente para responder a tu solicitud comercial. No necesitas una cuenta para enviar el mensaje de WhatsApp.',formNamePh:'Tu nombre',formCountryPh:'Francia',formContactPh:'+33...',formEmailPh:'tu@email.com',formVehiclePh:'Marca y modelo',formBudgetPh:'p. ej. 10.000 €',formMessagePh:'Describe tus criterios: año, kilometraje, combustible, cambio, equipamiento...',pageTitle:"AutoParc Export — Vehículos de ocasión",metaDescription:"AutoParc Export — vehículos de ocasión seleccionados en Alemania con entrega en toda Europa.",footerTag:"Vehículos de ocasión • Alemania → Europa",footerLegal:"© 2026 AutoParc Export — Aviso legal por completar antes de la puesta en producción.",maxPrice:"Precio máximo"},
+pt:{carsNav:"Veículos",servicesNav:"Serviços",contactNav:"Contacto",heroTitle:"O seu veículo usado, selecionado na Alemanha.",heroText:"Descubra veículos selecionados e beneficie de acompanhamento na importação e entrega em toda a Europa.",heroBtn:"Ver veículos",searchTitle:"Pesquisar um veículo",searchBtn:"Pesquisar",carsTitle:"Veículos disponíveis",servicesTitle:"Porquê a AutoParc Export?",f1t:"Seleção na Alemanha",f1:"Procuramos veículos de acordo com os critérios dos nossos clientes.",f2t:"Entrega na Europa",f2:"Organizamos a entrega para diferentes países europeus.",f3t:"Acompanhamento",f3:"Acompanhamos os procedimentos relacionados com a importação.",f4t:"Contacto direto",f4:"Contacte-nos diretamente por WhatsApp ou formulário.",contactTitle:"Procura um veículo específico?",contactText:"Indique a marca, o modelo, o orçamento e os seus critérios. Procuraremos um veículo adequado.",contactBtn:"Contactar pelo WhatsApp",contactHighlightTitle:'Tem alguma dúvida sobre um veículo?',contactHighlightText:'Preencha o formulário abaixo e responderemos rapidamente.',vehicleKicker:'Veículo selecionado na Alemanha',available:'Disponível',fromPrice:'Preço',deliveryExtra:'entrega não incluída',askInfo:'Pedir informações',whatsapp:'WhatsApp',equipmentTitle:'Equipamento',docsTitle:'Documentos e condições',galleryNote:'Foto do veículo — use as setas para percorrer as fotos. Clique na foto para ampliar.',trustGermany:'Origem Alemanha',trustGermanySub:'Seleção e verificação do veículo',trustEurope:'Entrega na Europa',trustEuropeSub:'Acompanhamento da importação',trustDocs:'Documentação do veículo',trustDocsSub:'Documentos disponíveis conforme o veículo',trustContact:'Contacto direto',trustContactSub:'WhatsApp e formulário de contacto',formTitle:'Pedido de informações',formIntro:'Preencha este formulário. O seu pedido será preparado automaticamente e enviado à AutoParc Export através do WhatsApp.',formName:'Nome / Apelido',formCountry:'País',formContact:'Telefone / WhatsApp',formEmail:'E-mail',formVehicle:'Veículo pretendido',formBudget:'Orçamento',formMessage:'O seu pedido',formSubmit:'📲 Enviar o meu pedido pelo WhatsApp',formDirect:'Ou abrir o WhatsApp diretamente',formNote:'Os seus dados são utilizados apenas para responder ao seu pedido comercial. Não é necessária uma conta para enviar a mensagem WhatsApp.',formNamePh:'O seu nome',formCountryPh:'França',formContactPh:'+33...',formEmailPh:'voce@email.com',formVehiclePh:'Marca e modelo',formBudgetPh:'ex.: 10 000 €',formMessagePh:'Descreva os seus critérios: ano, quilometragem, combustível, caixa, equipamento...',pageTitle:"AutoParc Export — Veículos usados",metaDescription:"AutoParc Export — veículos usados selecionados na Alemanha com entrega em toda a Europa.",footerTag:"Veículos usados • Alemanha → Europa",footerLegal:"© 2026 AutoParc Export — Aviso legal a completar antes da entrada em produção.",maxPrice:"Preço máximo"}
 };
 const vehicleTranslations={
 fr:{available:"Disponible",photoNote:"Photo du véhicule — utilisez les flèches pour faire défiler les photos. Cliquez sur la photo pour l'agrandir.",request:"Demander des informations",equipment:"Équipements",premium:"Équipements Premium",docs:"Documents & conditions",fuel:{gas:"Essence",diesel:"Diesel"},gear:{manual:"Boîte manuelle",auto:"Boîte automatique"},origin:"Véhicule importé d'Allemagne",delivery:"Livraison possible dans toute l'Europe",docs1:["Carte grise","Certificat de conformité","Contrôle technique","Carnet d'entretien"],docs2:["Factures d'entretien","Certificat de kilométrage","Rapport de condition disponible","Documents disponibles selon le véhicule"],finance:"Financement possible avec apport minimum de 20 %, selon conditions applicables.",discount:"Remise de 15 % pour achat comptant à la commande, selon conditions."},
@@ -482,56 +295,106 @@ function sendContactForm(e){
   const text='AutoParc Export — Demande de renseignements\n\n'+l.map((x,i)=>x+': '+vals[i]).join('\n');
   window.open('https://wa.me/33780770163?text='+encodeURIComponent(text),'_blank');
 }
-function applyLanguage(lang){
- const x=t[lang]||t.en, v=vehicleTranslations[lang]||vehicleTranslations.en, vt=vehicleTexts[lang]||vehicleTexts.en;
- const valueTranslations={
- fr:{"Gris":"Gris","Cuir partiel":"Cuir partiel","Excellent état":"Excellent état","Jusqu'en août 2027":"Jusqu'en août 2027", "Jusqu'en juin 2027":"Jusqu'en juin 2027","Traction avant":"Traction avant","Bleu métallisé":"Bleu métallisé","Jusqu'au 26/06/2027":"Jusqu'au 26/06/2027","Véhicules d'occasion • Allemagne → Europe":"Véhicules d'occasion • Allemagne → Europe","Mentions légales à compléter avant mise en production.":"Mentions légales à compléter avant mise en production.","Sélection en Allemagne":"Sélection en Allemagne","Livraison en Europe":"Livraison en Europe"},
- en:{"Gris":"Grey","Cuir partiel":"Part-leather","Excellent état":"Excellent condition","Jusqu'en août 2027":"Until August 2027","Traction avant":"Front-wheel drive","Bleu métallisé":"Metallic blue","Jusqu'au 26/06/2027":"Until 26/06/2027","Véhicules d'occasion • Allemagne → Europe":"Used vehicles • Germany → Europe","Mentions légales à compléter avant mise en production.":"Legal notices to be completed before launch.","Sélection en Allemagne":"Selection in Germany","Livraison en Europe":"Delivery in Europe"},
- pl:{"Gris":"Szary","Cuir partiel":"Częściowa skóra","Excellent état":"Bardzo dobry stan","Jusqu'en août 2027":"Do sierpnia 2027","Traction avant":"Napęd na przednie koła","Bleu métallisé":"Niebieski metalizowany","Jusqu'au 26/06/2027":"Do 26.06.2027","Véhicules d'occasion • Allemagne → Europe":"Samochody używane • Niemcy → Europa","Mentions légales à compléter avant mise en production.":"Informacje prawne do uzupełnienia przed uruchomieniem.","Sélection en Allemagne":"Wybór w Niemczech","Livraison en Europe":"Dostawa w Europie"},
- it:{"Gris":"Grigio","Cuir partiel":"Pelle parziale","Excellent état":"Ottime condizioni","Jusqu'en août 2027":"Fino ad agosto 2027","Traction avant":"Trazione anteriore","Bleu métallisé":"Blu metallizzato","Jusqu'au 26/06/2027":"Fino al 26/06/2027","Véhicules d'occasion • Allemagne → Europe":"Auto usate • Germania → Europa","Mentions légales à compléter avant mise en production.":"Note legali da completare prima della messa online.","Sélection en Allemagne":"Selezione in Germania","Livraison en Europe":"Consegna in Europa"},
- es:{"Gris":"Gris","Cuir partiel":"Cuero parcial","Excellent état":"Excelente estado","Jusqu'en août 2027":"Hasta agosto de 2027","Traction avant":"Tracción delantera","Bleu métallisé":"Azul metalizado","Jusqu'au 26/06/2027":"Hasta el 26/06/2027","Véhicules d'occasion • Allemagne → Europe":"Vehículos de ocasión • Alemania → Europa","Mentions légales à compléter avant mise en production.":"Aviso legal por completar antes de la puesta en producción.","Sélection en Allemagne":"Selección en Alemania","Livraison en Europe":"Entrega en Europa"},
- pt:{"Gris":"Cinzento","Cuir partiel":"Couro parcial","Excellent état":"Excelente estado","Jusqu'en août 2027":"Até agosto de 2027","Traction avant":"Tração dianteira","Bleu métallisé":"Azul metalizado","Jusqu'au 26/06/2027":"Até 26/06/2027","Véhicules d'occasion • Allemagne → Europe":"Veículos usados • Alemanha → Europa","Mentions légales à compléter avant mise en production.":"Aviso legal a completar antes da entrada em produção.","Sélection en Allemagne":"Seleção na Alemanha","Livraison en Europe":"Entrega na Europa"}
- };
- const vm=valueTranslations[lang]||valueTranslations.en;
- document.querySelectorAll("body *").forEach(el=>{
-   if(el.children.length===0){
-     const txt=el.textContent.trim();
-     if(vm[txt]) el.textContent=vm[txt];
-   }
- });
- const footer=document.querySelector("footer");
- if(footer){
-   const p=footer.querySelector("p"); if(p&&vm["Véhicules d'occasion • Allemagne → Europe"]) p.textContent=vm["Véhicules d'occasion • Allemagne → Europe"];
-   const sm=footer.querySelector("small"); if(sm&&vm["Mentions légales à compléter avant mise en production."]) sm.textContent="© 2026 AutoParc Export — "+vm["Mentions légales à compléter avant mise en production."];
- }
 
- document.documentElement.lang=lang;
- document.querySelectorAll("[data-i18n]").forEach(el=>{if(x[el.dataset.i18n]) el.textContent=x[el.dataset.i18n]});
- const priceSelect=document.querySelector('.search select'); if(priceSelect&&priceSelect.options[0]) priceSelect.options[0].textContent=x.maxPrice;
- const blocks=document.querySelectorAll('.vehicle-block');
- blocks.forEach((b,i)=>{
-   const badge=b.querySelector('.badge'); if(badge) badge.textContent=v.available;
-   const note=b.querySelector('.gallery-note'); if(note) note.textContent=v.photoNote;
-   const btn=b.querySelector('.car-info .btn'); if(btn) btn.textContent=v.request;
-   const hs=b.querySelectorAll('.equipment h3'); if(hs.length){hs[0].textContent=i===1?v.premium:v.equipment;if(hs[1])hs[1].textContent=v.docs;}
-   const specs=b.querySelectorAll('.spec strong');
-   const labels=i===0?['power','engine','trans','color','interior','places','eu','state']:i===1?['power','engine','trans','color','interior','owners','places','eu']:['power','engine','trans','color','interior','places','trunk','eu'];
-   const specMap={power:lang==='en'?'Power':lang==='pl'?'Moc':lang==='it'?'Potenza':lang==='es'?'Potencia':lang==='pt'?'Potência':'Puissance',engine:lang==='en'?'Engine':lang==='pl'?'Silnik':lang==='it'?'Motore':lang==='es'?'Motor':lang==='pt'?'Motor':'Moteur',trans:lang==='en'?'Transmission':lang==='pl'?'Napęd':lang==='it'?'Trasmissione':lang==='es'?'Transmisión':lang==='pt'?'Transmissão':'Transmission',color:lang==='en'?'Color':lang==='pl'?'Kolor':lang==='it'?'Colore':lang==='es'?'Color':lang==='pt'?'Cor':'Couleur',interior:lang==='en'?'Interior':lang==='pl'?'Wnętrze':lang==='it'?'Interni':lang==='es'?'Interior':lang==='pt'?'Interior':'Intérieur',places:lang==='en'?'Seats / doors':lang==='pl'?'Miejsca / drzwi':lang==='it'?'Posti / porte':lang==='es'?'Plazas / puertas':lang==='pt'?'Lugares / portas':'Places / portes',eu:lang==='en'?'EU approval':lang==='pl'?'Homologacja UE':lang==='it'?'Omologazione UE':lang==='es'?'Homologación UE':lang==='pt'?'Homologação UE':'Homologation UE',state:lang==='en'?'Condition':lang==='pl'?'Stan':lang==='it'?'Stato':lang==='es'?'Estado':lang==='pt'?'Estado':'État',owners:lang==='en'?'Owners':lang==='pl'?'Właściciele':lang==='it'?'Proprietari':lang==='es'?'Propietarios':lang==='pt'?'Proprietários':'Propriétaires',trunk:lang==='en'?'Boot':lang==='pl'?'Bagażnik':lang==='it'?'Bagagliaio':lang==='es'?'Maletero':lang==='pt'?'Bagageira':'Coffre'};
-   specs.forEach((el,j)=>{if(labels[j])el.textContent=specMap[labels[j]]});
-   const muted=b.querySelector('.car-info .muted'); if(muted){const fuel=i===1?v.fuel.diesel:v.fuel.gas;const gear=i===0?v.gear.manual:v.gear.auto;muted.textContent=(i===0?'2015 • 152 000 km':i===1?'2016 • 171 000 km':'2018 • 71 000 km')+' • '+fuel+' • '+gear;}
-   const desc=b.querySelector('.car-info p[style*="line-height"]'); if(desc)desc.textContent=i===1?vt.tucDesc:vt.i30Desc;
-   const eq=b.querySelectorAll('.equipment .equipment-grid'); if(eq[0])eq[0].innerHTML=translatedEquip(lang,i).map(h=>'<div>'+h+'</div>').join('');
-   if(eq[1])eq[1].innerHTML=docsHTML(lang,v);
- });
- localStorage.setItem('autoparc-lang',lang);
- updatePlaceholders(lang);
- applyInlineUi(lang);
+/* AutoParc Export V26 — catalogue facile à modifier */
+const galleryState={};
+const galleryData={};
+function esc(s){return String(s??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+function valueText(v,key,lang){
+  const x=v[key];
+  if(x && typeof x==='object') return x[lang]||x.fr||Object.values(x)[0]||'';
+  return x??'';
 }
-
+const standardVehicleTerms={
+  fr:{Essence:'Essence',Diesel:'Diesel',Électricité:'Électricité','Boîte manuelle':'Boîte manuelle','Boîte automatique':'Boîte automatique','Traction avant':'Traction avant','4x4':'4x4',Gris:'Gris','Blanc':'Blanc','Bleu métallisé':'Bleu métallisé','Cuir':'Cuir','Cuir partiel':'Cuir partiel','Excellent état':'Excellent état','Intérieur sport':'Intérieur sport'},
+  en:{Essence:'Petrol',Diesel:'Diesel','Électricité':'Electric','Boîte manuelle':'Manual transmission','Boîte automatique':'Automatic transmission','Traction avant':'Front-wheel drive','4x4':'4x4',Gris:'Grey',Blanc:'White','Bleu métallisé':'Metallic blue','Cuir':'Leather','Cuir partiel':'Part-leather','Excellent état':'Excellent condition','Intérieur sport':'Sport interior'},
+  pl:{Essence:'Benzyna',Diesel:'Diesel','Électricité':'Elektryczny','Boîte manuelle':'Skrzynia manualna','Boîte automatique':'Skrzynia automatyczna','Traction avant':'Napęd na przednie koła','4x4':'4x4',Gris:'Szary',Blanc:'Biały','Bleu métallisé':'Niebieski metalizowany','Cuir':'Skóra','Cuir partiel':'Częściowa skóra','Excellent état':'Bardzo dobry stan','Intérieur sport':'Sportowe wnętrze'},
+  it:{Essence:'Benzina',Diesel:'Diesel','Électricité':'Elettrico','Boîte manuelle':'Cambio manuale','Boîte automatique':'Cambio automatico','Traction avant':'Trazione anteriore','4x4':'4x4',Gris:'Grigio',Blanc:'Bianco','Bleu métallisé':'Blu metallizzato','Cuir':'Pelle','Cuir partiel':'Pelle parziale','Excellent état':'Ottime condizioni','Intérieur sport':'Interni sportivi'},
+  es:{Essence:'Gasolina',Diesel:'Diésel','Électricité':'Eléctrico','Boîte manuelle':'Cambio manual','Boîte automatique':'Cambio automático','Traction avant':'Tracción delantera','4x4':'4x4',Gris:'Gris',Blanc:'Blanco','Bleu métallisé':'Azul metalizado','Cuir':'Cuero','Cuir partiel':'Cuero parcial','Excellent état':'Excelente estado','Intérieur sport':'Interior deportivo'},
+  pt:{Essence:'Gasolina',Diesel:'Diesel','Électricité':'Elétrico','Boîte manuelle':'Caixa manual','Boîte automatique':'Caixa automática','Traction avant':'Tração dianteira','4x4':'4x4',Gris:'Cinzento',Blanc:'Branco','Bleu métallisé':'Azul metalizado','Cuir':'Couro','Cuir partiel':'Couro parcial','Excellent état':'Excelente estado','Intérieur sport':'Interior desportivo'}
+};
+const equipmentTermMap={
+'Finition AMG':['AMG trim','Pakiet AMG','Allestimento AMG','Acabado AMG','Acabamento AMG'],'Caméra de recul':['Rear-view camera','Kamera cofania','Telecamera posteriore','Cámara de marcha atrás','Câmara traseira'],'Radars avant & arrière':['Front & rear parking sensors','Czujniki parkowania przód i tył','Sensori di parcheggio anteriori e posteriori','Sensores de aparcamiento delanteros y traseros','Sensores de estacionamento dianteiros e traseiros'],'Régulateur de vitesse':['Cruise control','Tempomat','Cruise control','Control de crucero','Cruise control'],'Système multimédia':['Multimedia system','System multimedialny','Sistema multimediale','Sistema multimedia','Sistema multimédia'],'Radio DAB+':['DAB+ radio','Radio DAB+','Radio DAB+','Radio DAB+','Rádio DAB+'],'Navigation':['Navigation','Nawigacja','Navigazione','Navegación','Navegação'],'Climatisation automatique 2 zones':['Dual-zone automatic climate control','Automatyczna klimatyzacja 2-strefowa','Climatizzatore automatico bizona','Climatizador automático de 2 zonas','Climatização automática de 2 zonas'],'Sièges avant chauffants':['Heated front seats','Podgrzewane fotele przednie','Sedili anteriori riscaldabili','Asientos delanteros calefactados','Bancos dianteiros aquecidos'],'Volant multifonction':['Multifunction steering wheel','Wielofunkcyjna kierownica','Volante multifunzione','Volante multifunción','Volante multifunções'],'Phares Xénon':['Xenon headlights','Reflektory ksenonowe','Fari allo xeno','Faros de xenón','Faróis de xénon'],'Feux de jour LED':['LED daytime running lights','Światła dzienne LED','Luci diurne LED','Luces diurnas LED','Luzes diurnas LED'],'Capteur de pluie':['Rain sensor','Czujnik deszczu','Sensore pioggia','Sensor de lluvia','Sensor de chuva'],'Vitres électriques':['Electric windows','Elektryczne szyby','Alzacristalli elettrici','Elevalunas eléctricos','Vidros elétricos'],'Rétroviseurs électriques rabattables':['Electrically folding mirrors','Elektrycznie składane lusterka','Specchietti elettrici ripiegabili','Retrovisores eléctricos plegables','Retrovisores elétricos rebatíveis'],'Intérieur sport':['Sport interior','Sportowe wnętrze','Interni sportivi','Interior deportivo','Interior desportivo'],'Isofix':['Isofix','Isofix','Isofix','Isofix','Isofix'],'Jantes aluminium':['Alloy wheels','Felgi aluminiowe','Cerchi in alluminio','Llantas de aluminio','Jantes de alumínio'],'Pneus été et hiver sur jantes':['Summer and winter tyres on rims','Opony letnie i zimowe na felgach','Pneumatici estivi e invernali su cerchi','Neumáticos de verano e invierno en llantas','Pneus de verão e inverno em jantes'],
+'Bluetooth':['Bluetooth','Bluetooth','Bluetooth','Bluetooth','Bluetooth'],'USB / AUX':['USB / AUX','USB / AUX','USB / AUX','USB / AUX','USB / AUX'],'Édition Premium':['Premium edition','Edycja Premium','Allestimento Premium','Edición Premium','Edição Premium'],'Boîte automatique':['Automatic transmission','Skrzynia automatyczna','Cambio automatico','Cambio automático','Caixa automática'],'Transmission 4x4':['4x4 all-wheel drive','Napęd 4x4','Trazione integrale 4x4','Tracción integral 4x4','Tração integral 4x4'],'Intérieur cuir':['Leather interior','Skórzane wnętrze','Interni in pelle','Interior de cuero','Interior em couro'],'Toit panoramique':['Panoramic roof','Panoramiczny dach','Tetto panoramico','Techo panorámico','Teto panorâmico'],'Sièges arrière chauffants':['Heated rear seats','Podgrzewane tylne fotele','Sedili posteriori riscaldabili','Asientos traseros calefactados','Bancos traseiros aquecidos'],'Sièges avant ventilés':['Ventilated front seats','Wentylowane fotele przednie','Sedili anteriori ventilati','Asientos delanteros ventilados','Bancos dianteiros ventilados'],'Volant chauffant':['Heated steering wheel','Podgrzewana kierownica','Volante riscaldato','Volante calefactable','Volante aquecido'],'Avertisseur d’angle mort':['Blind-spot warning','Ostrzeżenie o martwym polu','Avviso angolo cieco','Alerta de ángulo muerto','Aviso de ângulo morto'],'Navigation GPS':['GPS navigation','Nawigacja GPS','Navigazione GPS','Navegación GPS','Navegação GPS'],'Démarrage sans clé':['Keyless start','Uruchamianie bez kluczyka','Avviamento senza chiave','Arranque sin llave','Arranque sem chave'],'Hayon électrique':['Power tailgate','Elektryczna klapa bagażnika','Portellone elettrico','Portón trasero eléctrico','Portão traseiro elétrico'],'Phares antibrouillard':['Fog lights','Światła przeciwmgielne','Fendinebbia','Faros antiniebla','Faróis de nevoeiro'],'ABS & contrôle de stabilité':['ABS & stability control','ABS i kontrola stabilności','ABS e controllo della stabilità','ABS y control de estabilidad','ABS e controlo de estabilidade']};
+Object.assign(equipmentTermMap,{
+'Apple CarPlay / Android Auto':['Apple CarPlay / Android Auto','Apple CarPlay / Android Auto','Apple CarPlay / Android Auto','Apple CarPlay / Android Auto','Apple CarPlay / Android Auto'],
+'Bluetooth – téléphone & musique':['Bluetooth – phone & music','Bluetooth – telefon i muzyka','Bluetooth – telefono e musica','Bluetooth – teléfono y música','Bluetooth – telefone e música'],
+'Sièges partiellement en cuir':['Part-leather seats','Fotele częściowo skórzane','Sedili parzialmente in pelle','Asientos parcialmente de cuero','Bancos parcialmente em couro'],
+'Siège conducteur électrique avec mémoire':["Electric driver's seat with memory",'Elektryczny fotel kierowcy z pamięcią','Sedile conducente elettrico con memoria','Asiento del conductor eléctrico con memoria','Banco do condutor elétrico com memória'],
+'Démarrage sans clé':['Keyless start','Uruchamianie bez kluczyka','Avviamento senza chiave','Arranque sin llave','Arranque sem chave'],
+'Verrouillage sans clé':['Keyless locking','Bezkluczykowe zamykanie','Chiusura senza chiave','Cierre sin llave','Fecho sem chave'],
+'Régulateur de vitesse adaptatif':['Adaptive cruise control','Adaptacyjny tempomat','Cruise control adattivo','Control de crucero adaptativo','Cruise control adaptativo'],
+'Reconnaissance des panneaux':['Traffic sign recognition','Rozpoznawanie znaków drogowych','Riconoscimento dei segnali stradali','Reconocimiento de señales de tráfico','Reconhecimento de sinais de trânsito'],
+'Capteurs de stationnement avant & arrière':['Front & rear parking sensors','Czujniki parkowania przód i tył','Sensori di parcheggio anteriori e posteriori','Sensores de aparcamiento delanteros y traseros','Sensores de estacionamento dianteiros e traseiros'],
+'Assistance aux feux de route':['High-beam assist','Asystent świateł drogowych','Assistente abbaglianti','Asistente de luces largas','Assistência aos máximos'],
+'Assistance au maintien dans la voie':['Lane keep assist','Asystent utrzymania pasa ruchu','Assistente al mantenimento della corsia','Asistente de mantenimiento de carril','Assistente de manutenção na faixa'],
+'Pneus été sur jantes aluminium':['Summer tyres on alloy wheels','Opony letnie na felgach aluminiowych','Pneumatici estivi su cerchi in lega','Neumáticos de verano en llantas de aleación','Pneus de verão em jantes de liga leve'],
+'Pneus hiver sur jantes aluminium':['Winter tyres on alloy wheels','Opony zimowe na felgach aluminiowych','Pneumatici invernali su cerchi in lega','Neumáticos de invierno en llantas de aleación','Pneus de inverno em jantes de liga leve'],
+'Jantes alliage':['Alloy wheels','Felgi aluminiowe','Cerchi in lega','Llantas de aleación','Jantes de liga leve'],
+'Volant multifonction':['Multifunction steering wheel','Wielofunkcyjna kierownica','Volante multifunzione','Volante multifunción','Volante multifunções'],
+'ABS & contrôle de stabilité':['ABS & stability control','ABS i kontrola stabilności','ABS e controllo della stabilità','ABS y control de estabilidad','ABS e controlo de estabilidade'],
+'Phares antibrouillard':['Fog lights','Światła przeciwmgielne','Fendinebbia','Faros antiniebla','Faróis de nevoeiro'],
+'Hayon électrique':['Power tailgate','Elektryczna klapa bagażnika','Portellone elettrico','Portón trasero eléctrico','Portão traseiro elétrico'],
+'Régulateur de vitesse':['Cruise control','Tempomat','Cruise control','Control de crucero','Cruise control'],
+'Climatisation automatique 2 zones':['Dual-zone automatic climate control','Automatyczna klimatyzacja 2-strefowa','Climatizzatore automatico bizona','Climatizador automático de 2 zonas','Climatização automática de 2 zonas'],
+'Feux de jour LED':['LED daytime running lights','Światła dzienne LED','Luci diurne LED','Luces diurnas LED','Luzes diurnas LED'],
+'Vitres électriques':['Electric windows','Elektryczne szyby','Alzacristalli elettrici','Elevalunas eléctricos','Vidros elétricos'],
+'Rétroviseurs électriques':['Electric mirrors','Elektryczne lusterka','Specchietti elettrici','Retrovisores eléctricos','Retrovisores elétricos'],
+'Jantes aluminium':['Alloy wheels','Felgi aluminiowe','Cerchi in lega','Llantas de aleación','Jantes de liga leve'],
+'Caméra de recul':['Rear-view camera','Kamera cofania','Telecamera posteriore','Cámara de marcha atrás','Câmara traseira'],
+'Navigation GPS':['GPS navigation','Nawigacja GPS','Navigazione GPS','Navegación GPS','Navegação GPS'],
+'Sièges avant chauffants':['Heated front seats','Podgrzewane fotele przednie','Sedili anteriori riscaldabili','Asientos delanteros calefactados','Bancos dianteiros aquecidos'],
+'Volant chauffant':['Heated steering wheel','Podgrzewana kierownica','Volante riscaldato','Volante calefactable','Volante aquecido'],
+'Intérieur cuir':['Leather interior','Skórzane wnętrze','Interni in pelle','Interior de cuero','Interior em couro'],
+'Toit panoramique':['Panoramic roof','Panoramiczny dach','Tetto panoramico','Techo panorámico','Teto panorâmico'],
+'Sièges arrière chauffants':['Heated rear seats','Podgrzewane tylne fotele','Sedili posteriori riscaldabili','Asientos traseros calefactados','Bancos traseiros aquecidos'],
+'Sièges avant ventilés':['Ventilated front seats','Wentylowane fotele przednie','Sedili anteriori ventilati','Asientos delanteros ventilados','Bancos dianteiros ventilados'],
+'Avertisseur d’angle mort':['Blind-spot warning','Ostrzeżenie o martwym polu','Avviso angolo cieco','Alerta de ángulo muerto','Aviso de ângulo morto'],
+'Navigation':['Navigation','Nawigacja','Navigazione','Navegación','Navegação'],
+'DAB+ radio':['DAB+ radio','Radio DAB+','Radio DAB+','Radio DAB+','Rádio DAB+']
+});
+function translateEquipmentItem(s,lang){let clean=s.replace(/^✓\s*/,'').trim(); if(lang==='fr')return '✓ '+clean; const a=equipmentTermMap[clean]; return '✓ '+(a?(a[{en:0,pl:1,it:2,es:3,pt:4}[lang]??0]):clean);}
+function genericEquip(v,lang){return (v.equipment||[]).map(x=>translateEquipmentItem(x,lang));}
+function makeDocs(lang){const v=vehicleTranslations[lang]||vehicleTranslations.en;return [`<div>${v.docs1.map(x=>'✓ '+x).join('<br>')}</div>`,`<div>${v.docs2.map(x=>'✓ '+x).join('<br>')}</div>`,`<div>🇩🇪 ${v.origin}<br>🇪🇺 ${v.delivery}</div>`,`<div>💳 ${v.finance}<br>💰 ${v.discount}</div>`];}
+function localPower(v,lang){
+ const raw=String(v||'');
+ if(lang==='fr')return raw;
+ const m=raw.match(/^([0-9.,]+)\s*ch$/i); if(!m)return raw;
+ return m[1]+' '+({en:'hp',pl:'KM',it:'CV',es:'CV',pt:'cv'}[lang]||'hp');
+}
+function renderVehicles(lang){
+ const root=document.getElementById('vehicleList'); if(!root)return; root.innerHTML='';
+ Object.keys(galleryData).forEach(k=>delete galleryData[k]); Object.keys(galleryState).forEach(k=>delete galleryState[k]);
+ const tr=vehicleTranslations[lang]||vehicleTranslations.en;
+ autoparcVehicles.forEach((v,i)=>{
+  const gid=v.id+'Gallery'; galleryData[gid]=v.photos||[]; galleryState[gid]=0;
+  const fuel=valueText(v,'fuel',lang), gear=valueText(v,'gear',lang), trans=valueText(v,'transmission',lang), color=valueText(v,'color',lang), interior=valueText(v,'interior',lang), condition=valueText(v,'condition',lang);
+  const specs=[['Puissance',localPower(v.power,lang),'power'],['Moteur',v.engine,'engine'],['Transmission',trans,'trans'],['Couleur',color,'color'],['Intérieur',interior,'interior']];
+  if(v.owners)specs.push(['Propriétaires',v.owners,'owners']); specs.push(['Places / portes',`${v.seats} / ${v.doors}`,'places']); if(v.trunk)specs.push(['Coffre',v.trunk,'trunk']); specs.push(['Homologation UE',valueText(v,'eu',lang),'eu']); if(v.condition)specs.push(['État',condition,'state']);
+  const labelMap={power:{fr:'Puissance',en:'Power',pl:'Moc',it:'Potenza',es:'Potencia',pt:'Potência'},engine:{fr:'Moteur',en:'Engine',pl:'Silnik',it:'Motore',es:'Motor',pt:'Motor'},trans:{fr:'Transmission',en:'Transmission',pl:'Napęd',it:'Trasmissione',es:'Transmisión',pt:'Transmissão'},color:{fr:'Couleur',en:'Color',pl:'Kolor',it:'Colore',es:'Color',pt:'Cor'},interior:{fr:'Intérieur',en:'Interior',pl:'Wnętrze',it:'Interni',es:'Interior',pt:'Interior'},owners:{fr:'Propriétaires',en:'Owners',pl:'Właściciele',it:'Proprietari',es:'Propietarios',pt:'Proprietários'},places:{fr:'Places / portes',en:'Seats / doors',pl:'Miejsca / drzwi',it:'Posti / porte',es:'Plazas / puertas',pt:'Lugares / portas'},trunk:{fr:'Coffre',en:'Boot',pl:'Bagażnik',it:'Bagagliaio',es:'Maletero',pt:'Bagageira'},eu:{fr:'Homologation UE',en:'EU approval',pl:'Homologacja UE',it:'Omologazione UE',es:'Homologación UE',pt:'Homologação UE'},state:{fr:'État',en:'Condition',pl:'Stan',it:'Stato',es:'Estado',pt:'Estado'}};
+  const eq=v.equipmentByLang&&v.equipmentByLang[lang]?v.equipmentByLang[lang]:genericEquip(v,lang); const desc=valueText(v,'description',lang); const title=valueText(v,'name',lang);
+  const article=document.createElement('article'); article.className='vehicle-block'; article.innerHTML=`<div class="car-main"><div><div class="vehicle-gallery" id="${gid}"><button class="gallery-arrow prev" type="button" aria-label="${lang==='fr'?'Photo précédente':'Previous photo'}" onclick="changeGallery('${gid}',-1)">‹</button><img class="gallery-main" src="" alt="Vehicle photo" onclick="openGalleryLightbox('${gid}')"><button class="gallery-arrow next" type="button" aria-label="${lang==='fr'?'Photo suivante':'Next photo'}" onclick="changeGallery('${gid}',1)">›</button><div class="gallery-counter"><span class="gallery-current">1</span> / <span class="gallery-total">${(v.photos||[]).length}</span></div></div><p class="gallery-note">${esc(tr.photoNote)}</p><div class="equipment"><h3>${esc(v.premium?tr.premium:tr.equipment)}</h3><div class="equipment-grid">${eq.map(x=>'<div>'+x+'</div>').join('')}</div></div><div class="equipment"><h3>${esc(tr.docs)}</h3><div class="equipment-grid">${makeDocs(lang).join('')}</div></div></div><div class="car-info"><div class="vehicle-top"><div><div class="vehicle-kicker">${esc(tr.vehicleKicker)}</div><div class="badge">${esc(tr.available)}</div><h1 class="vehicle-title">${esc(title)}</h1><p class="vehicle-subtitle">${esc(v.year)} • ${esc(v.km)} • ${esc(fuel)} • ${esc(gear)}</p></div><div class="vehicle-pricebox"><small>${esc(tr.fromPrice)}</small><p class="price">${esc(v.price)}</p><small>${esc(tr.deliveryExtra)}</small></div></div><div class="specs">${specs.map(([l,val,key])=>`<div class="spec"><strong>${esc(labelMap[key]?.[lang]||l)}</strong><br>${esc(val)}</div>`).join('')}</div><p class="muted vehicle-description" style="line-height:1.6">${esc(desc)}</p><div class="vehicle-actions"><a class="btn" href="#contact" onclick="selectVehicleForContact('${String(title).replace(/'/g,"\\'")}')">${esc(tr.request)}</a><a class="btn secondary" href="https://wa.me/33780770163" target="_blank">${esc(tr.whatsapp)}</a></div><div class="vehicle-contact-form"><h3>📞 <span>${esc(t[lang]?.vehicleFormTitle||'Interested in this vehicle?')}</span></h3><p class="form-intro">${esc(t[lang]?.vehicleFormIntro||'Fill in this form to contact us directly about this vehicle.')}</p><form class="inline-contact-form" onsubmit="sendInlineWhatsApp(event)"><input name="vehicle" type="hidden" value="${esc(title)}"><div class="inline-form-grid"><input name="name" placeholder="${esc(t[lang]?.formNamePh||'Your name')}" required><input name="country" placeholder="${esc(t[lang]?.formCountryPh||'France')}" required><input name="phone" placeholder="${esc(t[lang]?.formContactPh||'+33...')}" required><input name="email" type="email" placeholder="${esc(t[lang]?.formEmailPh||'you@email.com')}"><input name="budget" placeholder="${esc(t[lang]?.formBudgetPh||'e.g. €10,000')}"><textarea name="message" placeholder="${esc(t[lang]?.inlineMessagePh||'Your request or questions...')}"></textarea></div><div class="inline-form-actions"><button class="btn whatsapp-form" type="submit">${esc(t[lang]?.inlineWhatsApp||'💬 Send by WhatsApp')}</button><button class="btn email-form" type="button" onclick="sendInlineEmail(this)">${esc(t[lang]?.inlineEmail||'📧 Prepare an email')}</button></div><p class="form-small-note">${esc(t[lang]?.inlineEmailNote||'The email option opens your email app with the request already prepared. Simply enter the recipient.')}</p></form></div></div></div><div class="trust-row"><div class="trust-item">🇩🇪 <strong>${esc(t[lang]?.trustGermany||'German origin')}</strong><span>${esc(t[lang]?.trustGermanySub||'Vehicle selection and check')}</span></div><div class="trust-item">🇪🇺 <strong>${esc(t[lang]?.trustEurope||'European delivery')}</strong><span>${esc(t[lang]?.trustEuropeSub||'Import support')}</span></div><div class="trust-item">📄 <strong>${esc(t[lang]?.trustDocs||'Vehicle file')}</strong><span>${esc(t[lang]?.trustDocsSub||'Documents available depending on the vehicle')}</span></div><div class="trust-item">💬 <strong>${esc(t[lang]?.trustContact||'Direct contact')}</strong><span>${esc(t[lang]?.trustContactSub||'WhatsApp and contact form')}</span></div></div>`;
+  root.appendChild(article);
+ });
+ renderGallery(); enableGallerySwipe();
+}
+function updateGallery(id){const box=document.getElementById(id);if(!box)return;const photos=galleryData[id]||[];if(!photos.length)return;let idx=galleryState[id]||0;idx=(idx+photos.length)%photos.length;galleryState[id]=idx;const img=box.querySelector('.gallery-main');img.src=photos[idx];img.alt=`${(t[localStorage.getItem('autoparc-lang')||'fr']?.galleryNote||'Vehicle photo')} ${idx+1}`;box.querySelector('.gallery-current').textContent=idx+1;box.querySelector('.gallery-total').textContent=photos.length;}
+function renderGallery(){Object.keys(galleryData).forEach(updateGallery)}
+function changeGallery(id,step){galleryState[id]=(galleryState[id]||0)+step;updateGallery(id)}
+function openGalleryLightbox(id){const photos=galleryData[id]||[];const idx=galleryState[id]||0;if(photos[idx])openLightbox(photos[idx])}
+function openLightbox(src){document.getElementById('lightboxImg').src=src;document.getElementById('lightbox').classList.add('open')}
+function closeLightbox(){document.getElementById('lightbox').classList.remove('open')}
+function enableGallerySwipe(){document.querySelectorAll('.vehicle-gallery').forEach(box=>{let x=0;box.addEventListener('touchstart',e=>{x=e.changedTouches[0].screenX},{passive:true});box.addEventListener('touchend',e=>{const dx=e.changedTouches[0].screenX-x;if(Math.abs(dx)>45)changeGallery(box.id,dx<0?1:-1)},{passive:true})})}
+function updatePlaceholders(lang){document.querySelectorAll('[data-i18n-placeholder]').forEach(el=>{const key=el.getAttribute('data-i18n-placeholder');if(t&&t[lang]&&t[lang][key])el.placeholder=t[lang][key]})}
+function applyLanguage(lang){
+ const x=t[lang]||t.en;
+ document.documentElement.lang=lang; document.title=x.pageTitle||document.title; const md=document.querySelector('meta[name=description]'); if(md&&x.metaDescription)md.setAttribute('content',x.metaDescription); const lb=document.getElementById('lightboxImg'); if(lb)lb.alt=(lang==='fr'?'Photo du véhicule':lang==='pl'?'Zdjęcie pojazdu':lang==='it'?'Foto del veicolo':lang==='es'?'Foto del vehículo':lang==='pt'?'Foto do veículo':'Vehicle photo');
+ document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.dataset.i18n;if(x[k])el.textContent=x[k]});
+ const priceSelect=document.querySelector('.search select');if(priceSelect&&priceSelect.options[0])priceSelect.options[0].textContent=x.maxPrice;
+ renderVehicles(lang); updatePlaceholders(lang); applyInlineUi(lang); localStorage.setItem('autoparc-lang',lang);
+}
 const savedLang=localStorage.getItem('autoparc-lang')||'fr';
 applyLanguage(savedLang);
-renderGallery();
-enableGallerySwipe();
 </script>
 <script id="v16-language-selector">
 (function(){
@@ -551,82 +414,5 @@ enableGallerySwipe();
  selectLang(localStorage.getItem('autoparc-lang')||'fr');
 })();
 </script>
-<script id="v19-translation-fallback">
-(function(){
-  function translateRemaining(lang){
-    const map=(window.__valueTranslations||{})[lang];
-    if(!map)return;
-    const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);
-    const nodes=[];
-    while(walker.nextNode()) nodes.push(walker.currentNode);
-    nodes.forEach(n=>{
-      const t=n.nodeValue.trim();
-      if(map[t]) n.nodeValue=n.nodeValue.replace(t,map[t]);
-    });
-  }
-  const old=window.applyLanguage;
-  if(typeof old==='function'){
-    window.applyLanguage=function(lang){
-      old(lang);
-      setTimeout(function(){translateRemaining(lang)},20);
-    };
-  }
-  const lang=localStorage.getItem('autoparc-lang')||localStorage.getItem('autoparc-language')||'fr';
-  setTimeout(function(){translateRemaining(lang)},50);
-})();
 
-setTimeout(()=>{updatePlaceholders(localStorage.getItem('autoparc-lang')||'fr');},0);
-<script id="v25-translation-final-fallback">
-(function(){
-  const extra={
-    fr:{},
-    en:{
-      "Jusqu'en juin 2027":"Until June 2027","Jusqu'en août 2027":"Until August 2027","Jusqu'au 26/06/2027":"Until 26/06/2027",
-      "Cuir partiel":"Part-leather","Excellent état":"Excellent condition","Gris":"Grey","Bleu métallisé":"Metallic blue","Blanc":"White",
-      "Traction avant":"Front-wheel drive","Intérieur sport":"Sport interior","Véhicules d'occasion • Allemagne → Europe":"Used vehicles • Germany → Europe",
-      "Mentions légales à compléter avant mise en production.":"Legal notices to be completed before launch.","Sélection en Allemagne":"Selection in Germany","Livraison en Europe":"Delivery in Europe"
-    },
-    pl:{
-      "Jusqu'en juin 2027":"Do czerwca 2027","Jusqu'en août 2027":"Do sierpnia 2027","Jusqu'au 26/06/2027":"Do 26.06.2027",
-      "Cuir partiel":"Częściowa skóra","Excellent état":"Bardzo dobry stan","Gris":"Szary","Bleu métallisé":"Niebieski metalizowany","Blanc":"Biały",
-      "Traction avant":"Napęd na przednie koła","Intérieur sport":"Sportowe wnętrze","Véhicules d'occasion • Allemagne → Europe":"Samochody używane • Niemcy → Europa",
-      "Mentions légales à compléter avant mise en production.":"Informacje prawne do uzupełnienia przed uruchomieniem.","Sélection en Allemagne":"Wybór w Niemczech","Livraison en Europe":"Dostawa w Europie"
-    },
-    it:{
-      "Jusqu'en juin 2027":"Fino a giugno 2027","Jusqu'en août 2027":"Fino ad agosto 2027","Jusqu'au 26/06/2027":"Fino al 26/06/2027",
-      "Cuir partiel":"Pelle parziale","Excellent état":"Ottime condizioni","Gris":"Grigio","Bleu métallisé":"Blu metallizzato","Blanc":"Bianco",
-      "Traction avant":"Trazione anteriore","Intérieur sport":"Interni sportivi","Véhicules d'occasion • Allemagne → Europe":"Auto usate • Germania → Europa",
-      "Mentions légales à compléter avant mise en production.":"Note legali da completare prima della messa online.","Sélection en Allemagne":"Selezione in Germania","Livraison en Europe":"Consegna in Europa"
-    },
-    es:{
-      "Jusqu'en juin 2027":"Hasta junio de 2027","Jusqu'en août 2027":"Hasta agosto de 2027","Jusqu'au 26/06/2027":"Hasta el 26/06/2027",
-      "Cuir partiel":"Cuero parcial","Excellent état":"Excelente estado","Gris":"Gris","Bleu métallisé":"Azul metalizado","Blanc":"Blanco",
-      "Traction avant":"Tracción delantera","Intérieur sport":"Interior deportivo","Véhicules d'occasion • Allemagne → Europe":"Vehículos de ocasión • Alemania → Europa",
-      "Mentions légales à compléter avant mise en production.":"Aviso legal por completar antes de la puesta en producción.","Sélection en Allemagne":"Selección en Alemania","Livraison en Europe":"Entrega en Europa"
-    },
-    pt:{
-      "Jusqu'en juin 2027":"Até junho de 2027","Jusqu'en août 2027":"Até agosto de 2027","Jusqu'au 26/06/2027":"Até 26/06/2027",
-      "Cuir partiel":"Couro parcial","Excellent état":"Excelente estado","Gris":"Cinzento","Bleu métallisé":"Azul metalizado","Blanc":"Branco",
-      "Traction avant":"Tração dianteira","Intérieur sport":"Interior desportivo","Véhicules d'occasion • Allemagne → Europe":"Veículos usados • Alemanha → Europa",
-      "Mentions légales à compléter avant mise en production.":"Aviso legal a completar antes da entrada em produção.","Sélection en Allemagne":"Seleção na Alemanha","Livraison en Europe":"Entrega na Europa"
-    }
-  };
-  window.__v25translate=function(lang){
-    const base=(window.__valueTranslations&&window.__valueTranslations[lang])||{};
-    const map=Object.assign({},base,extra[lang]||{});
-    const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);
-    const nodes=[]; while(walker.nextNode()) nodes.push(walker.currentNode);
-    nodes.forEach(n=>{
-      let raw=n.nodeValue, trimmed=raw.trim();
-      if(!trimmed || n.parentElement.closest('script,style')) return;
-      if(map[trimmed]) { n.nodeValue=raw.replace(trimmed,map[trimmed]); return; }
-      Object.keys(map).sort((a,b)=>b.length-a.length).forEach(k=>{ if(n.nodeValue.includes(k)) n.nodeValue=n.nodeValue.split(k).join(map[k]); });
-    });
-  };
-  const oldApply=window.applyLanguage;
-  if(typeof oldApply==='function') window.applyLanguage=function(lang){ oldApply(lang); setTimeout(()=>window.__v25translate(lang),0); setTimeout(()=>window.__v25translate(lang),80); };
-  const lang=localStorage.getItem('autoparc-lang')||'fr';
-  setTimeout(()=>window.__v25translate(lang),120);
-})();
-</script>
 </body></html>
