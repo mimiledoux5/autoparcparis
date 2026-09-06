@@ -102,7 +102,11 @@ footer{background:var(--dark);color:white;padding:35px 7%}footer a{color:white}
 .language-option:hover{background:#f2f5f8}
 </style>
 
-</head>
+<style id="v17-fix">
+.language-picker{position:relative;z-index:10000}
+.language-picker-menu{z-index:10001}
+.gallery img{display:block!important}
+</style></head>
 <body>
 <header>
 <a class="logo" href="#" style="display:flex;align-items:center;text-decoration:none;color:white"><img src="logo.png" alt="AutoParc Export" style="height:52px;width:auto;max-width:190px;object-fit:contain"><span style="display:none">AutoParc Export</span></a>
@@ -276,11 +280,11 @@ const tucsonPhotos=["./tucson-1.jpg","./tucson-2.jpg","./tucson-3.jpg","./tucson
 const i30Photos=["./i30-1.jpg","./i30-2.jpg","./i30-3.jpg","./i30-4.jpg","./i30-5.jpg","./i30-6.jpg","./i30-7.jpg","./i30-8.jpg","./i30-9.jpg","./i30-10.jpg","./i30-11.jpg","./i30-12.jpg","./i30-13.jpg","./i30-14.jpg","./i30-15.jpg"];
 function renderGallery(){
 const g=document.getElementById("carGallery");
-g.innerHTML=carPhotos.map((p,i)=>`<img src="${p}" alt="Mercedes-Benz CLA 180 AMG — photo ${i+1}" loading="lazy" onerror="this.style.display='none'" onclick="openLightbox('${p}')">`).join("");
+g.innerHTML=carPhotos.map((p,i)=>`<img src="${new URL(p, document.baseURI).href}" alt="Mercedes-Benz CLA 180 AMG — photo ${i+1}" loading="lazy" " onclick="openLightbox('${p}')">`).join("");
 const tg=document.getElementById("tucsonGallery");
-tg.innerHTML=tucsonPhotos.map((p,i)=>`<img src="${p}" alt="Hyundai Tucson Premium 4x4 — photo ${i+1}" loading="lazy" onerror="this.style.display='none'" onclick="openLightbox('${p}')">`).join("");
+tg.innerHTML=tucsonPhotos.map((p,i)=>`<img src="${new URL(p, document.baseURI).href}" alt="Hyundai Tucson Premium 4x4 — photo ${i+1}" loading="lazy" " onclick="openLightbox('${p}')">`).join("");
 const ig=document.getElementById("i30Gallery");
-ig.innerHTML=i30Photos.map((p,i)=>`<img src="${p}" alt="Hyundai i30 1.4 T-GDi 140 ch — photo ${i+1}" loading="lazy" onerror="this.style.display='none'" onclick="openLightbox('${p}')">`).join("");
+ig.innerHTML=i30Photos.map((p,i)=>`<img src="${new URL(p, document.baseURI).href}" alt="Hyundai i30 1.4 T-GDi 140 ch — photo ${i+1}" loading="lazy" " onclick="openLightbox('${p}')">`).join("");
 }
 function openLightbox(src){document.getElementById("lightboxImg").src=src;document.getElementById("lightbox").classList.add("open");}
 function closeLightbox(){document.getElementById("lightbox").classList.remove("open");}
@@ -343,9 +347,8 @@ function applyLanguage(lang){
  });
  localStorage.setItem('autoparc-lang',lang);
 }
-document.getElementById("lang").onchange=e=>applyLanguage(e.target.value);
+
 const savedLang=localStorage.getItem('autoparc-lang')||'fr';
-document.getElementById('lang').value=savedLang;
 applyLanguage(savedLang);
 renderGallery();
 </script>
