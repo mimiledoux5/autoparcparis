@@ -8,7 +8,7 @@
 <style>
 :root{--dark:#0b1220;--blue:#1358a6;--light:#f5f7fa;--text:#172033}
 *{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;color:var(--text);background:var(--light)}
-header{background:var(--dark);color:white;padding:18px 5%;display:flex;align-items:center;justify-content:space-between;gap:20px;position:sticky;top:0;z-index:5}
+header{background:var(--dark);color:white;padding:10px 5%;display:flex;align-items:center;justify-content:space-between;gap:20px;position:sticky;top:0;z-index:5}
 .logo{font-weight:800;font-size:24px}.logo span{color:#4da3ff}
 nav a{color:white;text-decoration:none;margin:0 10px;font-size:14px}
 select{padding:8px;border-radius:6px;border:0}.hero{min-height:430px;padding:80px 7%;display:flex;align-items:center;background:linear-gradient(90deg,rgba(5,13,27,.92),rgba(5,13,27,.45)),url('https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=1800&q=80') center/cover;color:white}
@@ -23,7 +23,7 @@ footer{background:var(--dark);color:white;padding:35px 7%}footer a{color:white}
 </head>
 <body>
 <header>
-<div class="logo">AutoParc <span>Export</span></div>
+<a class="logo" href="#" style="display:flex;align-items:center;text-decoration:none;color:white"><img src="logo.png" alt="AutoParc Export" style="height:52px;width:auto;max-width:190px;object-fit:contain"><span style="display:none">AutoParc Export</span></a>
 <nav><a href="#cars" data-i18n="carsNav">Véhicules</a><a href="#services" data-i18n="servicesNav">Services</a><a href="#contact" data-i18n="contactNav">Contact</a></nav>
 <select id="lang"><option value="fr">🇫🇷 FR</option><option value="pl">🇵🇱 PL</option><option value="it">🇮🇹 IT</option><option value="es">🇪🇸 ES</option></select>
 </header>
