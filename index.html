@@ -91,19 +91,43 @@ footer{background:var(--dark);color:white;padding:35px 7%}footer a{color:white}
 .flag-badge{display:inline-flex!important;align-items:center;justify-content:center;width:24px;height:18px;font-size:16px;line-height:1}
 @media(max-width:700px){.lang-select{min-width:125px}.hero-features,.trust-features,.hero-badges{gap:7px}}
 </style>
+
+<style id="v14-language-selector">
+.language-picker{position:relative;display:inline-block;font-family:Arial,sans-serif}
+.language-picker-btn{display:flex;align-items:center;gap:7px;background:#fff;border:1px solid rgba(255,255,255,.35);border-radius:8px;padding:7px 10px;cursor:pointer;font-size:14px;color:#111;min-width:135px}
+.language-picker-btn img,.language-option img{width:22px;height:15px;object-fit:cover;border-radius:2px;display:block}
+.language-picker-menu{position:absolute;right:0;top:calc(100% + 6px);z-index:9999;background:#fff;border:1px solid #ddd;border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,.18);padding:6px;min-width:170px;display:none}
+.language-picker.open .language-picker-menu{display:block}
+.language-option{width:100%;display:flex;align-items:center;gap:9px;border:0;background:#fff;padding:9px 10px;border-radius:7px;cursor:pointer;text-align:left;color:#111;font-size:14px}
+.language-option:hover{background:#f2f5f8}
+.hero-features{display:flex!important;flex-wrap:wrap!important;gap:12px!important}
+.hero-feature{display:flex!important;align-items:center!important;gap:7px!important}
+.hero-feature img{width:24px;height:16px;object-fit:cover;border-radius:2px}
+@media(max-width:700px){
+ .language-picker-btn{min-width:112px;padding:6px 8px}
+ .language-picker-menu{right:0}
+}
+</style>
+
 </head>
 <body>
 <header>
 <a class="logo" href="#" style="display:flex;align-items:center;text-decoration:none;color:white"><img src="logo.png" alt="AutoParc Export" style="height:52px;width:auto;max-width:190px;object-fit:contain"><span style="display:none">AutoParc Export</span></a>
 <nav><a href="#cars" data-i18n="carsNav">Véhicules</a><a href="#services" data-i18n="servicesNav">Services</a><a href="#contact" data-i18n="contactNav">Contact</a></nav>
-<select class="lang-select" id="languageSelect" aria-label="Language">
-<option value="fr">🇫🇷 Français</option>
-<option value="en">🇬🇧 English</option>
-<option value="pl">🇵🇱 Polski</option>
-<option value="it">🇮🇹 Italiano</option>
-<option value="es">🇪🇸 Español</option>
-<option value="pt">🇵🇹 Português</option>
-</select>
+<div class="language-picker" id="languagePicker">
+  <button type="button" class="language-picker-btn" id="languagePickerBtn" aria-haspopup="true" aria-expanded="false">
+    <img src="https://flagcdn.com/w40/fr.png" alt="Français" id="currentLanguageFlag">
+    <span id="currentLanguageName">Français</span> ▾
+  </button>
+  <div class="language-picker-menu" id="languagePickerMenu">
+    <button class="language-option" data-lang="fr"><img src="https://flagcdn.com/w40/fr.png" alt=""> Français</button>
+    <button class="language-option" data-lang="en"><img src="https://flagcdn.com/w40/gb.png" alt=""> English</button>
+    <button class="language-option" data-lang="pl"><img src="https://flagcdn.com/w40/pl.png" alt=""> Polski</button>
+    <button class="language-option" data-lang="it"><img src="https://flagcdn.com/w40/it.png" alt=""> Italiano</button>
+    <button class="language-option" data-lang="es"><img src="https://flagcdn.com/w40/es.png" alt=""> Español</button>
+    <button class="language-option" data-lang="pt"><img src="https://flagcdn.com/w40/pt.png" alt=""> Português</button>
+  </div>
+</div>
 </header>
 
 <main>
