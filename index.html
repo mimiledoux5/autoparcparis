@@ -280,11 +280,11 @@ const tucsonPhotos=["./tucson-1.jpg","./tucson-2.jpg","./tucson-3.jpg","./tucson
 const i30Photos=["./i30-1.jpg","./i30-2.jpg","./i30-3.jpg","./i30-4.jpg","./i30-5.jpg","./i30-6.jpg","./i30-7.jpg","./i30-8.jpg","./i30-9.jpg","./i30-10.jpg","./i30-11.jpg","./i30-12.jpg","./i30-13.jpg","./i30-14.jpg","./i30-15.jpg"];
 function renderGallery(){
 const g=document.getElementById("carGallery");
-g.innerHTML=carPhotos.map((p,i)=>`<img src="${new URL(p, document.baseURI).href}" alt="Mercedes-Benz CLA 180 AMG — photo ${i+1}" loading="lazy" " onclick="openLightbox('${p}')">`).join("");
+g.innerHTML=carPhotos.map((p,i)=>`<img src="${p}" alt="Mercedes-Benz CLA 180 AMG — photo ${i+1}" loading="lazy" onclick="openLightbox('${p}')">`).join("");
 const tg=document.getElementById("tucsonGallery");
-tg.innerHTML=tucsonPhotos.map((p,i)=>`<img src="${new URL(p, document.baseURI).href}" alt="Hyundai Tucson Premium 4x4 — photo ${i+1}" loading="lazy" " onclick="openLightbox('${p}')">`).join("");
+tg.innerHTML=tucsonPhotos.map((p,i)=>`<img src="${p}" alt="Hyundai Tucson Premium 4x4 — photo ${i+1}" loading="lazy" onclick="openLightbox('${p}')">`).join("");
 const ig=document.getElementById("i30Gallery");
-ig.innerHTML=i30Photos.map((p,i)=>`<img src="${new URL(p, document.baseURI).href}" alt="Hyundai i30 1.4 T-GDi 140 ch — photo ${i+1}" loading="lazy" " onclick="openLightbox('${p}')">`).join("");
+ig.innerHTML=i30Photos.map((p,i)=>`<img src="${p}" alt="Hyundai i30 1.4 T-GDi 140 ch — photo ${i+1}" loading="lazy" onclick="openLightbox('${p}')">`).join("");
 }
 function openLightbox(src){document.getElementById("lightboxImg").src=src;document.getElementById("lightbox").classList.add("open");}
 function closeLightbox(){document.getElementById("lightbox").classList.remove("open");}
@@ -327,6 +327,27 @@ function translatedEquip(lang,i){if(i===0)return equipmentTexts[lang]||equipment
 function docsHTML(lang,v){return `<div>${v.docs1.map(x=>'✓ '+x).join('<br>')}</div><div>${v.docs2.map(x=>'✓ '+x).join('<br>')}</div><div>🇩🇪 ${v.origin}<br>🇪🇺 ${v.delivery}</div><div>💳 ${v.finance}<br>💰 ${v.discount}</div>`;}
 function applyLanguage(lang){
  const x=t[lang]||t.en, v=vehicleTranslations[lang]||vehicleTranslations.en, vt=vehicleTexts[lang]||vehicleTexts.en;
+ const valueTranslations={
+ fr:{"Gris":"Gris","Cuir partiel":"Cuir partiel","Excellent état":"Excellent état","Jusqu'en août 2027":"Jusqu'en août 2027","Traction avant":"Traction avant","Bleu métallisé":"Bleu métallisé","Jusqu'au 26/06/2027":"Jusqu'au 26/06/2027","Véhicules d'occasion • Allemagne → Europe":"Véhicules d'occasion • Allemagne → Europe","Mentions légales à compléter avant mise en production.":"Mentions légales à compléter avant mise en production.","Sélection en Allemagne":"Sélection en Allemagne","Livraison en Europe":"Livraison en Europe"},
+ en:{"Gris":"Grey","Cuir partiel":"Part-leather","Excellent état":"Excellent condition","Jusqu'en août 2027":"Until August 2027","Traction avant":"Front-wheel drive","Bleu métallisé":"Metallic blue","Jusqu'au 26/06/2027":"Until 26/06/2027","Véhicules d'occasion • Allemagne → Europe":"Used vehicles • Germany → Europe","Mentions légales à compléter avant mise en production.":"Legal notices to be completed before launch.","Sélection en Allemagne":"Selection in Germany","Livraison en Europe":"Delivery in Europe"},
+ pl:{"Gris":"Szary","Cuir partiel":"Częściowa skóra","Excellent état":"Bardzo dobry stan","Jusqu'en août 2027":"Do sierpnia 2027","Traction avant":"Napęd na przednie koła","Bleu métallisé":"Niebieski metalizowany","Jusqu'au 26/06/2027":"Do 26.06.2027","Véhicules d'occasion • Allemagne → Europe":"Samochody używane • Niemcy → Europa","Mentions légales à compléter avant mise en production.":"Informacje prawne do uzupełnienia przed uruchomieniem.","Sélection en Allemagne":"Wybór w Niemczech","Livraison en Europe":"Dostawa w Europie"},
+ it:{"Gris":"Grigio","Cuir partiel":"Pelle parziale","Excellent état":"Ottime condizioni","Jusqu'en août 2027":"Fino ad agosto 2027","Traction avant":"Trazione anteriore","Bleu métallisé":"Blu metallizzato","Jusqu'au 26/06/2027":"Fino al 26/06/2027","Véhicules d'occasion • Allemagne → Europe":"Auto usate • Germania → Europa","Mentions légales à compléter avant mise en production.":"Note legali da completare prima della messa online.","Sélection en Allemagne":"Selezione in Germania","Livraison en Europe":"Consegna in Europa"},
+ es:{"Gris":"Gris","Cuir partiel":"Cuero parcial","Excellent état":"Excelente estado","Jusqu'en août 2027":"Hasta agosto de 2027","Traction avant":"Tracción delantera","Bleu métallisé":"Azul metalizado","Jusqu'au 26/06/2027":"Hasta el 26/06/2027","Véhicules d'occasion • Allemagne → Europe":"Vehículos de ocasión • Alemania → Europa","Mentions légales à compléter avant mise en production.":"Aviso legal por completar antes de la puesta en producción.","Sélection en Allemagne":"Selección en Alemania","Livraison en Europe":"Entrega en Europa"},
+ pt:{"Gris":"Cinzento","Cuir partiel":"Couro parcial","Excellent état":"Excelente estado","Jusqu'en août 2027":"Até agosto de 2027","Traction avant":"Tração dianteira","Bleu métallisé":"Azul metalizado","Jusqu'au 26/06/2027":"Até 26/06/2027","Véhicules d'occasion • Allemagne → Europe":"Veículos usados • Alemanha → Europa","Mentions légales à compléter avant mise en production.":"Aviso legal a completar antes da entrada em produção.","Sélection en Allemagne":"Seleção na Alemanha","Livraison en Europe":"Entrega na Europa"}
+ };
+ const vm=valueTranslations[lang]||valueTranslations.en;
+ document.querySelectorAll("body *").forEach(el=>{
+   if(el.children.length===0){
+     const txt=el.textContent.trim();
+     if(vm[txt]) el.textContent=vm[txt];
+   }
+ });
+ const footer=document.querySelector("footer");
+ if(footer){
+   const p=footer.querySelector("p"); if(p&&vm["Véhicules d'occasion • Allemagne → Europe"]) p.textContent=vm["Véhicules d'occasion • Allemagne → Europe"];
+   const sm=footer.querySelector("small"); if(sm&&vm["Mentions légales à compléter avant mise en production."]) sm.textContent="© 2026 AutoParc Export — "+vm["Mentions légales à compléter avant mise en production."];
+ }
+
  document.documentElement.lang=lang;
  document.querySelectorAll("[data-i18n]").forEach(el=>{if(x[el.dataset.i18n]) el.textContent=x[el.dataset.i18n]});
  const priceSelect=document.querySelector('.search select'); if(priceSelect&&priceSelect.options[0]) priceSelect.options[0].textContent=x.maxPrice;
