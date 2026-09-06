@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AutoParc Export — Véhicules d'occasion</title>
+<meta name="description" content="AutoParc Export — véhicules d'occasion sélectionnés en Allemagne et livraison en Europe.">
+<style>
+:root{--dark:#0b1220;--blue:#1358a6;--light:#f5f7fa;--text:#172033}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;color:var(--text);background:var(--light)}
+header{background:var(--dark);color:white;padding:18px 5%;display:flex;align-items:center;justify-content:space-between;gap:20px;position:sticky;top:0;z-index:5}
+.logo{font-weight:800;font-size:24px}.logo span{color:#4da3ff}
+nav a{color:white;text-decoration:none;margin:0 10px;font-size:14px}
+select{padding:8px;border-radius:6px;border:0}.hero{min-height:430px;padding:80px 7%;display:flex;align-items:center;background:linear-gradient(90deg,rgba(5,13,27,.92),rgba(5,13,27,.45)),url('https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=1800&q=80') center/cover;color:white}
+.hero h1{font-size:48px;max-width:700px;margin:0 0 15px}.hero p{font-size:19px;max-width:650px;line-height:1.6}
+.btn{display:inline-block;background:var(--blue);color:white;text-decoration:none;padding:13px 22px;border-radius:7px;font-weight:700;margin-top:12px}
+section{padding:55px 7%}.search{background:white;margin:-35px 7% 0;padding:22px;border-radius:12px;box-shadow:0 8px 25px #0002;position:relative}
+.search input,.search select{border:1px solid #ddd;margin:5px;padding:11px;border-radius:6px}.cars{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+.card{background:white;border-radius:12px;overflow:hidden;box-shadow:0 4px 15px #0001}.card img{width:100%;height:175px;object-fit:cover}.card div{padding:17px}.price{font-size:22px;font-weight:800}.muted{color:#687386}.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:20px}.feature{background:white;padding:24px;border-radius:12px}
+footer{background:var(--dark);color:white;padding:35px 7%}footer a{color:white}
+@media(max-width:700px){nav{display:none}.hero h1{font-size:35px}.search{margin:0}.hero{min-height:500px}}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">AutoParc <span>Export</span></div>
+<nav><a href="#cars" data-i18n="carsNav">Véhicules</a><a href="#services" data-i18n="servicesNav">Services</a><a href="#contact" data-i18n="contactNav">Contact</a></nav>
+<select id="lang"><option value="fr">🇫🇷 FR</option><option value="pl">🇵🇱 PL</option><option value="it">🇮🇹 IT</option><option value="es">🇪🇸 ES</option></select>
+</header>
+
+<main>
+<div class="hero">
+<div>
+<h1 data-i18n="heroTitle">Votre véhicule d'occasion, sélectionné en Allemagne.</h1>
+<p data-i18n="heroText">Découvrez des véhicules sélectionnés et bénéficiez d'un accompagnement pour l'importation et la livraison en Europe.</p>
+<a class="btn" href="#cars" data-i18n="heroBtn">Voir les véhicules</a>
+</div></div>
+
+<div class="search">
+<strong data-i18n="searchTitle">Rechercher un véhicule</strong><br>
+<input id="search" placeholder="Marque ou modèle">
+<select><option>Prix maximum</option><option>20 000 €</option><option>30 000 €</option><option>50 000 €</option></select>
+<button class="btn" onclick="filterCars()" data-i18n="searchBtn">Rechercher</button>
+</div>
+
+<section id="cars">
+<h2 data-i18n="carsTitle">Véhicules disponibles</h2>
+<div class="cars" id="carList"></div>
+</section>
+
+<section id="services">
+<h2 data-i18n="servicesTitle">Pourquoi AutoParc Export ?</h2>
+<div class="features">
+<div class="feature"><h3>🇩🇪 <span data-i18n="f1t">Sélection en Allemagne</span></h3><p data-i18n="f1">Nous recherchons des véhicules correspondant aux critères de nos clients.</p></div>
+<div class="feature"><h3>🇪🇺 <span data-i18n="f2t">Livraison en Europe</span></h3><p data-i18n="f2">Organisation de la livraison vers différents pays européens.</p></div>
+<div class="feature"><h3>📋 <span data-i18n="f3t">Accompagnement</span></h3><p data-i18n="f3">Accompagnement dans les démarches liées à l'importation.</p></div>
+<div class="feature"><h3>💬 <span data-i18n="f4t">Contact direct</span></h3><p data-i18n="f4">Contactez-nous directement par WhatsApp ou formulaire.</p></div>
+</div>
+</section>
+
+<section id="contact">
+<h2 data-i18n="contactTitle">Vous recherchez un véhicule précis ?</h2>
+<p data-i18n="contactText">Indiquez-nous la marque, le modèle, le budget et vos critères. Nous pourrons rechercher un véhicule correspondant.</p>
+<a class="btn" href="https://wa.me/33000000000" target="_blank" data-i18n="contactBtn">Nous contacter sur WhatsApp</a>
+</section>
+</main>
+
+<footer><strong>AutoParc Export</strong><p>Véhicules d'occasion • Allemagne → Europe</p><small>© 2026 AutoParc Export — Mentions légales à compléter avant mise en production.</small></footer>
+
+<script>
+const cars=[
+{name:"BMW Série 3 320d",year:"2022",km:"48 000 km",fuel:"Diesel",price:"29 900 €",img:"https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=900&q=80"},
+{name:"Mercedes-Benz Classe C",year:"2021",km:"62 000 km",fuel:"Diesel",price:"31 500 €",img:"https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=900&q=80"},
+{name:"Audi A4 Avant",year:"2022",km:"55 000 km",fuel:"Diesel",price:"27 900 €",img:"https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=900&q=80"}
+];
+function render(list=cars){document.getElementById("carList").innerHTML=list.map(c=>`<article class="card"><img src="${c.img}" alt="${c.name}"><div><h3>${c.name}</h3><p class="muted">${c.year} • ${c.km} • ${c.fuel}</p><p class="price">${c.price}</p><a class="btn" href="#contact">Voir le véhicule</a></div></article>`).join("")}
+function filterCars(){let q=document.getElementById("search").value.toLowerCase();render(cars.filter(c=>(c.name+" "+c.fuel).toLowerCase().includes(q)))}
+const t={
+fr:{carsNav:"Véhicules",servicesNav:"Services",contactNav:"Contact",heroTitle:"Votre véhicule d'occasion, sélectionné en Allemagne.",heroText:"Découvrez des véhicules sélectionnés et bénéficiez d'un accompagnement pour l'importation et la livraison en Europe.",heroBtn:"Voir les véhicules",searchTitle:"Rechercher un véhicule",searchBtn:"Rechercher",carsTitle:"Véhicules disponibles",servicesTitle:"Pourquoi AutoParc Export ?",f1t:"Sélection en Allemagne",f1:"Nous recherchons des véhicules correspondant aux critères de nos clients.",f2t:"Livraison en Europe",f2:"Organisation de la livraison vers différents pays européens.",f3t:"Accompagnement",f3:"Accompagnement dans les démarches liées à l'importation.",f4t:"Contact direct",f4:"Contactez-nous directement par WhatsApp ou formulaire.",contactTitle:"Vous recherchez un véhicule précis ?",contactText:"Indiquez-nous la marque, le modèle, le budget et vos critères. Nous pourrons rechercher un véhicule correspondant.",contactBtn:"Nous contacter sur WhatsApp"},
+pl:{carsNav:"Samochody",servicesNav:"Usługi",contactNav:"Kontakt",heroTitle:"Twój samochód używany, wybrany w Niemczech.",heroText:"Poznaj wybrane samochody i skorzystaj ze wsparcia przy imporcie oraz dostawie w Europie.",heroBtn:"Zobacz samochody",searchTitle:"Wyszukaj samochód",searchBtn:"Szukaj",carsTitle:"Dostępne samochody",servicesTitle:"Dlaczego AutoParc Export?",f1t:"Wybór w Niemczech",f1:"Szukamy samochodów zgodnych z wymaganiami klientów.",f2t:"Dostawa w Europie",f2:"Organizujemy dostawę do różnych krajów Europy.",f3t:"Wsparcie",f3:"Pomagamy w formalnościach związanych z importem.",f4t:"Bezpośredni kontakt",f4:"Skontaktuj się z nami przez WhatsApp lub formularz.",contactTitle:"Szukasz konkretnego samochodu?",contactText:"Podaj markę, model, budżet i wymagania. Poszukamy odpowiedniego pojazdu.",contactBtn:"Skontaktuj się przez WhatsApp"},
+it:{carsNav:"Veicoli",servicesNav:"Servizi",contactNav:"Contatti",heroTitle:"La tua auto usata, selezionata in Germania.",heroText:"Scopri veicoli selezionati e ricevi assistenza per importazione e consegna in Europa.",heroBtn:"Vedi i veicoli",searchTitle:"Cerca un veicolo",searchBtn:"Cerca",carsTitle:"Veicoli disponibili",servicesTitle:"Perché AutoParc Export?",f1t:"Selezione in Germania",f1:"Cerchiamo veicoli in base alle esigenze dei nostri clienti.",f2t:"Consegna in Europa",f2:"Organizziamo la consegna in diversi Paesi europei.",f3t:"Assistenza",f3:"Assistenza nelle procedure legate all'importazione.",f4t:"Contatto diretto",f4:"Contattaci direttamente tramite WhatsApp o modulo.",contactTitle:"Cerchi un veicolo specifico?",contactText:"Indicaci marca, modello, budget e criteri. Cercheremo il veicolo adatto.",contactBtn:"Contattaci su WhatsApp"},
+es:{carsNav:"Vehículos",servicesNav:"Servicios",contactNav:"Contacto",heroTitle:"Tu vehículo de ocasión, seleccionado en Alemania.",heroText:"Descubre vehículos seleccionados y recibe asistencia para la importación y entrega en Europa.",heroBtn:"Ver vehículos",searchTitle:"Buscar un vehículo",searchBtn:"Buscar",carsTitle:"Vehículos disponibles",servicesTitle:"¿Por qué AutoParc Export?",f1t:"Selección en Alemania",f1:"Buscamos vehículos según los criterios de nuestros clientes.",f2t:"Entrega en Europa",f2:"Organizamos la entrega a diferentes países europeos.",f3t:"Asistencia",f3:"Asistencia en los trámites relacionados con la importación.",f4t:"Contacto directo",f4:"Contáctanos por WhatsApp o formulario.",contactTitle:"¿Buscas un vehículo específico?",contactText:"Indícanos marca, modelo, presupuesto y criterios. Buscaremos un vehículo adecuado.",contactBtn:"Contactar por WhatsApp"}
+};
+document.getElementById("lang").onchange=e=>{let x=t[e.target.value];document.querySelectorAll("[data-i18n]").forEach(el=>el.textContent=x[el.dataset.i18n])};
+render();
+</script>
+</body></html>
