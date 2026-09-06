@@ -92,6 +92,17 @@ footer{background:var(--dark);color:white;padding:35px 7%}footer a{color:white}
 .form-field label{font-size:13px;font-weight:700;color:#334155}.form-field input,.form-field select,.form-field textarea{width:100%;border:1px solid #d9e0e8;border-radius:8px;padding:12px;font:inherit;background:#fff;color:var(--text)}
 .form-field textarea{min-height:120px;resize:vertical}.form-note{font-size:12px;color:#64748b;margin:12px 0 0;line-height:1.5}
 .form-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:14px}.whatsapp-form{background:#198754}
+.vehicle-contact-form{margin:18px 0 4px;background:#f8fafc;border:1px solid #e3e9f0;border-radius:14px;padding:18px}
+.vehicle-contact-form h3{margin:0 0 6px;font-size:18px;color:var(--dark)}
+.vehicle-contact-form .form-intro{margin:0 0 13px;color:#64748b;font-size:13px}
+.inline-form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.inline-form-grid input,.inline-form-grid textarea{width:100%;box-sizing:border-box;border:1px solid #d9e0e8;border-radius:8px;padding:11px;font:inherit;background:#fff;color:var(--text)}
+.inline-form-grid textarea{min-height:82px;resize:vertical;grid-column:1/-1}
+.inline-form-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:10px}
+.email-form{background:#334155}
+.form-small-note{font-size:11px;color:#64748b;margin:9px 0 0;line-height:1.45}
+@media(max-width:800px){.inline-form-grid{grid-template-columns:1fr}.inline-form-grid textarea{grid-column:auto}.inline-form-actions .btn{width:100%;text-align:center}}
+
 @media(max-width:800px){.trust-row{grid-template-columns:1fr 1fr}.form-grid{grid-template-columns:1fr}.form-field.full{grid-column:auto}.vehicle-pricebox{width:100%;text-align:left}.vehicle-actions .btn{width:100%;text-align:center}}
 
 /* v22 - single large vehicle photo slider */
@@ -200,6 +211,26 @@ window.__valueTranslations={"en": {"Gris": "Grey", "Cuir partiel": "Part-leather
 <div class="spec"><strong>Homologation UE</strong><br>Jusqu'en août 2027</div><div class="spec"><strong>État</strong><br>Excellent état</div>
 </div>
 <div class="vehicle-actions"><a class="btn" href="#contact" onclick="selectVehicleForContact('Mercedes-Benz CLA 180 AMG');" data-i18n="askInfo">Demander des informations</a><a class="btn secondary" href="https://wa.me/33780770163" target="_blank" data-i18n="whatsapp">WhatsApp</a></div>
+<div class="vehicle-contact-form">
+<h3>📞 <span data-i18n="vehicleFormTitle">Intéressé par ce véhicule ?</span></h3>
+<p class="form-intro" data-i18n="vehicleFormIntro">Remplissez ce formulaire pour nous contacter directement au sujet de ce véhicule.</p>
+<form class="inline-contact-form" onsubmit="sendInlineWhatsApp(event)">
+<input type="hidden" name="vehicle" value="Mercedes-Benz CLA 180 AMG">
+<div class="inline-form-grid">
+<input name="name" required placeholder="Votre nom" data-i18n-placeholder="formNamePh">
+<input name="country" required placeholder="France" data-i18n-placeholder="formCountryPh">
+<input name="phone" required placeholder="+33..." data-i18n-placeholder="formContactPh">
+<input name="email" type="email" placeholder="vous@email.com" data-i18n-placeholder="formEmailPh">
+<input name="budget" placeholder="Ex. 10 000 €" data-i18n-placeholder="formBudgetPh">
+<textarea name="message" placeholder="Votre demande ou vos questions..." data-i18n-placeholder="inlineMessagePh"></textarea>
+</div>
+<div class="inline-form-actions">
+<button class="btn whatsapp-form" type="submit" data-i18n="inlineWhatsApp">💬 Envoyer par WhatsApp</button>
+<button class="btn email-form" type="button" onclick="sendInlineEmail(this)" data-i18n="inlineEmail">📧 Préparer un e-mail</button>
+</div>
+<p class="form-small-note" data-i18n="inlineEmailNote">L'option e-mail ouvre votre messagerie avec la demande déjà préparée. Il suffit d'indiquer votre destinataire.</p>
+</form>
+</div>
 </div></div>
 <div class="trust-row"><div class="trust-item">🇩🇪 <strong data-i18n="trustGermany">Origine Allemagne</strong><span data-i18n="trustGermanySub">Sélection et contrôle du véhicule</span></div><div class="trust-item">🇪🇺 <strong data-i18n="trustEurope">Livraison Europe</strong><span data-i18n="trustEuropeSub">Accompagnement à l'importation</span></div><div class="trust-item">📄 <strong data-i18n="trustDocs">Dossier véhicule</strong><span data-i18n="trustDocsSub">Documents disponibles selon le véhicule</span></div><div class="trust-item">💬 <strong data-i18n="trustContact">Contact direct</strong><span data-i18n="trustContactSub">WhatsApp et formulaire</span></div></div>
 <div class="equipment"><h3 data-i18n="equipmentTitle">Équipements</h3><div class="equipment-grid">
@@ -237,6 +268,26 @@ window.__valueTranslations={"en": {"Gris": "Grey", "Cuir partiel": "Part-leather
 <div class="spec"><strong>Places / portes</strong><br>5 / 5</div><div class="spec"><strong>Homologation UE</strong><br>Jusqu'en juin 2027</div>
 </div>
 <div class="vehicle-actions"><a class="btn" href="#contact" onclick="selectVehicleForContact('Hyundai Tucson Premium 4x4');" data-i18n="askInfo">Demander des informations</a><a class="btn secondary" href="https://wa.me/33780770163" target="_blank" data-i18n="whatsapp">WhatsApp</a></div>
+<div class="vehicle-contact-form">
+<h3>📞 <span data-i18n="vehicleFormTitle">Intéressé par ce véhicule ?</span></h3>
+<p class="form-intro" data-i18n="vehicleFormIntro">Remplissez ce formulaire pour nous contacter directement au sujet de ce véhicule.</p>
+<form class="inline-contact-form" onsubmit="sendInlineWhatsApp(event)">
+<input type="hidden" name="vehicle" value="Hyundai Tucson Premium 4x4">
+<div class="inline-form-grid">
+<input name="name" required placeholder="Votre nom" data-i18n-placeholder="formNamePh">
+<input name="country" required placeholder="France" data-i18n-placeholder="formCountryPh">
+<input name="phone" required placeholder="+33..." data-i18n-placeholder="formContactPh">
+<input name="email" type="email" placeholder="vous@email.com" data-i18n-placeholder="formEmailPh">
+<input name="budget" placeholder="Ex. 10 000 €" data-i18n-placeholder="formBudgetPh">
+<textarea name="message" placeholder="Votre demande ou vos questions..." data-i18n-placeholder="inlineMessagePh"></textarea>
+</div>
+<div class="inline-form-actions">
+<button class="btn whatsapp-form" type="submit" data-i18n="inlineWhatsApp">💬 Envoyer par WhatsApp</button>
+<button class="btn email-form" type="button" onclick="sendInlineEmail(this)" data-i18n="inlineEmail">📧 Préparer un e-mail</button>
+</div>
+<p class="form-small-note" data-i18n="inlineEmailNote">L'option e-mail ouvre votre messagerie avec la demande déjà préparée. Il suffit d'indiquer votre destinataire.</p>
+</form>
+</div>
 </div></div>
 <div class="equipment"><h3>Équipements Premium</h3><div class="equipment-grid">
 <div>✓ Édition Premium<br>✓ Boîte automatique<br>✓ Transmission 4x4<br>✓ Intérieur cuir<br>✓ Toit panoramique<br>✓ Sièges avant chauffants<br>✓ Sièges arrière chauffants</div>
@@ -274,6 +325,26 @@ window.__valueTranslations={"en": {"Gris": "Grey", "Cuir partiel": "Part-leather
 <div class="spec"><strong>Coffre</strong><br>395 L</div><div class="spec"><strong>Homologation UE</strong><br>Jusqu'au 26/06/2027</div>
 </div>
 <div class="vehicle-actions"><a class="btn" href="#contact" onclick="selectVehicleForContact('Hyundai i30 1.4 T-GDi 140 ch');" data-i18n="askInfo">Demander des informations</a><a class="btn secondary" href="https://wa.me/33780770163" target="_blank" data-i18n="whatsapp">WhatsApp</a></div>
+<div class="vehicle-contact-form">
+<h3>📞 <span data-i18n="vehicleFormTitle">Intéressé par ce véhicule ?</span></h3>
+<p class="form-intro" data-i18n="vehicleFormIntro">Remplissez ce formulaire pour nous contacter directement au sujet de ce véhicule.</p>
+<form class="inline-contact-form" onsubmit="sendInlineWhatsApp(event)">
+<input type="hidden" name="vehicle" value="Hyundai i30 1.4 T-GDi 140 ch">
+<div class="inline-form-grid">
+<input name="name" required placeholder="Votre nom" data-i18n-placeholder="formNamePh">
+<input name="country" required placeholder="France" data-i18n-placeholder="formCountryPh">
+<input name="phone" required placeholder="+33..." data-i18n-placeholder="formContactPh">
+<input name="email" type="email" placeholder="vous@email.com" data-i18n-placeholder="formEmailPh">
+<input name="budget" placeholder="Ex. 10 000 €" data-i18n-placeholder="formBudgetPh">
+<textarea name="message" placeholder="Votre demande ou vos questions..." data-i18n-placeholder="inlineMessagePh"></textarea>
+</div>
+<div class="inline-form-actions">
+<button class="btn whatsapp-form" type="submit" data-i18n="inlineWhatsApp">💬 Envoyer par WhatsApp</button>
+<button class="btn email-form" type="button" onclick="sendInlineEmail(this)" data-i18n="inlineEmail">📧 Préparer un e-mail</button>
+</div>
+<p class="form-small-note" data-i18n="inlineEmailNote">L'option e-mail ouvre votre messagerie avec la demande déjà préparée. Il suffit d'indiquer votre destinataire.</p>
+</form>
+</div>
 </div></div>
 <div class="trust-row"><div class="trust-item">🇩🇪 <strong data-i18n="trustGermany">Origine Allemagne</strong><span data-i18n="trustGermanySub">Sélection et contrôle du véhicule</span></div><div class="trust-item">🇪🇺 <strong data-i18n="trustEurope">Livraison Europe</strong><span data-i18n="trustEuropeSub">Accompagnement à l'importation</span></div><div class="trust-item">📄 <strong data-i18n="trustDocs">Dossier véhicule</strong><span data-i18n="trustDocsSub">Documents disponibles selon le véhicule</span></div><div class="trust-item">💬 <strong data-i18n="trustContact">Contact direct</strong><span data-i18n="trustContactSub">WhatsApp et formulaire</span></div></div>
 <div class="equipment"><h3 data-i18n="equipmentTitle">Équipements</h3><div class="equipment-grid">
@@ -310,7 +381,7 @@ window.__valueTranslations={"en": {"Gris": "Grey", "Cuir partiel": "Part-leather
 <div class="contact-highlight"><div class="contact-icon">📞</div><div><strong data-i18n="contactHighlightTitle">Une question sur un véhicule ?</strong><span data-i18n="contactHighlightText">Remplissez le formulaire ci-dessous et nous vous répondrons rapidement.</span></div></div>
 <div class="form-wrap">
 <h3 style="margin-top:0" data-i18n="formTitle">Demande de renseignements</h3>
-<p class="muted" data-i18n="formIntro">Remplissez ce formulaire. Votre demande sera préparée automatiquement et envoyée à AutoParc Export via WhatsApp.</p>
+<p class="muted" data-i18n="formIntro">Remplissez ce formulaire. Vous pourrez envoyer votre demande par WhatsApp ou préparer un e-mail.</p>
 <form id="contactForm" onsubmit="sendContactForm(event)">
 <div class="form-grid">
 <div class="form-field"><label for="formName" data-i18n="formName">Nom / Prénom</label><input id="formName" required autocomplete="name" placeholder="Votre nom" data-i18n-placeholder="formNamePh"></div>
@@ -321,8 +392,8 @@ window.__valueTranslations={"en": {"Gris": "Grey", "Cuir partiel": "Part-leather
 <div class="form-field"><label for="formBudget" data-i18n="formBudget">Budget</label><input id="formBudget" placeholder="Ex. 10 000 €" data-i18n-placeholder="formBudgetPh"></div>
 <div class="form-field full"><label for="formMessage" data-i18n="formMessage">Votre demande</label><textarea id="formMessage" placeholder="Décrivez vos critères : année, kilométrage, carburant, boîte, options..." data-i18n-placeholder="formMessagePh"></textarea></div>
 </div>
-<div class="form-actions"><button class="btn whatsapp-form" type="submit" data-i18n="formSubmit">📲 Envoyer ma demande sur WhatsApp</button><a class="btn secondary" href="https://wa.me/33780770163" target="_blank" data-i18n="formDirect">Ou ouvrir WhatsApp directement</a></div>
-<p class="form-note" data-i18n="formNote">Vos informations sont utilisées uniquement pour répondre à votre demande commerciale. Aucun compte n'est nécessaire pour envoyer le message WhatsApp.</p>
+<div class="form-actions"><button class="btn whatsapp-form" type="submit" data-i18n="formSubmit">📲 Envoyer ma demande sur WhatsApp</button><button class="btn email-form" type="button" onclick="sendMainEmail()" data-i18n="formEmailBtn">📧 Préparer un e-mail</button><a class="btn secondary" href="https://wa.me/33780770163" target="_blank" data-i18n="formDirect">Ou ouvrir WhatsApp directement</a></div>
+<p class="form-note" data-i18n="formNote">Vos informations sont utilisées uniquement pour répondre à votre demande commerciale. L'e-mail ouvre votre messagerie avec le contenu déjà préparé.</p>
 </form></div>
 </section>
 </main>
@@ -397,6 +468,19 @@ function updatePlaceholders(lang){
     if(t && t[lang] && t[lang][key]) el.placeholder=t[lang][key];
   });
 }
+const inlineUi={
+fr:{formEmailBtn:'📧 Préparer un e-mail',formNote2:"Vos informations sont utilisées uniquement pour répondre à votre demande commerciale.",vehicleFormTitle:'Intéressé par ce véhicule ?',vehicleFormIntro:'Remplissez ce formulaire pour nous contacter directement au sujet de ce véhicule.',inlineWhatsApp:'💬 Envoyer par WhatsApp',inlineEmail:'📧 Préparer un e-mail',inlineEmailNote:"L'option e-mail ouvre votre messagerie avec la demande déjà préparée. Il suffit d'indiquer votre destinataire.",inlineMessagePh:'Votre demande ou vos questions...'},
+en:{formEmailBtn:'📧 Prepare an email',formNote2:'Your information is used only to respond to your commercial request.',vehicleFormTitle:'Interested in this vehicle?',vehicleFormIntro:'Fill in this form to contact us directly about this vehicle.',inlineWhatsApp:'💬 Send by WhatsApp',inlineEmail:'📧 Prepare an email',inlineEmailNote:'The email option opens your email app with the request already prepared. Simply enter the recipient.',inlineMessagePh:'Your request or questions...'},
+pl:{formEmailBtn:'📧 Przygotuj e-mail',formNote2:'Twoje dane są wykorzystywane wyłącznie do odpowiedzi na zapytanie handlowe.',vehicleFormTitle:'Jesteś zainteresowany tym pojazdem?',vehicleFormIntro:'Wypełnij formularz, aby skontaktować się z nami bezpośrednio w sprawie tego pojazdu.',inlineWhatsApp:'💬 Wyślij przez WhatsApp',inlineEmail:'📧 Przygotuj e-mail',inlineEmailNote:'Opcja e-mail otwiera program pocztowy z przygotowaną wiadomością. Wystarczy wpisać odbiorcę.',inlineMessagePh:'Twoje zapytanie lub pytania...'},
+it:{formEmailBtn:'📧 Prepara un’e-mail',formNote2:'I tuoi dati sono utilizzati esclusivamente per rispondere alla tua richiesta commerciale.',vehicleFormTitle:'Interessato a questo veicolo?',vehicleFormIntro:'Compila questo modulo per contattarci direttamente per questo veicolo.',inlineWhatsApp:'💬 Invia tramite WhatsApp',inlineEmail:'📧 Prepara un’e-mail',inlineEmailNote:'L’opzione e-mail apre il tuo programma di posta con la richiesta già preparata. Inserisci solo il destinatario.',inlineMessagePh:'La tua richiesta o le tue domande...'},
+es:{formEmailBtn:'📧 Preparar un correo',formNote2:'Tus datos se utilizan únicamente para responder a tu solicitud comercial.',vehicleFormTitle:'¿Te interesa este vehículo?',vehicleFormIntro:'Completa este formulario para contactarnos directamente sobre este vehículo.',inlineWhatsApp:'💬 Enviar por WhatsApp',inlineEmail:'📧 Preparar un correo',inlineEmailNote:'La opción de correo abre tu aplicación de email con la solicitud ya preparada. Solo tienes que indicar el destinatario.',inlineMessagePh:'Tu solicitud o tus preguntas...'},
+pt:{formEmailBtn:'📧 Preparar um e-mail',formNote2:'Os seus dados são utilizados apenas para responder ao seu pedido comercial.',vehicleFormTitle:'Interessado neste veículo?',vehicleFormIntro:'Preencha este formulário para nos contactar diretamente sobre este veículo.',inlineWhatsApp:'💬 Enviar por WhatsApp',inlineEmail:'📧 Preparar um e-mail',inlineEmailNote:'A opção de e-mail abre a sua aplicação de correio com o pedido já preparado. Basta indicar o destinatário.',inlineMessagePh:'O seu pedido ou perguntas...'}
+};
+function applyInlineUi(lang){const u=inlineUi[lang]||inlineUi.fr;document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.getAttribute('data-i18n');if(u[k])el.textContent=u[k]});document.querySelectorAll('[data-i18n-placeholder]').forEach(el=>{const k=el.getAttribute('data-i18n-placeholder');if(u[k])el.placeholder=u[k]});}
+function inlineFormData(btn){const form=btn.closest('form');return Object.fromEntries(new FormData(form).entries());}
+function sendInlineWhatsApp(e){e.preventDefault();const d=inlineFormData(e.submitter||e.target.querySelector('button[type=submit]'));const text='AutoParc Export — Demande de renseignements\n\nVéhicule : '+d.vehicle+'\nNom / Prénom : '+d.name+'\nPays : '+d.country+'\nTéléphone : '+d.phone+'\nE-mail : '+(d.email||'—')+'\nBudget : '+(d.budget||'—')+'\nDemande : '+(d.message||'—');window.open('https://wa.me/33780770163?text='+encodeURIComponent(text),'_blank');}
+function sendInlineEmail(btn){const d=inlineFormData(btn);const subject='Demande — '+d.vehicle;const body='Bonjour,\n\nJe suis intéressé(e) par le véhicule suivant : '+d.vehicle+'\n\nNom / Prénom : '+d.name+'\nPays : '+d.country+'\nTéléphone : '+d.phone+'\nE-mail : '+(d.email||'—')+'\nBudget : '+(d.budget||'—')+'\nDemande : '+(d.message||'—')+'\n\nCordialement';window.location.href='mailto:?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);}
+function sendMainEmail(){const f=document.getElementById('contactForm');const vals={name:document.getElementById('formName').value,country:document.getElementById('formCountry').value,phone:document.getElementById('formContact').value,email:document.getElementById('formEmail').value,vehicle:document.getElementById('formVehicle').value,budget:document.getElementById('formBudget').value,message:document.getElementById('formMessage').value};const subject='Demande — '+vals.vehicle;const body='Bonjour,\n\nVéhicule recherché : '+vals.vehicle+'\nNom / Prénom : '+vals.name+'\nPays : '+vals.country+'\nTéléphone : '+vals.phone+'\nE-mail : '+(vals.email||'—')+'\nBudget : '+(vals.budget||'—')+'\nDemande : '+(vals.message||'—')+'\n\nCordialement';window.location.href='mailto:?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);}
 function selectVehicleForContact(name){const f=document.getElementById('formVehicle');if(f){f.value=name;document.getElementById('contact').scrollIntoView({behavior:'smooth',block:'start'});f.focus();}}
 function sendContactForm(e){
   e.preventDefault();
@@ -450,6 +534,7 @@ function applyLanguage(lang){
  });
  localStorage.setItem('autoparc-lang',lang);
  updatePlaceholders(lang);
+ applyInlineUi(lang);
 }
 
 const savedLang=localStorage.getItem('autoparc-lang')||'fr';
