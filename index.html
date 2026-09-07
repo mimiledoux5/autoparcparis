@@ -292,6 +292,28 @@ header nav a span {
   header nav { width:100% !important; max-width:none !important; overflow-x:auto !important; overflow-y:hidden !important; }
 }
 </style>
+
+<style id="v54-language-picker-final-fix">
+/* Affichage garanti du sélecteur de langue sans modifier le catalogue */
+header { overflow: visible !important; }
+#languagePicker { display: inline-block !important; visibility: visible !important; opacity: 1 !important; position: relative !important; z-index: 100000 !important; justify-self: end !important; min-width: 135px !important; }
+#languagePicker .language-picker-btn { display: flex !important; visibility: visible !important; opacity: 1 !important; min-width: 135px !important; white-space: nowrap !important; }
+#languagePicker .language-picker-menu { z-index: 100001 !important; }
+@media (min-width: 1101px) {
+  header { grid-template-columns: minmax(250px,365px) minmax(150px,1fr) auto 145px !important; }
+}
+@media (max-width: 1100px) {
+  header { grid-template-columns: minmax(0,1fr) auto auto !important; }
+  header .header-middle { display:none !important; }
+  header nav { grid-column:auto !important; }
+}
+@media (max-width: 700px) {
+  header { display:flex !important; flex-wrap:wrap !important; overflow:visible !important; }
+  #languagePicker { order:2 !important; margin-left:auto !important; min-width:125px !important; }
+  #languagePicker .language-picker-btn { min-width:125px !important; }
+  header nav { order:3 !important; width:100% !important; }
+}
+</style>
 </head>
 <body id="top">
 <header>
@@ -799,7 +821,6 @@ setTimeout(function(){ if(Array.isArray(window.autoparcVehicles) && window.autop
   });
   const initial=localStorage.getItem('autoparc-lang')||'fr';
   forceLabels(initial);
-  closeLanguagePicker();
 })();
 </script>
 </body></html>
