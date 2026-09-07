@@ -1,1 +1,2 @@
-AutoParc Export V43 — catalogue robuste, menu Accueil, en-tête conforme à la maquette.
+AutoParc Export - V46
+Catalogue en 2 colonnes sur ordinateur. Base V45 conservee.
