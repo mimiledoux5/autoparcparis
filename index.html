@@ -412,6 +412,10 @@ function valueText(v,key,lang){
   if(x && typeof x==='object') return x[lang]||x.fr||Object.values(x)[0]||'';
   const raw=String(x??'');
   if(lang==='fr') return raw;
+  if(key==='fuel'){
+    const fuelTranslations={fr:{Essence:'Essence',Diesel:'Diesel','Électricité':'Électricité'},en:{Essence:'Petrol',Diesel:'Diesel','Électricité':'Electric'},pl:{Essence:'Benzyna',Diesel:'Diesel','Électricité':'Elektryczny'},it:{Essence:'Benzina',Diesel:'Diesel','Électricité':'Elettrico'},es:{Essence:'Gasolina',Diesel:'Diésel','Électricité':'Eléctrico'},pt:{Essence:'Gasolina',Diesel:'Gasóleo','Électricité':'Elétrico'}};
+    return fuelTranslations[lang]?.[raw]||raw;
+  }
   if(window.__valueTranslations?.[lang]?.[raw]) return window.__valueTranslations[lang][raw];
   if(window.standardVehicleTerms?.[lang]?.[raw]) return window.standardVehicleTerms[lang][raw];
   return raw;
