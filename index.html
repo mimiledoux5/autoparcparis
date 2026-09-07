@@ -627,7 +627,7 @@ function applyLanguage(lang){
  if(currentModalVehicleId && document.getElementById('vehicleModal')?.classList.contains('open')) openVehicleModal(currentModalVehicleId);
 }
 const savedLang=localStorage.getItem('autoparc-lang')||'fr';
-if(!Array.isArray(window.autoparcVehicles) || !window.autoparcVehicles.length){ window.autoparcVehicles = Array.isArray(window.autoparcVehiclesFallback) ? window.autoparcVehiclesFallback : []; }
+window.autoparcVehicles = Array.isArray(window.autoparcVehiclesFallback) ? window.autoparcVehiclesFallback : [];
 window.autoparcVehicles = window.autoparcVehicles.filter(v=>v&&typeof v==='object'&&v.id);
 applyLanguage(savedLang);
 setTimeout(function(){ if(Array.isArray(window.autoparcVehicles) && window.autoparcVehicles.length) renderVehicles(localStorage.getItem('autoparc-lang')||'fr'); },0);
