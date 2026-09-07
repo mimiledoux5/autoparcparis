@@ -9,7 +9,7 @@
  sont automatiquement traduits par le site. Pour une description parfaite dans les 6 langues,
  vous pouvez ajouter description:{fr:'...',en:'...',pl:'...',it:'...',es:'...',pt:'...'}.
 */
-window.autoparcVehicles = [
+const autoparcVehicles = [
 {
  id:'cla180', name:'Mercedes-Benz CLA 180 AMG', year:'2015', km:'152 000 km', fuel:'Essence', gear:'Boîte manuelle', price:'4 100 €', power:'122 ch', engine:'1.6 L', transmission:'Traction avant', color:'Gris', interior:'Cuir partiel', seats:'5', doors:'5', eu:"Jusqu'en août 2027", condition:'Excellent état', premium:false,
  description:{fr:'Mercedes-Benz CLA 180 AMG en excellent état, avec finition AMG, caméra de recul, navigation, climatisation automatique et nombreux équipements.',en:'Mercedes-Benz CLA 180 AMG in excellent condition, with AMG trim, rear-view camera, navigation, automatic climate control and extensive equipment.',pl:'Mercedes-Benz CLA 180 AMG w bardzo dobrym stanie, z pakietem AMG, kamerą cofania, nawigacją, automatyczną klimatyzacją i bogatym wyposażeniem.',it:'Mercedes-Benz CLA 180 AMG in ottime condizioni, con allestimento AMG, telecamera posteriore, navigazione, climatizzatore automatico e numerosi equipaggiamenti.',es:'Mercedes-Benz CLA 180 AMG en excelente estado, con acabado AMG, cámara de marcha atrás, navegación, climatizador automático y amplio equipamiento.',pt:'Mercedes-Benz CLA 180 AMG em excelente estado, com acabamento AMG, câmara traseira, navegação, climatização automática e amplo equipamento.'},
@@ -21,7 +21,7 @@ window.autoparcVehicles = [
   es:['✓ Acabado AMG<br>✓ Cámara de marcha atrás<br>✓ Sensores de aparcamiento delanteros y traseros<br>✓ Bluetooth<br>✓ USB / AUX<br>✓ Control de crucero','✓ Sistema multimedia<br>✓ Radio DAB+<br>✓ Navegación<br>✓ Climatizador automático de 2 zonas<br>✓ Asientos delanteros calefactados','✓ Volante multifunción<br>✓ Faros de xenón<br>✓ Luces diurnas LED<br>✓ Sensor de lluvia<br>✓ Elevalunas eléctricos','✓ Retrovisores eléctricos plegables<br>✓ Interior deportivo<br>✓ Isofix<br>✓ Llantas de aluminio<br>✓ Neumáticos de verano e invierno en llantas'],
   pt:['✓ Acabamento AMG<br>✓ Câmara traseira<br>✓ Sensores de estacionamento dianteiros e traseiros<br>✓ Bluetooth<br>✓ USB / AUX<br>✓ Cruise control','✓ Sistema multimédia<br>✓ Rádio DAB+<br>✓ Navegação<br>✓ Climatização automática de 2 zonas<br>✓ Bancos dianteiros aquecidos','✓ Volante multifunções<br>✓ Faróis de xénon<br>✓ Luzes diurnas LED<br>✓ Sensor de chuva<br>✓ Vidros elétricos','✓ Retrovisores elétricos rebatíveis<br>✓ Interior desportivo<br>✓ Isofix<br>✓ Jantes de alumínio<br>✓ Pneus de verão e inverno em jantes']
  },
- photos:Array.from({length:16},(_,i)=>`./cla180-${i+1}.jpg`)
+ photos:Array.from({length:15},(_,i)=>`./cla180-${i+1}.jpg`)
 },
 {
  id:'tucson', name:'Hyundai Tucson Premium 4x4', year:'2016', km:'171 000 km', fuel:'Diesel', gear:'Boîte automatique', price:'5 700 €', power:'136 ch', engine:'2.0 L CRDi', transmission:'4x4', color:'Blanc', interior:'Cuir', seats:'5', doors:'5', owners:'2', eu:"Jusqu'en juin 2027", premium:true,
