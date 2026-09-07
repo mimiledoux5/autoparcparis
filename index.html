@@ -722,9 +722,15 @@ setTimeout(function(){ if(Array.isArray(window.autoparcVehicles) && window.autop
   const title=document.querySelector('title');if(title)title.textContent=replace(title.textContent);
   const md=document.querySelector('meta[name="description"]');if(md)md.setAttribute('content',replace(md.getAttribute('content')||''));
  }
- window.addEventListener('autoparc-language-applied',e=>setTimeout(()=>audit(e.detail||localStorage.getItem('autoparc-lang')||'fr'),0));
- setInterval(()=>audit(localStorage.getItem('autoparc-lang')||'fr'),500);
- setTimeout(()=>audit(localStorage.getItem('autoparc-lang')||'fr'),100);
+ let lastAuditedLang='';
+ function auditOnce(lang){
+   lang=lang||localStorage.getItem('autoparc-lang')||'fr';
+   if(lang===lastAuditedLang) return;
+   lastAuditedLang=lang;
+   audit(lang);
+ }
+ window.addEventListener('autoparc-language-applied',e=>setTimeout(()=>auditOnce(e.detail||localStorage.getItem('autoparc-lang')||'fr'),0));
+ setTimeout(()=>auditOnce(localStorage.getItem('autoparc-lang')||'fr'),100);
 })();
 </script>
 
