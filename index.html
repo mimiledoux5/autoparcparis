@@ -142,6 +142,30 @@ nav{gap:8px} nav a{color:#111;font-size:17px;padding:10px 14px;border-radius:6px
 @media(max-width:900px){.catalog-layout{grid-template-columns:250px 1fr;gap:24px}.catalog-grid{grid-template-columns:1fr}.catalog-image{height:240px}}
 @media(max-width:700px){header{padding:9px 14px}header .logo img{height:44px;max-width:165px}nav a{font-size:15px;padding:8px 10px}.catalog-shell{padding:28px 14px 50px}.catalog-head{align-items:flex-start;flex-direction:column}.catalog-head h2{font-size:26px}.catalog-layout{display:block}.filter-sidebar{margin-bottom:28px;background:#fff;border-radius:10px;padding:15px}.filter-title{font-size:19px}.filter-accordion{border-top:1px solid #ddd}.filter-group{border-bottom:1px solid #ddd}.catalog-toolbar{margin-top:10px}.catalog-grid{grid-template-columns:1fr;gap:18px}.catalog-image{height:220px}.catalog-title{font-size:19px}.catalog-meta{grid-template-columns:1fr 1fr 1fr}.catalog-bottom{align-items:flex-end}.catalog-price{font-size:21px}.vehicle-modal{padding:8px}.modal-gallery{height:280px}.vehicle-modal-content{padding:17px}.modal-grid{grid-template-columns:1fr;gap:18px}.modal-specs{grid-template-columns:1fr 1fr}}
 
+
+/* v41 — interface rapprochée de la maquette AutoParc Export */
+body{background:#f7f8fa;color:#0b1f3a}
+header{background:#fff;color:#0b1f3a;border-bottom:1px solid #e5e9ef;padding:14px 3.5%;box-shadow:0 1px 8px rgba(11,31,58,.04);position:sticky;top:0;z-index:20}
+header .logo{color:#0b1f3a}
+nav a{color:#0b1f3a;font-size:17px;font-weight:800;padding:12px 15px}
+nav a:hover{background:#f1f5f9;color:#0b1f3a}
+.catalog-shell{max-width:1480px;margin:0 auto;padding:34px 24px 70px}
+.catalog-head{align-items:center;margin-bottom:20px}
+.catalog-head h2{font-size:32px;color:#0b1f3a;letter-spacing:-.4px}
+.catalog-head p{font-size:15px;color:#52627a}
+.catalog-layout{grid-template-columns:295px minmax(0,1fr);gap:32px}
+.filter-sidebar{background:#fff;border:1px solid #e7ebf0;border-radius:12px;padding:16px;box-shadow:0 4px 16px rgba(11,31,58,.04)}
+.filter-title{font-size:20px;color:#0b1f3a;margin:0 0 4px}.filter-subtitle{color:#66758a}
+.filter-accordion{border-top:1px solid #e1e6ec}.filter-group{border-bottom:1px solid #e1e6ec}.filter-toggle{padding:15px 2px;font-size:15px;color:#0b1f3a}.filter-content{padding:0 2px 15px}.filter-content input,.filter-content select{border:1px solid #d2dae4;border-radius:7px;padding:11px 12px;background:#fff}
+.filter-actions{margin-top:15px}.filter-actions .btn{background:#062d66;border-radius:8px;padding:12px}.filter-actions .secondary{border-color:#cfd7e2;color:#0b1f3a}
+.catalog-toolbar{margin-bottom:14px}.catalog-count{font-size:15px;color:#53627a;font-weight:600}.catalog-sort{min-width:195px;border:1px solid #d5dce5;border-radius:8px;background:#fff;padding:10px 12px;color:#0b1f3a}
+.catalog-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.catalog-card{border:1px solid #e4e9ef;border-radius:12px;box-shadow:0 3px 14px rgba(11,31,58,.07);transform:none}.catalog-card:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(11,31,58,.12)}
+.catalog-image{height:255px;background:#edf1f5}.catalog-image img{object-fit:cover}.catalog-badge{top:10px;left:10px}.catalog-heart{right:10px;top:10px}.catalog-body{padding:14px 15px 16px}.catalog-title{font-size:19px;color:#0b1f3a;margin-bottom:11px}.catalog-meta{margin-bottom:14px}.catalog-meta span{font-size:12.5px;color:#33445c}.catalog-price{font-size:23px;color:#0b1f3a}.catalog-view{background:#062d66;border-radius:8px;padding:11px 16px;font-size:13px}.catalog-view:hover{background:#0a438f}
+.search-result-count{background:#edf5ff;color:#0a438f;border-color:#d8e8ff;font-size:14px;padding:8px 13px}
+@media(max-width:1250px){.catalog-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:900px){.catalog-layout{grid-template-columns:250px 1fr;gap:22px}.catalog-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:700px){.catalog-shell{padding:28px 14px 50px}.catalog-layout{display:block}.filter-sidebar{margin-bottom:22px}.catalog-grid{grid-template-columns:1fr}.catalog-image{height:225px}.catalog-head h2{font-size:27px}}
 </style>
 <style id="flag-fix">
 .lang-select{display:flex!important;align-items:center!important;gap:6px!important}
@@ -432,7 +456,7 @@ pt:{allBrands:'Todas as marcas',modelLabel:'Modelo',modelPh:'Ex.: GLE, i30, Tran
 const allVehicleBrands = [
 'Abarth','Alfa Romeo','Alpine','Aston Martin','Audi','Bentley','BMW','BYD','Cadillac','Chevrolet','Citroën','Cupra','Dacia','Daewoo','Daihatsu','Dodge','DS','Ferrari','Fiat','Ford','Genesis','GMC','Honda','Hyundai','Infiniti','Isuzu','Iveco','Jaguar','Jeep','Kia','Lamborghini','Lancia','Land Rover','Lexus','Lincoln','Lotus','Maserati','Mazda','McLaren','Mercedes-Benz','MG','Mini','Mitsubishi','Nissan','Opel','Peugeot','Porsche','RAM','Renault','Rolls-Royce','Saab','Seat','Skoda','Smart','Subaru','Suzuki','Tesla','Toyota','Volkswagen','Volvo'
 ];
-const normalizedBrandCatalog = allVehicleBrands.map(b=>({label:b,key:normalizeFilterText(b).replace(/[^a-z0-9- ]/g,'').trim()})).sort((a,b)=>b.key.length-a.key.length);
+const normalizedBrandCatalog = allVehicleBrands.map(b=>({label:b,key:normalizeFilterText(b).replace(/[^a-z0-9- ]/g,'').trim().replace(/\s+/g,'-')})).sort((a,b)=>b.key.length-a.key.length);
 function vehicleBrand(v){
  const n=normalizeFilterText(valueText(v,'name','fr')).trim();
  const hit=normalizedBrandCatalog.find(b=>n===b.key || n.startsWith(b.key+' '));
@@ -441,7 +465,7 @@ function vehicleBrand(v){
 function vehicleModel(v){const n=String(valueText(v,'name','fr')||'');const b=vehicleBrand(v);return n.replace(new RegExp('^'+b+'\\s*','i'),'').trim()||n;}
 function populateBrandAndModelFilters(lang){
  const ui=filterExtraUi[lang]||filterExtraUi.fr;
- const brands=allVehicleBrands.map(b=>({label:b,key:normalizeFilterText(b).replace(/[^a-z0-9- ]/g,'').trim()})).sort((a,b)=>a.label.localeCompare(b.label,'fr'));
+ const brands=allVehicleBrands.map(b=>({label:b,key:normalizeFilterText(b).replace(/[^a-z0-9- ]/g,'').trim().replace(/\s+/g,'-')})).sort((a,b)=>a.label.localeCompare(b.label,'fr'));
  const brand=document.getElementById('brandFilter'); if(brand){ const current=brand.value; if(brand.options[0]) brand.options[0].textContent=ui.allBrands; if(current) brand.value=current; }
  const list=document.getElementById('modelSuggestions'); if(list){list.innerHTML='';[...new Set(autoparcVehicles.map(vehicleModel).filter(Boolean))].sort().forEach(m=>{const o=document.createElement('option');o.value=m;list.appendChild(o)})}
  const ml=document.getElementById('filterModelLabel');if(ml)ml.textContent=ui.modelLabel;const model=document.getElementById('search');if(model)model.placeholder=ui.modelPh;
@@ -472,7 +496,7 @@ function passesFilters(v){
  return true;
 }
 function sortVehicles(arr){const s=document.getElementById('catalogSort')?.value||'default';const num=x=>parseFilterNumber(x);return [...arr].sort((a,b)=>s==='priceAsc'?num(a.price)-num(b.price):s==='priceDesc'?num(b.price)-num(a.price):s==='yearDesc'?parseInt(b.year)-parseInt(a.year):s==='kmAsc'?num(a.km)-num(b.km):0)}
-function updateCatalogUi(lang){
+function updateCatalogUi(lang,countOverride){
  const tr=filterTranslations[lang]||filterTranslations.fr,ui=catalogUi[lang]||catalogUi.fr,extra=filterExtraUi[lang]||filterExtraUi.fr;
  const ids={searchIntro:'searchIntro',filterMake:'filterMake',filterYearMin:'filterYearMin',filterYearMax:'filterYearMax',filterKmMax:'filterKmMax',filterPriceMax:'filterPriceMax',filterFuel:'filterFuel'};Object.entries(ids).forEach(([k,id])=>{const el=document.getElementById(id);if(el&&tr[k])el.textContent=tr[k]});
  const fy=document.getElementById('filterYearGroup');if(fy)fy.textContent=ui.filterYear;const fg=document.getElementById('filterGear');if(fg)fg.textContent=ui.filterGear;const ft=document.querySelector('[data-i18n="filterTitle"]'),fs=document.querySelector('[data-i18n="filterSubtitle"]');if(ft)ft.textContent=ui.filterTitle;if(fs)fs.textContent=ui.filterSubtitle;
@@ -480,7 +504,7 @@ function updateCatalogUi(lang){
  const opts={kmMax:[['',tr.allKm]],priceMax:[] ,fuelFilter:[['',tr.allFuel],['essence',tr.fuelPetrol],['diesel',tr.fuelDiesel],['electric',tr.fuelElectric]],gearFilter:[['',lang==='fr'?'Toutes':lang==='en'?'All':lang==='pl'?'Wszystkie':lang==='it'?'Tutte':lang==='es'?'Todas':'Todas'],['manual',lang==='fr'?'Manuelle':lang==='en'?'Manual':lang==='pl'?'Manualna':lang==='it'?'Manuale':lang==='es'?'Manual':'Manual'],['automatic',lang==='fr'?'Automatique':lang==='en'?'Automatic':lang==='pl'?'Automatyczna':lang==='it'?'Automatica':lang==='es'?'Automático':'Automática']]};
  Object.entries(opts).forEach(([id,vals])=>{const el=document.getElementById(id);if(!el)return;vals.forEach(([val,text])=>{const o=Array.from(el.options).find(x=>x.value===val);if(o)o.textContent=text})});
  populateBrandAndModelFilters(lang);
- const count=document.querySelectorAll('.catalog-card').length,ct=document.getElementById('searchResultCount');if(ct)ct.textContent=count+' '+(count===1?tr.resultOne:tr.resultMany);
+ const count=(typeof countOverride==='number'?countOverride:document.querySelectorAll('.catalog-card').length),ct=document.getElementById('searchResultCount');if(ct)ct.textContent=count+' '+(count===1?tr.resultOne:tr.resultMany);
 }
 function filterCars(){renderVehicles(localStorage.getItem('autoparc-lang')||'fr')}
 function resetFilters(){['search','brandFilter','yearMin','yearMax','kmMin','kmMax','priceMin','priceMax','fuelFilter','gearFilter','transmissionFilter'].forEach(id=>{const el=document.getElementById(id);if(el)el.value=''});const s=document.getElementById('catalogSort');if(s)s.value='default';filterCars()}
@@ -490,7 +514,7 @@ function renderVehicles(lang){
  const filtered=sortVehicles(autoparcVehicles.filter(passesFilters)); const ui=catalogUi[lang]||catalogUi.fr;
  filtered.forEach((v,i)=>{const img=(v.photos&&v.photos[0])||'';const fuel=valueText(v,'fuel',lang),gear=valueText(v,'gear',lang);const title=valueText(v,'name',lang);const article=document.createElement('article');article.className='catalog-card';article.innerHTML=`<div class="catalog-image"><img src="${esc(img)}" alt="${esc(title)}" loading="lazy"><span class="catalog-badge">${esc(v.year)}</span><button class="catalog-heart" type="button" aria-label="Favorite">♡</button></div><div class="catalog-body"><h3 class="catalog-title">${esc(title)}</h3><div class="catalog-meta"><span>${esc(v.km)}</span><span>${esc(v.year)}</span><span>${esc(fuel)}</span></div><div class="catalog-bottom"><div class="catalog-price">${esc(v.price)}</div><button class="catalog-view" type="button" onclick="openVehicleModal('${v.id}')">${esc(ui.view)}</button></div></div>`;root.appendChild(article)});
  if(!filtered.length)root.innerHTML=`<div class="catalog-empty"><strong>${esc((filterTranslations[lang]||filterTranslations.fr).noResultsTitle)}</strong><span>${esc((filterTranslations[lang]||filterTranslations.fr).noResultsText)}</span></div>`;
- updateCatalogUi(lang);
+ updateCatalogUi(lang,filtered.length);
 }
 function openVehicleModal(id){const v=autoparcVehicles.find(x=>x.id===id);if(!v)return;const lang=localStorage.getItem('autoparc-lang')||'fr',title=valueText(v,'name',lang),fuel=valueText(v,'fuel',lang),gear=valueText(v,'gear',lang),trans=valueText(v,'transmission',lang),color=valueText(v,'color',lang),interior=valueText(v,'interior',lang);const eq=completeEquipment(v,lang).join('<br><br>');const tr=vehicleTranslations[lang]||vehicleTranslations.en;const content=document.getElementById('vehicleModalContent');galleryData['modalGallery']=v.photos||[];galleryState['modalGallery']=0;content.innerHTML=`<div class="modal-gallery" id="modalGallery"><button class="gallery-arrow prev" type="button" onclick="changeGallery('modalGallery',-1)">‹</button><img class="gallery-main" src="" alt=""><button class="gallery-arrow next" type="button" onclick="changeGallery('modalGallery',1)">›</button><div class="gallery-counter"><span class="gallery-current">1</span> / <span class="gallery-total">${(v.photos||[]).length}</span></div></div><div class="vehicle-modal-content"><div class="vehicle-top"><div><div class="vehicle-kicker">${esc(v.year)} • ${esc(v.km)}</div><h1 class="vehicle-title">${esc(title)}</h1><p class="vehicle-subtitle">${esc(fuel)} • ${esc(gear)}</p></div><div class="vehicle-pricebox"><p class="price">${esc(v.price)}</p></div></div><div class="modal-grid"><div><h3>${esc(tr.descriptionTitle)}</h3><p style="line-height:1.65;color:#555">${esc(valueText(v,'description',lang))}</p><h3 style="margin-top:20px">${esc(tr.equipment)}</h3><div class="modal-eq">${eq}</div></div><div><h3>${esc(tr.specsTitle)}</h3><div class="modal-specs"><div class="modal-spec"><strong>${esc(tr.year)}</strong><br>${esc(v.year)}</div><div class="modal-spec"><strong>${esc(tr.km)}</strong><br>${esc(v.km)}</div><div class="modal-spec"><strong>${esc(tr.fuelLabel)}</strong><br>${esc(fuel)}</div><div class="modal-spec"><strong>${esc(tr.gearLabel)}</strong><br>${esc(gear)}</div><div class="modal-spec"><strong>${esc(tr.transmission)}</strong><br>${esc(trans)}</div><div class="modal-spec"><strong>${esc(tr.color)}</strong><br>${esc(color)}</div><div class="modal-spec"><strong>${esc(tr.interior)}</strong><br>${esc(interior)}</div><div class="modal-spec"><strong>${esc(tr.power)}</strong><br>${esc(v.power)}</div></div><div class="modal-cta"><a class="btn" href="#contact" onclick="closeVehicleModal();selectVehicleForContact('${String(title).replace(/'/g,"\\'")}')">${esc(tr.request)}</a><a class="btn secondary" href="https://wa.me/33780770163" target="_blank">${esc(tr.whatsapp)}</a></div></div></div></div>`;document.getElementById('vehicleModal').classList.add('open');document.body.style.overflow='hidden';renderGallery()}
 function closeVehicleModal(){document.getElementById('vehicleModal').classList.remove('open');document.body.style.overflow=''}
