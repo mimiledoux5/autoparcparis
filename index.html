@@ -697,4 +697,53 @@ setTimeout(function(){ if(Array.isArray(window.autoparcVehicles) && window.autop
   window.addEventListener('autoparc-language-changed',applyCatalogTitle);
 })();
 </script>
+
+<style id="autoparc-legal-footer-style">
+  .autoparc-legal-footer{margin-top:48px;background:#071a3d;color:#fff;border-top:4px solid #c9a227;padding:34px 24px 20px;}
+  .autoparc-legal-footer .legal-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.2fr 1fr;gap:32px;}
+  .autoparc-legal-footer h3{margin:0 0 12px;font-size:18px;color:#fff;}
+  .autoparc-legal-footer p{margin:7px 0;line-height:1.55;color:#e8edf7;font-size:14px;}
+  .autoparc-legal-footer a{color:#fff;text-decoration:none;}
+  .autoparc-legal-footer a:hover{text-decoration:underline;}
+  .autoparc-legal-footer .legal-bottom{max-width:1200px;margin:24px auto 0;padding-top:16px;border-top:1px solid rgba(255,255,255,.18);text-align:center;color:#cbd4e5;font-size:12px;}
+  @media(max-width:700px){.autoparc-legal-footer .legal-inner{grid-template-columns:1fr;gap:18px;}.autoparc-legal-footer{padding:28px 18px 18px;}}
+</style>
+
+
+<footer class="autoparc-legal-footer" id="mentions-legales">
+  <div class="legal-inner">
+    <div>
+      <h3 data-legal="companyTitle">AutoParc Export</h3>
+      <p><strong data-legal="addressLabel">Adresse :</strong> 154 route de Bondy, 93600 Aulnay-sous-Bois, France</p>
+      <p><strong data-legal="sirenLabel">SIREN / numéro d'entreprise :</strong> 510 467 905</p>
+    </div>
+    <div>
+      <h3 data-legal="contactTitle">Contact</h3>
+      <p><strong data-legal="emailLabel">E-mail :</strong> <a href="mailto:contact@autoparcde.com">contact@autoparcde.com</a></p>
+      <p><strong data-legal="phoneLabel">Téléphone :</strong> <a href="tel:+33780770163">+33 7 80 77 01 63</a></p>
+      <p><a href="#mentions-legales" data-legal="legalLink">Mentions légales</a></p>
+    </div>
+  </div>
+  <div class="legal-bottom">© 2026 AutoParc Export — <span data-legal="rights">Tous droits réservés.</span></div>
+</footer>
+<script id="autoparc-legal-footer-i18n">
+(function(){
+  const L={
+    fr:{addressLabel:'Adresse :',sirenLabel:"SIREN / numéro d'entreprise :",emailLabel:'E-mail :',phoneLabel:'Téléphone :',contactTitle:'Contact',legalLink:'Mentions légales',rights:'Tous droits réservés.'},
+    en:{addressLabel:'Address:',sirenLabel:'SIREN / company number:',emailLabel:'Email:',phoneLabel:'Phone:',contactTitle:'Contact',legalLink:'Legal notice',rights:'All rights reserved.'},
+    pl:{addressLabel:'Adres:',sirenLabel:'SIREN / numer firmy:',emailLabel:'E-mail:',phoneLabel:'Telefon:',contactTitle:'Kontakt',legalLink:'Informacje prawne',rights:'Wszelkie prawa zastrzeżone.'},
+    it:{addressLabel:'Indirizzo:',sirenLabel:'SIREN / numero aziendale:',emailLabel:'E-mail:',phoneLabel:'Telefono:',contactTitle:'Contatti',legalLink:'Note legali',rights:'Tutti i diritti riservati.'},
+    es:{addressLabel:'Dirección:',sirenLabel:'SIREN / número de empresa:',emailLabel:'Correo electrónico:',phoneLabel:'Teléfono:',contactTitle:'Contacto',legalLink:'Aviso legal',rights:'Todos los derechos reservados.'},
+    pt:{addressLabel:'Morada:',sirenLabel:'SIREN / número da empresa:',emailLabel:'E-mail:',phoneLabel:'Telefone:',contactTitle:'Contacto',legalLink:'Aviso legal',rights:'Todos os direitos reservados.'}
+  };
+  function apply(){
+    const lang=(localStorage.getItem('autoparc-lang')||'fr').toLowerCase();
+    const x=L[lang]||L.fr;
+    document.querySelectorAll('[data-legal]').forEach(el=>{const k=el.getAttribute('data-legal'); if(k==='companyTitle') return; if(x[k]) el.textContent=x[k];});
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',apply); else apply();
+  window.addEventListener('autoparc-language-changed',apply);
+})();
+</script>
+
 </body></html>
