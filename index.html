@@ -687,146 +687,44 @@ setTimeout(function(){ if(Array.isArray(window.autoparcVehicles) && window.autop
 </script>
 
 
-<script id="autoparc-final-translation-audit">
-(function(){
- const PHRASES={
-  en:{
-   'Véhicules':'Vehicles','Services':'Services','Contact':'Contact','Votre véhicule d\'occasion, sélectionné en Allemagne.':'Your used vehicle, selected in Germany.','Découvrez des véhicules sélectionnés et bénéficiez d\'un accompagnement pour l\'importation et la livraison en Europe.':'Discover selected vehicles and benefit from support with import procedures and delivery throughout Europe.','Voir les véhicules':'View vehicles','Rechercher un véhicule':'Search for a vehicle','Marque ou modèle':'Make or model','Prix maximum':'Maximum price','Véhicules disponibles':'Available vehicles','Pourquoi AutoParc Export ?':'Why AutoParc Export?','Sélection en Allemagne':'Selection in Germany','Livraison en Europe':'Delivery in Europe','Accompagnement':'Support','Contact direct':'Direct contact','Nous recherchons des véhicules correspondant aux critères de nos clients.':'We search for vehicles matching our customers\' requirements.','Organisation de la livraison vers différents pays européens.':'We organize delivery to different European countries.','Accompagnement dans les démarches liées à l\'importation.':'Support with procedures related to vehicle import.','Contactez-nous directement par WhatsApp ou formulaire.':'Contact us directly via WhatsApp or the contact form.','Vous recherchez un véhicule précis ?':'Looking for a specific vehicle?','Indiquez-nous la marque, le modèle, le budget et vos critères. Nous pourrons rechercher un véhicule correspondant.':'Tell us the make, model, budget and your requirements. We can search for a suitable vehicle.','Une question sur un véhicule ?':'Questions about a vehicle?','Remplissez le formulaire ci-dessous et nous vous répondrons rapidement.':'Fill in the form below and we will get back to you quickly.','Demande de renseignements':'Information request','Remplissez ce formulaire. Vous pourrez envoyer votre demande par WhatsApp ou préparer un e-mail.':'Fill in this form. You can send your request by WhatsApp or prepare an email.','Nom / Prénom':'First / last name','Pays':'Country','Téléphone / WhatsApp':'Phone / WhatsApp','E-mail':'Email','Véhicule recherché':'Vehicle wanted','Budget':'Budget','Votre demande':'Your request','Votre nom':'Your name','France':'France','Marque et modèle':'Make and model','Décrivez vos critères : année, kilométrage, carburant, boîte, options...':'Describe your criteria: year, mileage, fuel, gearbox, options...','Envoyer ma demande sur WhatsApp':'Send my request on WhatsApp','Ou ouvrir WhatsApp directement':'Or open WhatsApp directly','Préparer un e-mail':'Prepare an email','Vos informations sont utilisées uniquement pour répondre à votre demande commerciale. Aucun compte n\'est nécessaire pour envoyer le message WhatsApp.':'Your information is used only to respond to your commercial request. No account is required to send the WhatsApp message.','Véhicules d\'occasion • Allemagne → Europe':'Used vehicles • Germany → Europe','Mentions légales à compléter avant mise en production.':'Legal notices to be completed before launch.','Photo du véhicule':'Vehicle photo','Photo précédente':'Previous photo','Photo suivante':'Next photo','Équipements':'Equipment','Équipements Premium':'Premium equipment','Documents & conditions':'Documents & conditions','Origine Allemagne':'German origin','Sélection et contrôle du véhicule':'Vehicle selection and check','Livraison Europe':'European delivery','Dossier véhicule':'Vehicle file','WhatsApp et formulaire':'WhatsApp and contact form','Carte grise':'Registration certificate','Certificat de conformité':'Certificate of conformity','Contrôle technique':'Technical inspection','Carnet d\'entretien':'Service history','Factures d\'entretien':'Maintenance invoices','Certificat de kilométrage':'Mileage certificate','Rapport de condition disponible':'Condition report available','Véhicule importé d\'Allemagne':'Vehicle imported from Germany','Livraison possible dans toute l\'Europe':'Delivery possible throughout Europe','Essence':'Petrol','Boîte manuelle':'Manual transmission','Boîte automatique':'Automatic transmission','Traction avant':'Front-wheel drive','Gris':'Grey','Blanc':'White','Bleu métallisé':'Metallic blue','Cuir':'Leather','Cuir partiel':'Part-leather','Excellent état':'Excellent condition','Intérieur sport':'Sport interior','Propriétaires':'Owners','Places / portes':'Seats / doors','Coffre':'Boot','Homologation UE':'EU approval','État':'Condition','hors livraison':'delivery not included','Disponible':'Available','Prix':'Price','Puissance':'Power','Moteur':'Engine','Transmission':'Transmission','Couleur':'Color','Intérieur':'Interior','État':'Condition','Dossier véhicule':'Vehicle file','Véhicule sélectionné en Allemagne':'Vehicle selected in Germany','Photo du véhicule — utilisez les flèches pour faire défiler les photos. Cliquez sur la photo pour l\'agrandir.':'Vehicle photos — use the arrows to browse the photos. Click the photo to enlarge it.','Origine Allemagne':'German origin','Livraison Europe':'European delivery','Accompagnement à l\'importation':'Import support','Sélection et contrôle du véhicule':'Vehicle selection and check','Documents disponibles selon le véhicule':'Documents available depending on the vehicle','Préparer un e-mail':'Prepare an email','Remplissez ce formulaire pour nous contacter directement au sujet de ce véhicule.':'Fill in this form to contact us directly about this vehicle.','The email option opens your email app with the request already prepared. Simply enter the recipient.':'The email option opens your email app with the request already prepared. Simply enter the recipient.'
-  },
-  pl:{
-   'Véhicules':'Samochody','Services':'Usługi','Contact':'Kontakt','Votre véhicule d\'occasion, sélectionné en Allemagne.':'Twój samochód używany, wybrany w Niemczech.','Découvrez des véhicules sélectionnés et bénéficiez d\'un accompagnement pour l\'importation et la livraison en Europe.':'Poznaj wybrane samochody i skorzystaj ze wsparcia przy imporcie oraz dostawie w Europie.','Voir les véhicules':'Zobacz samochody','Rechercher un véhicule':'Wyszukaj samochód','Marque ou modèle':'Marka lub model','Prix maximum':'Maksymalna cena','Véhicules disponibles':'Dostępne samochody','Pourquoi AutoParc Export ?':'Dlaczego AutoParc Export?','Sélection en Allemagne':'Wybór w Niemczech','Livraison en Europe':'Dostawa w Europie','Accompagnement':'Wsparcie','Contact direct':'Bezpośredni kontakt','Nous recherchons des véhicules correspondant aux critères de nos clients.':'Szukamy samochodów zgodnych z wymaganiami klientów.','Organisation de la livraison vers différents pays européens.':'Organizujemy dostawę do różnych krajów Europy.','Accompagnement dans les démarches liées à l\'importation.':'Pomagamy w formalnościach związanych z importem.','Contactez-nous directement par WhatsApp ou formulaire.':'Skontaktuj się z nami przez WhatsApp lub formularz.','Vous recherchez un véhicule précis ?':'Szukasz konkretnego samochodu?','Indiquez-nous la marque, le modèle, le budget et vos critères. Nous pourrons rechercher un véhicule correspondant.':'Podaj markę, model, budżet i wymagania. Poszukamy odpowiedniego pojazdu.','Une question sur un véhicule ?':'Masz pytanie dotyczące pojazdu?','Remplissez le formulaire ci-dessous et nous vous répondrons rapidement.':'Wypełnij poniższy formularz, a szybko się z Tobą skontaktujemy.','Demande de renseignements':'Zapytanie o informacje','Nom / Prénom':'Imię / nazwisko','Pays':'Kraj','Téléphone / WhatsApp':'Telefon / WhatsApp','E-mail':'E-mail','Véhicule recherché':'Poszukiwany pojazd','Votre demande':'Twoje zapytanie','Préparer un e-mail':'Przygotuj e-mail','Ou ouvrir WhatsApp directement':'Lub otwórz WhatsApp bezpośrednio','Photo du véhicule':'Zdjęcie pojazdu','Photo précédente':'Poprzednie zdjęcie','Photo suivante':'Następne zdjęcie','Équipements':'Wyposażenie','Équipements Premium':'Wyposażenie Premium','Documents & conditions':'Dokumenty i warunki','Origine Allemagne':'Pochodzenie: Niemcy','Sélection et contrôle du véhicule':'Wybór i kontrola pojazdu','Livraison Europe':'Dostawa w Europie','Dossier véhicule':'Dokumentacja pojazdu','WhatsApp et formulaire':'WhatsApp i formularz kontaktowy','Carte grise':'Dowód rejestracyjny','Certificat de conformité':'Certyfikat zgodności','Contrôle technique':'Badanie techniczne','Carnet d\'entretien':'Książka serwisowa','Factures d\'entretien':'Faktury serwisowe','Certificat de kilométrage':'Certyfikat przebiegu','Rapport de condition disponible':'Dostępny raport stanu pojazdu','Véhicule importé d\'Allemagne':'Pojazd importowany z Niemiec','Livraison possible dans toute l\'Europe':'Dostawa możliwa na terenie całej Europy','Essence':'Benzyna','Boîte manuelle':'Skrzynia manualna','Boîte automatique':'Skrzynia automatyczna','Traction avant':'Napęd na przednie koła','Gris':'Szary','Blanc':'Biały','Bleu métallisé':'Niebieski metalizowany','Cuir':'Skóra','Cuir partiel':'Częściowa skóra','Excellent état':'Bardzo dobry stan','Intérieur sport':'Sportowe wnętrze','Propriétaires':'Właściciele','Places / portes':'Miejsca / drzwi','Coffre':'Bagażnik','Homologation UE':'Homologacja UE','État':'Stan','hors livraison':'dostawa nie wliczona','Disponible':'Dostępny','Prix':'Cena','Puissance':'Moc','Moteur':'Silnik','Transmission':'Napęd','Couleur':'Kolor','Intérieur':'Wnętrze','Véhicule sélectionné en Allemagne':'Pojazd wybrany w Niemczech','Accompagnement à l\'importation':'Wsparcie przy imporcie','Documents disponibles selon le véhicule':'Dokumenty dostępne zależnie od pojazdu','Remplissez ce formulaire pour nous contacter directement au sujet de ce véhicule.':'Wypełnij ten formularz, aby skontaktować się z nami bezpośrednio w sprawie tego pojazdu.'
-  },
-  it:{
-   'Véhicules':'Veicoli','Services':'Servizi','Contact':'Contatti','Votre véhicule d\'occasion, sélectionné en Allemagne.':'La tua auto usata, selezionata in Germania.','Découvrez des véhicules sélectionnés et bénéficiez d\'un accompagnement pour l\'importation et la livraison en Europe.':'Scopri veicoli selezionati e ricevi assistenza per importazione e consegna in Europa.','Voir les véhicules':'Vedi i veicoli','Rechercher un véhicule':'Cerca un veicolo','Marque ou modèle':'Marca o modello','Prix maximum':'Prezzo massimo','Véhicules disponibles':'Veicoli disponibili','Pourquoi AutoParc Export ?':'Perché AutoParc Export?','Sélection en Allemagne':'Selezione in Germania','Livraison en Europe':'Consegna in Europa','Accompagnement':'Assistenza','Contact direct':'Contatto diretto','Nous recherchons des véhicules correspondant aux critères de nos clients.':'Cerchiamo veicoli in base alle esigenze dei nostri clienti.','Organisation de la livraison vers différents pays européens.':'Organizziamo la consegna in diversi Paesi europei.','Accompagnement dans les démarches liées à l\'importation.':'Assistenza nelle procedure legate all\'importazione.','Contactez-nous directement par WhatsApp ou formulaire.':'Contattaci direttamente tramite WhatsApp o modulo.','Vous recherchez un véhicule précis ?':'Cerchi un veicolo specifico?','Indiquez-nous la marque, le modèle, le budget et vos critères. Nous pourrons rechercher un véhicule correspondant.':'Indicaci marca, modello, budget e criteri. Cercheremo il veicolo adatto.','Une question sur un véhicule ?':'Hai una domanda su un veicolo?','Remplissez le formulaire ci-dessous et nous vous répondrons rapidement.':'Compila il modulo qui sotto e ti risponderemo rapidamente.','Demande de renseignements':'Richiesta di informazioni','Nom / Prénom':'Nome / Cognome','Pays':'Paese','Téléphone / WhatsApp':'Telefono / WhatsApp','E-mail':'E-mail','Véhicule recherché':'Veicolo ricercato','Votre demande':'La tua richiesta','Préparer un e-mail':'Prepara un’e-mail','Ou ouvrir WhatsApp directement':'Oppure apri direttamente WhatsApp','Photo du véhicule':'Foto del veicolo','Photo précédente':'Foto precedente','Photo suivante':'Foto successiva','Équipements':'Equipaggiamento','Équipements Premium':'Equipaggiamento Premium','Documents & conditions':'Documenti e condizioni','Origine Allemagne':'Origine Germania','Sélection et contrôle du véhicule':'Selezione e controllo del veicolo','Livraison Europe':'Consegna in Europa','Dossier véhicule':'Documentazione veicolo','WhatsApp et formulaire':'WhatsApp e modulo di contatto','Carte grise':'Carta di circolazione','Certificat de conformité':'Certificato di conformità','Contrôle technique':'Revisione tecnica','Carnet d\'entretien':'Libretto di manutenzione','Factures d\'entretien':'Fatture di manutenzione','Certificat de kilométrage':'Certificato del chilometraggio','Rapport de condition disponible':'Rapporto sulle condizioni disponibile','Véhicule importé d\'Allemagne':'Veicolo importato dalla Germania','Livraison possible dans toute l\'Europe':'Consegna possibile in tutta Europa','Essence':'Benzina','Boîte manuelle':'Cambio manuale','Boîte automatique':'Cambio automatico','Traction avant':'Trazione anteriore','Gris':'Grigio','Blanc':'Bianco','Bleu métallisé':'Blu metallizzato','Cuir':'Pelle','Cuir partiel':'Pelle parziale','Excellent état':'Ottime condizioni','Intérieur sport':'Interni sportivi','Propriétaires':'Proprietari','Places / portes':'Posti / porte','Coffre':'Bagagliaio','Homologation UE':'Omologazione UE','État':'Stato','hors livraison':'consegna esclusa','Disponible':'Disponibile','Prix':'Prezzo','Puissance':'Potenza','Moteur':'Motore','Transmission':'Trasmissione','Couleur':'Colore','Intérieur':'Interni','Véhicule sélectionné en Allemagne':'Veicolo selezionato in Germania','Accompagnement à l\'importation':'Assistenza per l\'importazione','Documents disponibles selon le véhicule':'Documenti disponibili in base al veicolo','Remplissez ce formulaire pour nous contacter directement au sujet de ce véhicule.':'Compila questo modulo per contattarci direttamente riguardo a questo veicolo.'
-  },
-  es:{
-   'Véhicules':'Vehículos','Services':'Servicios','Contact':'Contacto','Votre véhicule d\'occasion, sélectionné en Allemagne.':'Tu vehículo de ocasión, seleccionado en Alemania.','Découvrez des véhicules sélectionnés et bénéficiez d\'un accompagnement pour l\'importation et la livraison en Europe.':'Descubre vehículos seleccionados y recibe asistencia para la importación y entrega en Europa.','Voir les véhicules':'Ver vehículos','Rechercher un véhicule':'Buscar un vehículo','Marque ou modèle':'Marca o modelo','Prix maximum':'Precio máximo','Véhicules disponibles':'Vehículos disponibles','Pourquoi AutoParc Export ?':'¿Por qué AutoParc Export?','Sélection en Allemagne':'Selección en Alemania','Livraison en Europe':'Entrega en Europa','Accompagnement':'Asistencia','Contact direct':'Contacto directo','Nous recherchons des véhicules correspondant aux critères de nos clients.':'Buscamos vehículos según los criterios de nuestros clientes.','Organisation de la livraison vers différents pays européens.':'Organizamos la entrega a diferentes países europeos.','Accompagnement dans les démarches liées à l\'importation.':'Asistencia en los trámites relacionados con la importación.','Contactez-nous directement par WhatsApp ou formulaire.':'Contáctanos por WhatsApp o formulario.','Vous recherchez un véhicule précis ?':'¿Buscas un vehículo específico?','Indiquez-nous la marque, le modèle, le budget et vos critères. Nous pourrons rechercher un véhicule correspondant.':'Indícanos marca, modelo, presupuesto y criterios. Buscaremos un vehículo adecuado.','Une question sur un véhicule ?':'¿Tienes una pregunta sobre un vehículo?','Remplissez le formulaire ci-dessous et nous vous répondrons rapidement.':'Completa el formulario y te responderemos rápidamente.','Demande de renseignements':'Solicitud de información','Nom / Prénom':'Nombre / Apellidos','Pays':'País','Téléphone / WhatsApp':'Teléfono / WhatsApp','E-mail':'Correo electrónico','Véhicule recherché':'Vehículo buscado','Votre demande':'Tu solicitud','Préparer un e-mail':'Preparar un correo','Ou ouvrir WhatsApp directement':'O abrir WhatsApp directamente','Photo du véhicule':'Foto del vehículo','Photo précédente':'Foto anterior','Photo suivante':'Foto siguiente','Équipements':'Equipamiento','Équipements Premium':'Equipamiento Premium','Documents & conditions':'Documentos y condiciones','Origine Allemagne':'Origen Alemania','Sélection et contrôle du véhicule':'Selección y revisión del vehículo','Livraison Europe':'Entrega en Europa','Dossier véhicule':'Documentación del vehículo','WhatsApp et formulaire':'WhatsApp y formulario de contacto','Carte grise':'Permiso de circulación','Certificat de conformité':'Certificado de conformidad','Contrôle technique':'Inspección técnica','Carnet d\'entretien':'Libro de mantenimiento','Factures d\'entretien':'Facturas de mantenimiento','Certificat de kilométrage':'Certificado de kilometraje','Rapport de condition disponible':'Informe del estado disponible','Véhicule importé d\'Allemagne':'Vehículo importado de Alemania','Livraison possible dans toute l\'Europe':'Entrega posible en toda Europa','Essence':'Gasolina','Boîte manuelle':'Cambio manual','Boîte automatique':'Cambio automático','Traction avant':'Tracción delantera','Gris':'Gris','Blanc':'Blanco','Bleu métallisé':'Azul metalizado','Cuir':'Cuero','Cuir partiel':'Cuero parcial','Excellent état':'Excelente estado','Intérieur sport':'Interior deportivo','Propriétaires':'Propietarios','Places / portes':'Plazas / puertas','Coffre':'Maletero','Homologation UE':'Homologación UE','État':'Estado','hors livraison':'entrega no incluida','Disponible':'Disponible','Prix':'Precio','Puissance':'Potencia','Moteur':'Motor','Transmission':'Transmisión','Couleur':'Color','Intérieur':'Interior','Véhicule sélectionné en Allemagne':'Vehículo seleccionado en Alemania','Accompagnement à l\'importation':'Asistencia para la importación','Documents disponibles selon le véhicule':'Documentos disponibles según el vehículo','Remplissez ce formulaire pour nous contacter directement au sujet de ce véhicule.':'Completa este formulario para contactarnos directamente sobre este vehículo.'
-  },
-  pt:{
-   'Véhicules':'Veículos','Services':'Serviços','Contact':'Contacto','Votre véhicule d\'occasion, sélectionné en Allemagne.':'O seu veículo usado, selecionado na Alemanha.','Découvrez des véhicules sélectionnés et bénéficiez d\'un accompagnement pour l\'importation et la livraison en Europe.':'Descubra veículos selecionados e beneficie de acompanhamento na importação e entrega em toda a Europa.','Voir les véhicules':'Ver veículos','Rechercher un véhicule':'Pesquisar um veículo','Marque ou modèle':'Marca ou modelo','Prix maximum':'Preço máximo','Véhicules disponibles':'Veículos disponíveis','Pourquoi AutoParc Export ?':'Porquê a AutoParc Export?','Sélection en Allemagne':'Seleção na Alemanha','Livraison en Europe':'Entrega na Europa','Accompagnement':'Acompanhamento','Contact direct':'Contacto direto','Nous recherchons des véhicules correspondant aux critères de nos clients.':'Procuramos veículos de acordo com os critérios dos nossos clientes.','Organisation de la livraison vers différents pays européens.':'Organizamos a entrega a diferentes países europeus.','Accompagnement dans les démarches liées à l\'importation.':'Acompanhamos os procedimentos relacionados com a importação.','Contactez-nous directement par WhatsApp ou formulaire.':'Contacte-nos diretamente através do WhatsApp ou formulário.','Vous recherchez un véhicule précis ?':'Procura um veículo específico?','Indiquez-nous la marque, le modèle, le budget et vos critères. Nous pourrons rechercher un véhicule correspondant.':'Indique a marca, o modelo, o orçamento e os seus critérios. Procuraremos um veículo adequado.','Une question sur un véhicule ?':'Tem alguma dúvida sobre um veículo?','Remplissez le formulaire ci-dessous et nous vous répondrons rapidement.':'Preencha o formulário abaixo e responderemos rapidamente.','Demande de renseignements':'Pedido de informações','Nom / Prénom':'Nome / Apelido','Pays':'País','Téléphone / WhatsApp':'Telefone / WhatsApp','E-mail':'E-mail','Véhicule recherché':'Veículo pretendido','Votre demande':'O seu pedido','Préparer un e-mail':'Preparar um e-mail','Ou ouvrir WhatsApp directement':'Ou abrir o WhatsApp diretamente','Photo du véhicule':'Foto do veículo','Photo précédente':'Foto anterior','Photo suivante':'Foto seguinte','Équipements':'Equipamento','Équipements Premium':'Equipamento Premium','Documents & conditions':'Documentos e condições','Origine Allemagne':'Origem Alemanha','Sélection et contrôle du véhicule':'Seleção e verificação do veículo','Livraison Europe':'Entrega na Europa','Dossier véhicule':'Documentação do veículo','WhatsApp et formulaire':'WhatsApp e formulário de contacto','Carte grise':'Documento de matrícula','Certificat de conformité':'Certificado de conformidade','Contrôle technique':'Inspeção técnica','Carnet d\'entretien':'Livro de manutenção','Factures d\'entretien':'Faturas de manutenção','Certificat de kilométrage':'Certificado de quilometragem','Rapport de condition disponible':'Relatório de estado disponível','Véhicule importé d\'Allemagne':'Veículo importado da Alemanha','Livraison possible dans toute l\'Europe':'Entrega possível em toda a Europa','Essence':'Gasolina','Boîte manuelle':'Caixa manual','Boîte automatique':'Caixa automática','Traction avant':'Tração dianteira','Gris':'Cinzento','Blanc':'Branco','Bleu métallisé':'Azul metalizado','Cuir':'Couro','Cuir partiel':'Couro parcial','Excellent état':'Excelente estado','Intérieur sport':'Interior desportivo','Propriétaires':'Proprietários','Places / portes':'Lugares / portas','Coffre':'Bagageira','Homologation UE':'Homologação UE','État':'Estado','hors livraison':'entrega não incluída','Disponible':'Disponível','Prix':'Preço','Puissance':'Potência','Moteur':'Motor','Transmission':'Transmissão','Couleur':'Cor','Intérieur':'Interior','Véhicule sélectionné en Allemagne':'Veículo selecionado na Alemanha','Accompagnement à l\'importation':'Acompanhamento da importação','Documents disponibles selon le véhicule':'Documentos disponíveis conforme o veículo','Remplissez ce formulaire pour nous contacter directement au sujet de ce véhicule.':'Preencha este formulário para nos contactar diretamente sobre este veículo.'
-  }
- };
- function audit(lang){
-  if(lang==='fr') return;
-  const map=PHRASES[lang]||{};
-  const replace=(txt)=>{
-    let out=txt;
-    Object.keys(map).sort((a,b)=>b.length-a.length).forEach(k=>{out=out.split(k).join(map[k]);});
-    return out;
-  };
-  const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);
-  const nodes=[];while(walker.nextNode())nodes.push(walker.currentNode);
-  nodes.forEach(n=>{const v=n.nodeValue;const r=replace(v);if(r!==v)n.nodeValue=r;});
-  document.querySelectorAll('[placeholder]').forEach(el=>{const v=el.getAttribute('placeholder'),r=replace(v);if(r!==v)el.setAttribute('placeholder',r);});
-  document.querySelectorAll('[aria-label]').forEach(el=>{const v=el.getAttribute('aria-label'),r=replace(v);if(r!==v)el.setAttribute('aria-label',r);});
-  const title=document.querySelector('title');if(title)title.textContent=replace(title.textContent);
-  const md=document.querySelector('meta[name="description"]');if(md)md.setAttribute('content',replace(md.getAttribute('content')||''));
- }
- let lastAuditedLang='';
- function auditOnce(lang){
-   lang=lang||localStorage.getItem('autoparc-lang')||'fr';
-   if(lang===lastAuditedLang) return;
-   lastAuditedLang=lang;
-   audit(lang);
- }
- window.addEventListener('autoparc-language-applied',e=>setTimeout(()=>auditOnce(e.detail||localStorage.getItem('autoparc-lang')||'fr'),0));
- setTimeout(()=>auditOnce(localStorage.getItem('autoparc-lang')||'fr'),100);
-})();
-</script>
 
-<script id="v49-language-final-fix">
+
+
+
+
+<script id="autoparc-clean-language-final">
 (function(){
   const LANGS=['fr','en','pl','it','es','pt'];
-  const brandLabels={fr:'Toutes les marques',en:'All makes',pl:'Wszystkie marki',it:'Tutte le marche',es:'Todas las marcas',pt:'Todas as marcas'};
-  const resetLabels={fr:'Réinitialiser',en:'Reset filters',pl:'Wyczyść filtry',it:'Reimposta filtri',es:'Restablecer filtros',pt:'Limpar filtros'};
-  const availableLabels={fr:'Véhicules disponibles',en:'Available vehicles',pl:'Dostępne samochody',it:'Veicoli disponibili',es:'Vehículos disponibles',pt:'Veículos disponíveis'};
-  function setFilterLanguage(lang){
-    const f=document.getElementById('brandFilter'); if(f&&f.options[0]) f.options[0].textContent=brandLabels[lang]||brandLabels.fr;
-    const r=document.querySelector('.filter-actions button.secondary'); if(r) r.textContent=resetLabels[lang]||resetLabels.fr;
-    const h=document.querySelector('[data-i18n="carsTitle"]'); if(h) h.textContent=availableLabels[lang]||availableLabels.fr;
+  const info={fr:['Français','fr'],en:['English','gb'],pl:['Polski','pl'],it:['Italiano','it'],es:['Español','es'],pt:['Português','pt']};
+  function sync(lang){
+    lang=LANGS.includes(lang)?lang:'fr';
+    const x=typeof t!=='undefined' && t[lang] ? t[lang] : null;
+    if(!x)return;
+    document.documentElement.lang=lang;
+    document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.getAttribute('data-i18n');if(x[k]!==undefined)el.textContent=x[k];});
+    document.querySelectorAll('[data-i18n-alt]').forEach(el=>{const k=el.getAttribute('data-i18n-alt');if(x[k]!==undefined)el.alt=x[k];});
+    const title=document.querySelector('title'); if(title&&x.pageTitle) title.textContent=x.pageTitle;
+    const md=document.querySelector('meta[name="description"]'); if(md&&x.metaDescription) md.content=x.metaDescription;
+    if(typeof renderVehicles==='function') renderVehicles(lang);
+    if(typeof updateCatalogUi==='function') updateCatalogUi(lang);
+    const brand=document.getElementById('brandFilter');
+    const brandLabels={fr:'Toutes les marques',en:'All makes',pl:'Wszystkie marki',it:'Tutti i marchi',es:'Todas las marcas',pt:'Todas as marcas'};
+    if(brand&&brand.options[0]) brand.options[0].textContent=brandLabels[lang];
+    const reset=document.querySelector('.filter-actions button.secondary');
+    const resetLabels={fr:'Réinitialiser',en:'Reset filters',pl:'Wyczyść filtry',it:'Reimposta filtri',es:'Restablecer filtros',pt:'Limpar filtros'};
+    if(reset) reset.textContent=resetLabels[lang];
+    const flag=document.getElementById('currentLanguageFlag'),name=document.getElementById('currentLanguageName');
+    if(flag&&name){flag.src='https://flagcdn.com/w40/'+info[lang][1]+'.png';name.textContent=info[lang][0];}
+    localStorage.setItem('autoparc-lang',lang);
   }
-  function refreshOpenModal(lang){
-    if(typeof currentModalVehicleId==='string' && currentModalVehicleId && document.getElementById('vehicleModal')?.classList.contains('open')){
-      openVehicleModal(currentModalVehicleId);
-    }
-  }
-  const originalApply=window.applyLanguage;
-  if(typeof originalApply==='function'){
-    window.applyLanguage=function(lang){
-      lang=LANGS.includes(lang)?lang:'fr';
-      localStorage.setItem('autoparc-lang',lang);
-      originalApply(lang);
-      setFilterLanguage(lang);
-      if(typeof updateCatalogUi==='function') updateCatalogUi(lang);
-      refreshOpenModal(lang);
-    };
-  }
-  // Ensure a language change always rebuilds the vehicle cards and the modal in the selected language.
+  window.applyLanguageClean=sync;
   document.addEventListener('click',function(e){
     const opt=e.target.closest('.language-option');
     if(!opt)return;
     const lang=opt.dataset.lang;
-    if(LANGS.includes(lang) && typeof window.applyLanguage==='function'){
-      setTimeout(()=>window.applyLanguage(lang),20);
-    }
+    setTimeout(()=>sync(lang),0);
   },true);
-  setFilterLanguage(localStorage.getItem('autoparc-lang')||'fr');
-})();
-</script>
-
-<script id="v50-final-ui-language-fix">
-(function(){
-  const labels={
-    fr:{brands:'Toutes les marques',reset:'Réinitialiser',available:'Véhicules disponibles'},
-    en:{brands:'All makes',reset:'Reset filters',available:'Available vehicles'},
-    pl:{brands:'Wszystkie marki',reset:'Wyczyść filtry',available:'Dostępne samochody'},
-    it:{brands:'Tutti i marchi',reset:'Reimposta filtri',available:'Veicoli disponibili'},
-    es:{brands:'Todas las marcas',reset:'Restablecer filtros',available:'Vehículos disponibles'},
-    pt:{brands:'Todas as marcas',reset:'Limpar filtros',available:'Veículos disponíveis'}
-  };
-  function forceLabels(lang){
-    const L=labels[lang]||labels.fr;
-    const brand=document.getElementById('brandFilter');
-    if(brand && brand.options.length) brand.options[0].textContent=L.brands;
-    const reset=document.querySelector('.filter-actions button.secondary');
-    if(reset) reset.textContent=L.reset;
-    const title=document.querySelector('[data-i18n="carsTitle"]');
-    if(title) title.textContent=L.available;
-  }
-  function closeLanguagePicker(){
-    const picker=document.getElementById('languagePicker');
-    const btn=document.getElementById('languagePickerBtn');
-    if(picker) picker.classList.remove('open');
-    if(btn) btn.setAttribute('aria-expanded','false');
-  }
-  const oldApply=window.applyLanguage;
-  if(typeof oldApply==='function' && !oldApply.__v50wrapped){
-    function wrapped(lang){
-      oldApply(lang);
-      const current=localStorage.getItem('autoparc-lang')||lang||'fr';
-      forceLabels(current);
-      closeLanguagePicker();
-      setTimeout(()=>{forceLabels(current);closeLanguagePicker();},30);
-      setTimeout(()=>{forceLabels(current);closeLanguagePicker();},200);
-    }
-    wrapped.__v50wrapped=true;
-    window.applyLanguage=wrapped;
-  }
-  document.addEventListener('click',function(e){
-    const option=e.target.closest('.language-option');
-    if(option){
-      const lang=option.dataset.lang||'fr';
-      setTimeout(()=>{forceLabels(lang);closeLanguagePicker();},0);
-      setTimeout(()=>{forceLabels(lang);closeLanguagePicker();},80);
-    }
-  },true);
-  document.addEventListener('change',function(e){
-    if(e.target && e.target.id==='brandFilter'){
-      forceLabels(localStorage.getItem('autoparc-lang')||'fr');
-    }
-  });
-  const initial=localStorage.getItem('autoparc-lang')||'fr';
-  forceLabels(initial);
+  sync(localStorage.getItem('autoparc-lang')||'fr');
 })();
 </script>
 </body></html>
