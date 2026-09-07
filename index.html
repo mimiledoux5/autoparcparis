@@ -273,7 +273,7 @@ header nav{display:flex!important;align-items:center;gap:6px;white-space:nowrap}
 </div></div>
 <section id="cars" class="catalog-shell">
   <div class="catalog-head">
-    <div><h2 data-i18n="carsTitle">Véhicules disponibles</h2><p id="searchIntro">Trouvez le véhicule qui correspond à vos critères.</p></div>
+    <div><h2 id="catalogAvailableTitle" data-i18n="carsTitle">Véhicules disponibles</h2><p id="searchIntro">Trouvez le véhicule qui correspond à vos critères.</p></div>
     <select id="catalogSort" class="catalog-sort" onchange="renderVehicles(localStorage.getItem('autoparc-lang')||'fr')">
       <option value="default">Trier par défaut</option><option value="priceAsc">Prix croissant</option><option value="priceDesc">Prix décroissant</option><option value="yearDesc">Année récente</option><option value="kmAsc">Kilométrage croissant</option>
     </select>
@@ -587,7 +587,7 @@ function setCatalogLanguageLabels(lang){
  const L=labels[lang]||labels.fr;
  const brand=document.getElementById('brandFilter'); if(brand&&brand.options[0]) brand.options[0].textContent=L.brands;
  const reset=document.querySelector('.filter-actions button.secondary'); if(reset) reset.textContent=L.reset;
- const title=document.querySelector('#cars h2[data-i18n="carsTitle"]'); if(title) title.textContent=L.available;
+ const title=document.getElementById('catalogAvailableTitle'); if(title) title.textContent=L.available;
 }
 function applyLanguage(lang){
  const x=t[lang]||t.fr;
@@ -668,6 +668,8 @@ setTimeout(function(){ if(Array.isArray(window.autoparcVehicles) && window.autop
       finally {
         const safe=labels[lang]?lang:'fr';
         forceCatalogLabels(safe);
+        if(typeof window.applyCatalogTitle==='function') window.applyCatalogTitle();
+        window.dispatchEvent(new Event('autoparc-language-changed'));
         const picker=document.getElementById('languagePicker');
         const btn=document.getElementById('languagePickerBtn');
         if(picker) picker.classList.remove('open');
@@ -677,8 +679,22 @@ setTimeout(function(){ if(Array.isArray(window.autoparcVehicles) && window.autop
   }
   document.addEventListener('DOMContentLoaded',function(){
     forceCatalogLabels(localStorage.getItem('autoparc-lang')||'fr');
+    if(typeof window.applyCatalogTitle==='function') window.applyCatalogTitle();
   });
 })();
 </script>
 
+<script id="autoparc-catalog-title-final">
+(function(){
+  const labels={fr:'Véhicules disponibles',en:'Available vehicles',pl:'Dostępne samochody',it:'Veicoli disponibili',es:'Vehículos disponibles',pt:'Veículos disponíveis'};
+  function applyCatalogTitle(){
+    const lang=localStorage.getItem('autoparc-lang')||'fr';
+    const el=document.getElementById('catalogAvailableTitle');
+    if(el) el.textContent=labels[lang]||labels.fr;
+  }
+  window.applyCatalogTitle=applyCatalogTitle;
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',applyCatalogTitle); else applyCatalogTitle();
+  window.addEventListener('autoparc-language-changed',applyCatalogTitle);
+})();
+</script>
 </body></html>
