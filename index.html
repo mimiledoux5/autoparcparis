@@ -695,4 +695,61 @@ setTimeout(function(){ if(Array.isArray(window.autoparcVehicles) && window.autop
   setFilterLanguage(localStorage.getItem('autoparc-lang')||'fr');
 })();
 </script>
+
+<script id="v50-final-ui-language-fix">
+(function(){
+  const labels={
+    fr:{brands:'Toutes les marques',reset:'Réinitialiser',available:'Véhicules disponibles'},
+    en:{brands:'All makes',reset:'Reset filters',available:'Available vehicles'},
+    pl:{brands:'Wszystkie marki',reset:'Wyczyść filtry',available:'Dostępne samochody'},
+    it:{brands:'Tutti i marchi',reset:'Reimposta filtri',available:'Veicoli disponibili'},
+    es:{brands:'Todas las marcas',reset:'Restablecer filtros',available:'Vehículos disponibles'},
+    pt:{brands:'Todas as marcas',reset:'Limpar filtros',available:'Veículos disponíveis'}
+  };
+  function forceLabels(lang){
+    const L=labels[lang]||labels.fr;
+    const brand=document.getElementById('brandFilter');
+    if(brand && brand.options.length) brand.options[0].textContent=L.brands;
+    const reset=document.querySelector('.filter-actions button.secondary');
+    if(reset) reset.textContent=L.reset;
+    const title=document.querySelector('[data-i18n="carsTitle"]');
+    if(title) title.textContent=L.available;
+  }
+  function closeLanguagePicker(){
+    const picker=document.getElementById('languagePicker');
+    const btn=document.getElementById('languagePickerBtn');
+    if(picker) picker.classList.remove('open');
+    if(btn) btn.setAttribute('aria-expanded','false');
+  }
+  const oldApply=window.applyLanguage;
+  if(typeof oldApply==='function' && !oldApply.__v50wrapped){
+    function wrapped(lang){
+      oldApply(lang);
+      const current=localStorage.getItem('autoparc-lang')||lang||'fr';
+      forceLabels(current);
+      closeLanguagePicker();
+      setTimeout(()=>{forceLabels(current);closeLanguagePicker();},30);
+      setTimeout(()=>{forceLabels(current);closeLanguagePicker();},200);
+    }
+    wrapped.__v50wrapped=true;
+    window.applyLanguage=wrapped;
+  }
+  document.addEventListener('click',function(e){
+    const option=e.target.closest('.language-option');
+    if(option){
+      const lang=option.dataset.lang||'fr';
+      setTimeout(()=>{forceLabels(lang);closeLanguagePicker();},0);
+      setTimeout(()=>{forceLabels(lang);closeLanguagePicker();},80);
+    }
+  },true);
+  document.addEventListener('change',function(e){
+    if(e.target && e.target.id==='brandFilter'){
+      forceLabels(localStorage.getItem('autoparc-lang')||'fr');
+    }
+  });
+  const initial=localStorage.getItem('autoparc-lang')||'fr';
+  forceLabels(initial);
+  closeLanguagePicker();
+})();
+</script>
 </body></html>
