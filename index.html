@@ -639,4 +639,46 @@ setTimeout(function(){ if(Array.isArray(window.autoparcVehicles) && window.autop
  selectLang(initial);
 })();
 </script>
+
+<script id="autoparc-language-final-stability">
+(function(){
+  const labels={
+    fr:{brands:'Toutes les marques',reset:'Réinitialiser',available:'Véhicules disponibles'},
+    en:{brands:'All makes',reset:'Reset filters',available:'Available vehicles'},
+    pl:{brands:'Wszystkie marki',reset:'Wyczyść filtry',available:'Dostępne samochody'},
+    it:{brands:'Tutte le marche',reset:'Reimposta filtri',available:'Veicoli disponibili'},
+    es:{brands:'Todas las marcas',reset:'Restablecer filtros',available:'Vehículos disponibles'},
+    pt:{brands:'Todas as marcas',reset:'Limpar filtros',available:'Veículos disponíveis'}
+  };
+  function forceCatalogLabels(lang){
+    const L=labels[lang]||labels.fr;
+    const brand=document.getElementById('brandFilter');
+    if(brand && brand.options && brand.options[0]) brand.options[0].textContent=L.brands;
+    const reset=document.querySelector('.filter-actions button.secondary');
+    if(reset) reset.textContent=L.reset;
+    const title=document.querySelector('#cars h2[data-i18n="carsTitle"]');
+    if(title) title.textContent=L.available;
+  }
+  window.forceCatalogLabels=forceCatalogLabels;
+  const originalApply=window.applyLanguage;
+  if(typeof originalApply==='function'){
+    window.applyLanguage=function(lang){
+      try { originalApply(lang); }
+      catch(err) { console.error('AutoParc language error:',err); }
+      finally {
+        const safe=labels[lang]?lang:'fr';
+        forceCatalogLabels(safe);
+        const picker=document.getElementById('languagePicker');
+        const btn=document.getElementById('languagePickerBtn');
+        if(picker) picker.classList.remove('open');
+        if(btn) btn.setAttribute('aria-expanded','false');
+      }
+    };
+  }
+  document.addEventListener('DOMContentLoaded',function(){
+    forceCatalogLabels(localStorage.getItem('autoparc-lang')||'fr');
+  });
+})();
+</script>
+
 </body></html>
