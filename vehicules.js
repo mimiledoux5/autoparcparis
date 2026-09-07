@@ -9,7 +9,7 @@
  sont automatiquement traduits par le site. Pour une description parfaite dans les 6 langues,
  vous pouvez ajouter description:{fr:'...',en:'...',pl:'...',it:'...',es:'...',pt:'...'}.
 */
-const autoparcVehicles = [
+window.autoparcVehicles = [
 {
  id:'cla180', name:'Mercedes-Benz CLA 180 AMG', year:'2015', km:'152 000 km', fuel:'Essence', gear:'Boîte manuelle', price:'4 100 €', power:'122 ch', engine:'1.6 L', transmission:'Traction avant', color:'Gris', interior:'Cuir partiel', seats:'5', doors:'5', eu:"Jusqu'en août 2027", condition:'Excellent état', premium:false,
  description:{fr:'Mercedes-Benz CLA 180 AMG en excellent état, avec finition AMG, caméra de recul, navigation, climatisation automatique et nombreux équipements.',en:'Mercedes-Benz CLA 180 AMG in excellent condition, with AMG trim, rear-view camera, navigation, automatic climate control and extensive equipment.',pl:'Mercedes-Benz CLA 180 AMG w bardzo dobrym stanie, z pakietem AMG, kamerą cofania, nawigacją, automatyczną klimatyzacją i bogatym wyposażeniem.',it:'Mercedes-Benz CLA 180 AMG in ottime condizioni, con allestimento AMG, telecamera posteriore, navigazione, climatizzatore automatico e numerosi equipaggiamenti.',es:'Mercedes-Benz CLA 180 AMG en excelente estado, con acabado AMG, cámara de marcha atrás, navegación, climatizador automático y amplio equipamiento.',pt:'Mercedes-Benz CLA 180 AMG em excelente estado, com acabamento AMG, câmara traseira, navegação, climatização automática e amplo equipamento.'},
